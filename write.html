@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Write a Poem</title>
+<style>
+			:root{
+				--background: #ffffff;
+				--base: #dedede;
+				--text-color: #000000;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: 0;
+				border: 0;
+				outline: 0;
+				resize: none;
+				user-select: none;
+			}
+			body{
+				background-color: var(--background);
+				color: var(--text-color);
+			}
+			form{
+				background-color: var(--base);
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				right: 5em;
+				left: 5em;
+				top: 5em;
+				padding: 1em;
+				border-radius: 0.25em;
+			}
+			form > *{
+				margin: 0.25em;
+				border-radius: 0.25em;
+				padding: 0.25em 1em;
+			}
+			form h2{
+				margin: 0;
+				padding: 0.2em 0;
+				text-align: center;
+			}
+</style>
+  </head>
+  <body>
+	<form action="" method="post">
+	  <h2>Write your content</h2>
+	  <input type="text" name="title" placeholder="Title">
+	  <textarea name="content" cols="30" rows="10" placeholder="Content"></textarea>
+	  <input type="submit" value="Submit">
+	</form>	
+  </body>
+</html>
