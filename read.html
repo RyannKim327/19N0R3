@@ -74,7 +74,7 @@
 	  })
 	  document.head.innerHTML = document.head.innerHTML + `<title>${li.title}</title>`
 	  document.getElementById("title").textContent = li.title
-	  document.getElementById("content").innerHTML = li.content.replace(/\r\n/gi, "<br>").replace(/\\/gi, "\\")
+	  document.getElementById("content").innerHTML = li.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
 	  }
 	  _s()
 	  </script>
