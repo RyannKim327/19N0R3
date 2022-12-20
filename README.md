@@ -1,4 +1,4 @@
-# 19N0R3 POetry Server Side
+# 19N0R3 Poetry Server Side
 
 > This repository is created as part of my study about nodejs. I use the fetch method in vanilla js, so that I can connect it thru the server side. I use the API method to share the data from the server to the client side.
 ----
