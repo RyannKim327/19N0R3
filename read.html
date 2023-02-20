@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<style>
+	<head>
+		<style>
 			:root{
 				--background: #ffffff;
 				--div: #dedede;
@@ -50,7 +50,7 @@
 				overflow-y: scroll;
 				font-family: 'Courier New', Courier, monospace;
 			}
-</style>
+		</style>
 	</head>
 	<body>
 		<div class="poems-base">
@@ -62,20 +62,20 @@
 			<blockquote id="content"></blockquote>
 		</div>
 	</body>
-	  <script>
-	  let _s = async () => {
-	  let w = window.location.href.split(/\?id=/)[1]
-	  let li = await fetch(`/read/${w}`).then(r => {
-	  let data = r.json()
-	  return data
-	  }).catch(e => {
-	  console.error(`Error ${e}`)
-	  return null
-	  })
-	  document.head.innerHTML = document.head.innerHTML + `<title>${li.title}</title>`
-	  document.getElementById("title").textContent = li.title
-	  document.getElementById("content").innerHTML = li.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
-	  }
-	  _s()
-	  </script>
+		<script>
+			let _s = async () => {
+			let w = window.location.href.split(/\?id=/)[1]
+			let li = await fetch(`/read/${w}`).then(r => {
+			let data = r.json()
+			return data
+			}).catch(e => {
+			console.error(`Error ${e}`)
+			return null
+			})
+			document.head.innerHTML = document.head.innerHTML + `<title>${li.title}</title>`
+			document.getElementById("title").textContent = li.title
+			document.getElementById("content").innerHTML = li.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
+			}
+			_s()
+		</script>
 </html>
