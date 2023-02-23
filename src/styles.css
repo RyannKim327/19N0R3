@@ -36,9 +36,12 @@ body{
 	justify-content: center;
 }
 .poems-base input{
+	background-color: var(--base-background);
 	width: auto;
 	border: 1px var(--color) solid;
-	border-radius: var()--radius;
+	border-radius: var(--radius);
+	color: var(--color);
+	padding: 0 0.5em;
 }
 .poems-base ul{
 	margin-top: 1em;
@@ -59,4 +62,13 @@ body{
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace;
 	font-weight: bold;
+}
+.poems-content .poems-heading{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.poems-content .poems-heading h5{
+	padding-top: 0.5em;
+	padding-left: 0.75em;
 }

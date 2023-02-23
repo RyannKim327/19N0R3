@@ -33,7 +33,8 @@ let filter = async () => {
 		}else{
 			let f = e.title.toLowerCase()
 			let g = s.toLowerCase()
-			if(f.includes(g)){
+			let h = e.author.toLowerCase()
+			if(f.includes(g) || h.includes(g)){
 				if(total < max){
 					t += `<li onclick="read('${e.id}')">${e.title}</a></li>`
 					total++
@@ -47,6 +48,7 @@ let filter = async () => {
 
 async function read(id_num){
 	let title = document.getElementById("poem-title")
+	let author = document.getElementById("poem-author")
 	let content = document.getElementById("poem-content")
 	let poem = await fetch(`/read/${id_num}`).then(r => {
 		return r.json()
@@ -54,7 +56,8 @@ async function read(id_num){
 		console.error(`Error [Read]: ${e}`)
 		return null
 	})
-	title.textContent = poem.title + " - " + poem.author
+	title.textContent = poem.title
+	author.textContent = poem.author
 	console.log(poem.content)
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
 }
