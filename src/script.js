@@ -42,6 +42,7 @@ let filter = async () => {
 		}
 	}
 	lists.innerHTML = t
+	document.getElementById("poems-lists").textContent = "Poems lists - [" + list.length + " poems]"
 }
 
 async function read(id_num){
