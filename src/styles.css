@@ -1,0 +1,70 @@
+:root{
+	--background: #ffffff;
+	--div: #dedede;
+	--color: #000000;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+	border: 0;
+	outline: 0;
+	user-select: none;
+}
+body{
+	background-color: var(--background);
+}
+.poems-base{
+	background-color: var(--div);
+	color: var(--color);
+	border-radius: 0.25em;
+	margin: 1em;
+	padding: 0.5em;
+}
+.poems-base div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.poems-base h3{
+	text-align: center;
+	font-size: 1.75em;
+}
+.poems-base input{
+	background-color: var(--div);
+	border-radius: 0.2em;
+	border: 1px var(--color) solid;
+	padding: 0.2em 0;
+	font-size: 1em;
+}
+.poems{
+	list-style: decimal-leading-zero;
+	margin-left: 1em;
+	padding: 1em;
+	font-size: 1.25em;
+}
+.poems-base .poems a{
+	color: var(--color);
+}
+.poems-base .poems a::selection{
+	color: var(--color);
+}
+.poems-base button{
+	padding: 0 1em;
+	border-radius: 0.75em;
+	font-family: 'Times New Roman', Times, serif;
+	cursor: pointer;
+}
+@media only screen and(max-width: 760px) {
+	.poems-base{
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		min-width: 50%;
+		width: 50%;
+		resize: horizontal;
+	}
+	.poems-base *{
+		display: inline;
+	}
+}

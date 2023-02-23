@@ -1,6 +1,7 @@
 const express = require("express")
 const fs = require("fs")
 const parser = require("body-parser")
+const path = require("path")
 const app = express()
 const body = parser.urlencoded({ extended: false })
 
@@ -13,13 +14,23 @@ const gex = (string) => {
 
 app.use(express.static("public"))
 
+app.use("/res", express.static(path.join(`${__dirname}/src`)))
+
 app.get("/", (req, res) => {
-	res.sendFile(`${__dirname}/index.html`)
+	res.sendFile(`${__dirname}/src/index.html`)
 })
 
 app.get("/lists", (req, res) => {
-	const json = JSON.parse(fs.readFileSync("data.json", "utf8"))
-	res.send(json)
+	let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
+	let p = json.poems
+	let poems = []
+	for(let i = p.length - 1; i >= 0; i--){
+		poems.push(p[i])
+	}
+	let js = {
+		"poems": poems
+	}
+	res.send(js)
 })
 
 app.get("/read", (req, res) => {
