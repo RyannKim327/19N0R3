@@ -44,7 +44,8 @@ app.use("/read/:id", (req, res) => {
 		if(json.poems[i].id == req.params.id){
 			js = {
 				"title": json.poems[i].title,
-				"content": json.poems[i].content
+				"content": json.poems[i].content,
+				"author": json.poems[i].author
 			}
 			break
 		}

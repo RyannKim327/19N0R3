@@ -53,7 +53,7 @@ async function read(id_num){
 		console.error(`Error [Read]: ${e}`)
 		return null
 	})
-	title.textContent = poem.title
+	title.textContent = poem.title + " - " + poem.author
 	console.log(poem.content)
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
 }
@@ -65,3 +65,4 @@ let search = document.getElementById("search")
 search.onkeyup = () => {
 	_s()
 }
+read(1)
