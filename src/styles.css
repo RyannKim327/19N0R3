@@ -1,70 +1,62 @@
 :root{
-	--background: #ffffff;
-	--div: #dedede;
-	--color: #000000;
+	--background: #121230;
+	--color: #ffffff;
+	--radius: 0.1em;
+
+	--base-background: #303060;
 }
 *{
-	margin: 0;
-	padding: 0;
+	border: none;
 	box-sizing: 0;
-	border: 0;
-	outline: 0;
+	padding: 0;
+	margin: 0;
 	user-select: none;
+	outline: none;
 }
 body{
 	background-color: var(--background);
+	color: var(--color);
+}
+.poems-container{
+	display: flex;
+	flex-direction: row;
+	margin: 1em;
 }
 .poems-base{
-	background-color: var(--div);
-	color: var(--color);
-	border-radius: 0.25em;
-	margin: 1em;
+	background-color: var(--base-background);
+	margin: 0.25em;
 	padding: 0.5em;
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: column;
 }
 .poems-base div{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.poems-base h3{
-	text-align: center;
-	font-size: 1.75em;
+	flex-direction: column;
+	justify-content: center;
 }
 .poems-base input{
-	background-color: var(--div);
-	border-radius: 0.2em;
+	width: auto;
 	border: 1px var(--color) solid;
-	padding: 0.2em 0;
-	font-size: 1em;
+	border-radius: var()--radius;
 }
-.poems{
-	list-style: decimal-leading-zero;
-	margin-left: 1em;
-	padding: 1em;
-	font-size: 1.25em;
+.poems-base ul{
+	margin-top: 1em;
 }
-.poems-base .poems a{
+.poems-base ul, .poems-base ul li{
+	list-style: inside;
+}
+.poems-base ul li a{
 	color: var(--color);
+	text-decoration: none;
 }
-.poems-base .poems a::selection{
-	color: var(--color);
+.poems-content{
+	width: 100em;
+	height: 40em;
 }
-.poems-base button{
-	padding: 0 1em;
-	border-radius: 0.75em;
-	font-family: 'Times New Roman', Times, serif;
-	cursor: pointer;
-}
-@media only screen and(max-width: 760px) {
-	.poems-base{
-		display: flex;
-		flex-direction: row;
-		position: absolute;
-		min-width: 50%;
-		width: 50%;
-		resize: horizontal;
-	}
-	.poems-base *{
-		display: inline;
-	}
+#poem-content{
+	overflow-y: scroll;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 }

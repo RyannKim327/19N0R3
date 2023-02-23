@@ -8,13 +8,18 @@
 		<link rel="stylesheet" href="res/styles.css">
 	</head>
 	<body>
-		<div class="poems-base">
-			<div>
-				<input type="search" id="search" onkeyup="_s()">
-				<h3>Poems lists</h3>
-				<input type="search" style="visibility: hidden;" onkeyup="_s()">
+		<div class="poems-container">
+			<div class="poems-base">
+				<div>
+					<input type="search" id="search">
+					<h3>Poems lists</h3>
+				</div>
+				<ul class="poems" id="lists"></ul>
 			</div>
-			<ul class="poems" id="lists"></ul>
+			<div class="poems-base poems-content">
+				<h3 id="poem-title"></h3>
+				<p id="poem-content"></p>
+			</div>
 		</div>
 	</body>
 	<script src="res/script.js"></script>
