@@ -85,6 +85,8 @@ body{
 		display: none;
 		position: absolute;
 		z-index: 1;
+		box-shadow: 3px 3px 5px black;
+		border-radius: 0.25em;
 	}
 	.poems-nav-logo{
 		display: flex;
