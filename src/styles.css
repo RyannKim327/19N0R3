@@ -73,8 +73,11 @@ body{
 	padding-top: 0.5em;
 	padding-left: 0.75em;
 }
+
 @media only screen and (max-width: 768px){
-	body{
-		background-color: gainsboro;
+	.poems-lists{
+		position: absolute;
+		z-index: 1;
+		display: none;
 	}
 }
