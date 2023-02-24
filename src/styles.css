@@ -17,6 +17,7 @@ body{
 	background-color: var(--background);
 	color: var(--color);
 }
+
 .poems-container{
 	display: flex;
 	flex-direction: row;
@@ -47,14 +48,14 @@ body{
 	margin-top: 1em;
 }
 .poems-base ul, .poems-base ul li{
-	list-style: inside;
+	list-style: inside; 
 }
 .poems-base ul li a{
 	color: var(--color);
 	text-decoration: none;
 }
 .poems-content{
-	width: 100em;
+	width: 75em;
 	height: 40em;
 }
 #poem-content{
@@ -71,4 +72,9 @@ body{
 .poems-content .poems-heading h5{
 	padding-top: 0.5em;
 	padding-left: 0.75em;
+}
+@media only screen and (max-width: 768px){
+	body{
+		background-color: gainsboro;
+	}
 }

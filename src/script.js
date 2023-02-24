@@ -10,7 +10,6 @@ const get = async (url) => {
 
 let total = 0
 let max = 25
-let id = -1
 let _s = () => {
 	total = 0
 	filter()
@@ -58,7 +57,6 @@ async function read(id_num){
 	})
 	title.textContent = poem.title
 	author.textContent = poem.author
-	console.log(poem.content)
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
 }
 

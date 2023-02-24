@@ -7,6 +7,8 @@ const body = parser.urlencoded({ extended: false })
 
 const write = "/write/my/poem"
 
+const PORT = 3000 | 5000 | process.env.PORT
+
 const gex = (string) => {
 	const str = string + "\\b"
 	return new RegExp(str, "i")
@@ -108,6 +110,6 @@ app.use("/search/:q", (req, res) => {
 	}
 })
 
-app.listen(3000, () => {
-	console.log("Listening on the local server")
+app.listen(PORT, () => {
+	console.log(`Listening with the port ${PORT}`)
 })
