@@ -1,7 +1,7 @@
 :root{
-	--background: #e5ba73;
+	--background: #faf881;
 	--color: #ffffff;
-	--radius: 0.1em;
+	--radius: 0.25em;
 
 	--base-background: #c58940;
 	--nav-color: #b99b6b;
@@ -79,13 +79,12 @@ body{
 	display: none;
 }
 
-
 @media only screen and (max-width: 768px){
 	.poems-lists{
 		display: none;
 		position: absolute;
 		z-index: 1;
-		box-shadow: 3px 3px 5px black;
+		box-shadow: 1px 1px 3px var(--background);
 		border-radius: 0.25em;
 	}
 	.poems-nav-logo{

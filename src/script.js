@@ -9,7 +9,7 @@ const get = async (url) => {
 }
 
 let total = 0
-let max = 25
+let max = 20
 let _s = () => {
 	total = 0
 	filter()
@@ -35,7 +35,7 @@ let filter = async () => {
 			let h = e.author.toLowerCase()
 			if(f.includes(g) || h.includes(g)){
 				if(total < max){
-					t += `<li onclick="read('${e.id}')">${e.title}</a></li>`
+					t += `<li onclick="execute('${e.id}')">${e.title}</a></li>`
 					total++
 				}
 			}
@@ -74,6 +74,12 @@ search.onkeyup = () => {
 	_s()
 }
 read(1)
+
+function execute(id_num){
+	read(id_num)
+	document.getElementById("search").value = ""
+	_s()
+}
 
 document.getElementById("poems-nav").onclick = () => {
 	if(window.innerWidth < 760){
