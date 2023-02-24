@@ -1,9 +1,10 @@
 :root{
-	--background: #121230;
+	--background: #e5ba73;
 	--color: #ffffff;
 	--radius: 0.1em;
 
-	--base-background: #303060;
+	--base-background: #c58940;
+	--nav-color: #b99b6b;
 }
 *{
 	border: none;
@@ -74,10 +75,27 @@ body{
 	padding-left: 0.75em;
 }
 
+.poems-nav-logo{
+	display: none;
+}
+
+
 @media only screen and (max-width: 768px){
 	.poems-lists{
+		display: none;
 		position: absolute;
 		z-index: 1;
-		display: none;
 	}
+	.poems-nav-logo{
+		display: flex;
+		flex-direction: column;
+		margin-right: 1em;
+	}
+	.poems-nav-logo p{
+		min-width: 1em;
+		background-color: var(--nav-color);
+		padding: 0.1em;
+		margin: 0.1em;
+	}
+	
 }

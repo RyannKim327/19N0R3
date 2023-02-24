@@ -58,12 +58,15 @@ async function read(id_num){
 	title.textContent = poem.title
 	author.textContent = poem.author
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
-	if(document.getElementById("poems-nav").style != "none"){
-		document.getElementById("poems-lists-v2").style = "none	"
+	if(window.innerWidth < 760){
+		document.getElementById("poems-lists-v2").style = "none"
 	}
 }
 
 window.onload = () => {
+	if(window.innerWidth < 760){
+		document.getElementById("poems-lists-v2").style = "none"
+	}
 	_s()
 }
 let search = document.getElementById("search")
@@ -73,10 +76,20 @@ search.onkeyup = () => {
 read(1)
 
 document.getElementById("poems-nav").onclick = () => {
-	let l = document.getElementById("poems-lists-v2")
-	if(l.style.display == "none"){
-		l.style.display = "block"
-	}else{
-		l.style.display = "none"
+	if(window.innerWidth < 760){
+		let l = document.getElementById("poems-lists-v2")
+		if(l.style.display == "none"){
+			l.style.display = "block"
+		}else{
+			l.style.display = "none"
+		}
 	}
 }
+
+function sizing(){
+	if(window.innerWidth > 760){
+		document.getElementById("poems-lists-v2").style.display = "block"
+	}
+	setTimeout(sizing, 100)
+}
+sizing()
