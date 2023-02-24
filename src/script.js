@@ -26,7 +26,8 @@ let filter = async () => {
 	let e = list[x]
 		if(s == ""){
 			if(total < max){
-				t += `<li onclick="read('${e.id}')">${e.title}</a></li>`
+				let title = e.title.replace(/(\(.*?\))/gi, "")
+				t += `<li onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
 				total++
 			}
 		}else{
@@ -35,7 +36,8 @@ let filter = async () => {
 			let h = e.author.toLowerCase()
 			if(f.includes(g) || h.includes(g)){
 				if(total < max){
-					t += `<li onclick="execute('${e.id}')">${e.title}</a></li>`
+					let title = e.title.replace(/(\(.*?\))/gi, "")
+					t += `<li onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
 					total++
 				}
 			}

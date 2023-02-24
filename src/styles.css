@@ -51,9 +51,9 @@ body{
 .poems-base ul, .poems-base ul li{
 	list-style: inside; 
 }
-.poems-base ul li a{
-	color: var(--color);
-	text-decoration: none;
+.poems-base sub{
+	font-size: xx-small;
+	font-family: 'Times New Roman', Times, serif	;
 }
 .poems-content{
 	width: 75em;
