@@ -61,6 +61,7 @@ app.get(write, (req, res) => {
 
 app.post(write, body, (req, res) => {
 	const title = req.body.title
+	const author = req.body.author || "Unknown Author"
 	const content = req.body.content.replace(/\-([\w]+)\-\n/gi, "")
 	if(title == undefined || content == undefined || title == "" || content == "")
 		return res.send("No Result")
@@ -69,6 +70,7 @@ app.post(write, body, (req, res) => {
 	json.poems.push({
 		id,
 		title,
+		author,
 		content
 	})
 	fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
