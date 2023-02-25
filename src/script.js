@@ -98,6 +98,6 @@ function sizing(){
 	if(window.innerWidth > 760){
 		document.getElementById("poems-lists-v2").style.display = "block"
 	}
-	setTimeout(sizing, 100)
 }
-sizing()
+
+setInterval(sizing, 100)
