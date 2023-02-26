@@ -62,6 +62,7 @@ async function read(id_num){
 	author.textContent = poem.author
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
 	poem_id = id_num
+	content.classList = ""
 	document.getElementById("poem-content").style = undefined
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
@@ -118,6 +119,7 @@ document.getElementById("about").onclick = () => {
 	content.style.width = "50%"
 	content.style.alignSelf = "center"
 	content.style.overflow = "hidden"
+	content.classList = "poem-about"
 }
 
 setInterval(sizing, 100)

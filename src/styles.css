@@ -118,5 +118,7 @@ body{
 		padding: 0.1em;
 		margin: 0.1em;
 	}
-	
+	.poem-about{
+		width: 75%;
+	}
 }
