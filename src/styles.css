@@ -68,15 +68,33 @@ body{
 .poems-content .poems-heading{
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
 }
-.poems-content .poems-heading h5{
-	padding-top: 0.5em;
-	padding-left: 0.75em;
+
+.poems-heading div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.poems-heading div h5{
+	margin: 0.5em;
 }
 
 .poems-nav-logo{
 	display: none;
+}
+
+.poems-heading .poem-menu ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.poems-heading .poem-menu ul li{
+	list-style: none;
+}
+.poems-heading .poem-menu ul li:nth-child(even){
+	margin: 0 0.5em;
 }
 
 @media only screen and (max-width: 768px){
@@ -87,12 +105,13 @@ body{
 		box-shadow: 1px 1px 3px var(--background);
 		border-radius: 0.25em;
 	}
-	.poems-nav-logo{
+	.poems-heading div .poems-nav-logo{
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		margin-right: 1em;
 	}
-	.poems-nav-logo p{
+	.poems-heading div .poems-nav-logo p{
 		min-width: 1em;
 		background-color: var(--nav-color);
 		padding: 0.1em;
