@@ -10,6 +10,7 @@ const get = async (url) => {
 
 let total = 0
 let max = 20
+let poem_id = 1
 let _s = () => {
 	total = 0
 	filter()
@@ -60,6 +61,8 @@ async function read(id_num){
 	title.textContent = poem.title
 	author.textContent = poem.author
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
+	poem_id = id_num
+	document.getElementById("poem-content").style = undefined
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
@@ -98,6 +101,23 @@ function sizing(){
 	if(window.innerWidth > 760){
 		document.getElementById("poems-lists-v2").style.display = "block"
 	}
+}
+
+document.getElementById("home").onclick = () => {
+	read(poem_id)
+}
+
+document.getElementById("about").onclick = () => {
+	let title = document.getElementById("poem-title")
+	let author = document.getElementById("poem-author")
+	let content = document.getElementById("poem-content")
+	title.textContent = "About"
+	author.textContent = ""
+	content.textContent = "Greetings, I am Ryann Kim Sesgundo, the one behind this project 19N0R3 Poetry. This is just a platform, where I try to practice my skills in development, also in designing, with the combination of my hobby, which is writing poems. There are lot of studies happens, before I've made this, ans lots of version released, and I'm much happy that you're here and reading some poems, written by the people and contributors behind this small platform. Enjoy and I hope that you'll liked it."
+	content.style.textAlign = "justify"
+	content.style.width = "50%"
+	content.style.alignSelf = "center"
+	content.style.overflow = "hidden"
 }
 
 setInterval(sizing, 100)

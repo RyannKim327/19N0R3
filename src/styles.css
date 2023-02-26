@@ -92,6 +92,7 @@ body{
 }
 .poems-heading .poem-menu ul li{
 	list-style: none;
+	cursor: pointer;
 }
 .poems-heading .poem-menu ul li:nth-child(even){
 	margin: 0 0.5em;
