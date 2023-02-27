@@ -93,12 +93,11 @@ function execute(id_num){
 document.getElementById("poems-nav").onclick = () => {
 	if(window.innerWidth < 760){
 		let l = document.getElementById("poems-lists-v2")
-		if(l.style.display == "block"){
+		if(l.style.display != "none"){
 			l.style.display = "none"
 		}
 	}
 }
-
 function sizing(){
 	if(window.innerWidth > 760){
 		document.getElementById("poems-lists-v2").style.display = "block"
@@ -147,13 +146,11 @@ document.getElementById("poems-nav-icon").onclick = () => {
 	setTimeout(() => {
 		if(window.innerWidth < 760){
 			let l = document.getElementById("poems-lists-v2")
-			if(l.style.display == "none"){
+			if(l.style.display != "block"){
 				l.style.display = "block"
 			}
-			
-		console.log("h")
 		}
-	}, 100);
+	}, 1000);
 }
 
 setInterval(sizing, 100)
