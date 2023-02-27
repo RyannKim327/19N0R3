@@ -28,7 +28,7 @@ let filter = async () => {
 		if(s == ""){
 			if(total < max){
 				let title = e.title.replace(/(\(.*?\))/gi, "")
-				t += `<li onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
+				t += `<li class="poems_title" id="poem_id_${e.id}" onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
 				total++
 			}
 		}else{
@@ -64,6 +64,9 @@ async function read(id_num){
 	poem_id = id_num
 	content.classList = ""
 	document.getElementById("poem-content").style = undefined
+	document.getElementById("home").style.color = "#00de00"
+	document.getElementById("about").style.color = "#ffffff"
+	document.getElementById("contact").style.color = "#ffffff"
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
@@ -90,9 +93,7 @@ function execute(id_num){
 document.getElementById("poems-nav").onclick = () => {
 	if(window.innerWidth < 760){
 		let l = document.getElementById("poems-lists-v2")
-		if(l.style.display == "none"){
-			l.style.display = "block"
-		}else{
+		if(l.style.display == "block"){
 			l.style.display = "none"
 		}
 	}
@@ -120,6 +121,9 @@ document.getElementById("about").onclick = () => {
 	content.style.alignSelf = "center"
 	content.style.overflow = "hidden"
 	content.classList = "poem-about"
+	document.getElementById("home").style.color = "#ffffff"
+	document.getElementById("about").style.color = "#00de00"
+	document.getElementById("contact").style.color = "#ffffff"
 }
 
 document.getElementById("contact").onclick = () => {
@@ -134,6 +138,22 @@ document.getElementById("contact").onclick = () => {
 	content.style.alignSelf = "center"
 	content.style.overflow = "hidden"
 	content.classList = "poem-about"
+	document.getElementById("home").style.color = "#ffffff"
+	document.getElementById("about").style.color = "#ffffff"
+	document.getElementById("contact").style.color = "#00de00"
+}
+
+document.getElementById("poems-nav-icon").onclick = () => {
+	setTimeout(() => {
+		if(window.innerWidth < 760){
+			let l = document.getElementById("poems-lists-v2")
+			if(l.style.display == "none"){
+				l.style.display = "block"
+			}
+			
+		console.log("h")
+		}
+	}, 100);
 }
 
 setInterval(sizing, 100)
