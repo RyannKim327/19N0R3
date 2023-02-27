@@ -5,6 +5,8 @@
 	--color: #ffffff;
 	--radius: 0.25em;
 
+	--placeholder: #dedede;
+
 	--base-background: #c58940;
 	--nav-color: #b99b6b;
 }
@@ -38,6 +40,11 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+.poems-base input::placeholder{
+	color: var(--placeholder);
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
 }
 .poems-base input{
 	background-color: var(--base-background);
