@@ -122,4 +122,18 @@ document.getElementById("about").onclick = () => {
 	content.classList = "poem-about"
 }
 
+document.getElementById("contact").onclick = () => {
+	let title = document.getElementById("poem-title")
+	let author = document.getElementById("poem-author")
+	let content = document.getElementById("poem-content")
+	title.textContent = "Contact us"
+	author.textContent = ""
+	content.textContent = ""
+	content.style.textAlign = "justify"
+	content.style.width = "50%"
+	content.style.alignSelf = "center"
+	content.style.overflow = "hidden"
+	content.classList = "poem-about"
+}
+
 setInterval(sizing, 100)

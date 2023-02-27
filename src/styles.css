@@ -1,3 +1,5 @@
+@import url('https://use.fontawesome.com/releases/v6.3.0/css/all.css');
+
 :root{
 	--background: #faf881;
 	--color: #ffffff;
@@ -78,7 +80,7 @@ body{
 	justify-content: space-around;
 }
 .poems-heading div h5{
-	margin: 0.5em;
+	margin: 0.45em;
 }
 
 .poems-nav-logo{
@@ -95,7 +97,13 @@ body{
 	cursor: pointer;
 }
 .poems-heading .poem-menu ul li:nth-child(even){
-	margin: 0 0.5em;
+	padding: 0 0.5em;
+}
+.poems-heading .poem-menu ul li span{
+	display: block;
+}
+.poems-heading .poem-menu ul li .poem-icon{
+	display: none;
 }
 
 @media only screen and (max-width: 768px){
@@ -119,6 +127,12 @@ body{
 		margin: 0.1em;
 	}
 	.poem-about{
-		width: 75%;
+		width: 75% !important;
+	}
+	.poems-heading .poem-menu ul li span{
+		display: none;
+	}
+	.poems-heading .poem-menu ul li .poem-icon{
+		display: block;
 	}
 }
