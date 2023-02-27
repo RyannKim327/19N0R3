@@ -52,12 +52,8 @@ async function read(id_num){
 	let title = document.getElementById("poem-title")
 	let author = document.getElementById("poem-author")
 	let content = document.getElementById("poem-content")
-	let poem = await fetch(`/read/${id_num}`).then(r => {
-		return r.json()
-	}).catch(error => {
-		console.error(`Error [Read]: ${e}`)
-		return null
-	})
+	let api = await fetch(`/read/${id_num}`)
+	let poem = await api.json()
 	title.textContent = poem.title
 	author.textContent = poem.author
 	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
