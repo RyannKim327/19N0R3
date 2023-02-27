@@ -54,9 +54,23 @@ async function read(id_num){
 	let content = document.getElementById("poem-content")
 	let api = await fetch(`/read/${id_num}`)
 	let poem = await api.json()
+	let txt = ""
+	let lists = [
+		"-i-", "-ii-", "-iii-", '-iv-', '-v-',
+		'-vi-', '-vii-', '-viii-', '-ix-', '-x-',
+		"-xi-", "-xii-", "-xiii-", '-xiv-', '-xv-',
+		'-xvi-', '-xvii-', '-xviii-', '-xix-', '-xx-',
+		"-xxi-", "-xxii-", "-xxiii-", '-xxiv-', '-xxv-',
+		'-xxvi-', '-xxvii-', '-xxviii-', '-xxix-', '-xxx-'
+	]
+	let txts = poem.content.replace(/\r/gi, "").split("\n\n")
+	for(let i = 0; i < txts.length; i++){
+		let values = txts[i].replace(/\n/gi, "<br>").replace(/-([\w]+)-/gi, "")
+		txt += `<br><span class='poems-stanza'>${lists[i]}</span>${values}<br>`
+	}
 	title.textContent = poem.title
 	author.textContent = poem.author
-	content.innerHTML = poem.content.replace(/\r\n/gi, "<br>").replace(/\n/gi, "<br>").replace(/\\/gi, "\\")
+	content.innerHTML = txt
 	poem_id = id_num
 	content.classList = ""
 	document.getElementById("poem-content").style = undefined

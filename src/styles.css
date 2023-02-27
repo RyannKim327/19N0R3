@@ -49,13 +49,15 @@ body{
 }
 .poems-base ul{
 	margin-top: 1em;
+	list-style: inside;
 }
-.poems-base ul, .poems-base ul li{
-	list-style: inside; 
+.poems-base ul li{
+	margin-left: 1.5em;
+	list-style: decimal-leading-zero; 
 }
 .poems-base sub{
 	font-size: xx-small;
-	font-family: 'Times New Roman', Times, serif	;
+	font-family: 'Times New Roman', Times, serif;
 }
 .poems-content{
 	width: 75em;
@@ -64,8 +66,9 @@ body{
 #poem-content{
 	overflow-y: scroll;
 	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: bold;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-style: italic;
+	font-weight: lighter;
 }
 .poems-content .poems-heading{
 	display: flex;
@@ -78,6 +81,9 @@ body{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+.poems-heading div h5, .poems-heading div h3{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .poems-heading div h5{
 	margin: 0.45em;
@@ -104,6 +110,13 @@ body{
 }
 .poems-heading .poem-menu ul li .poem-icon{
 	display: none;
+}
+
+.poems-stanza{
+	font-family: 'Times New Roman', Times, serif;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: small-caps;
 }
 
 @media only screen and (max-width: 768px){
