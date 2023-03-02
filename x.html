@@ -2206,7 +2206,7 @@
 	  ]
 	}
   ]
-  let n = 95
+  let n = 100
   function nxt(){
 	if(n < json.length){
 		n++
@@ -2230,6 +2230,14 @@
 		'-xvi-', '-xvii-', '-xviii-', '-xix-', '-xx-',
 		"-xxi-", "-xxii-", "-xxiii-", '-xxiv-', '-xxv-',
 		'-xxvi-', '-xxvii-', '-xxviii-', '-xxix-', '-xxx-'
+	]
+	let list = [
+		"i", "ii", "iii", 'iv', 'v',
+		'vi', 'vii', 'viii', 'ix', 'x',
+		"xi", "xii", "xiii", 'xiv', 'xv',
+		'xvi', 'xvii', 'xviii', 'xix', 'xx',
+		"xxi", "xxii", "xxiii", 'xxiv', 'xxv',
+		'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx'
 	]
 	let txts = post.replace(/\r/gi, "").split("\n\n")
 	for(let i = 0; i < txts.length; i++){
