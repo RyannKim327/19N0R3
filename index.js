@@ -59,6 +59,10 @@ app.get(write, (req, res) => {
 	res.sendFile(__dirname + "/write.html")
 })
 
+app.get("/a", (req, res) => {
+	res.sendFile(__dirname + "/x.html")
+})
+
 app.post(write, body, (req, res) => {
 	const title = req.body.title
 	const author = req.body.author || "Unknown Author"
@@ -74,7 +78,7 @@ app.post(write, body, (req, res) => {
 		content
 	})
 	fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
-	res.send("Success")
+	res.sendFile(__dirname + "/write.html")
 })
 
 app.use("/search/:q", (req, res) => {
