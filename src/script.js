@@ -80,6 +80,7 @@ async function read(id_num){
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
+	document.title = poem.title
 }
 
 window.onload = () => {
