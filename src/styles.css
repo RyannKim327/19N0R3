@@ -12,6 +12,7 @@
 
 	--scrollbar-background: #a77436;
 	--scrollbar-thumb: #77562e;
+	--scrollbar-thumb-dark: #47331b;
 }
 *{
 	border: none;
@@ -147,10 +148,12 @@ body{
 	width: 100%;
 	text-align: center;
 	margin: 0.25em;
+	border-radius: 5em;
 }
 
 .poems-base .poems-paging span:hover{
 	background-color: var(--scrollbar-thumb);
+	color: var(--nav-color);
 }
 
 .poems-stanza{
@@ -161,17 +164,22 @@ body{
 }
 
 ::-webkit-scrollbar{
-	width: 0.25em;
+	width: 0.5em;
 }
 
 ::-webkit-scrollbar-track{
 	background-color: var(--scrollbar-background);
-	border-radius: 15%;
+	border-radius: 5em;
 }
 
 ::-webkit-scrollbar-thumb{
 	background-color: var(--scrollbar-thumb);
-	border-radius: 15%;
+	border-radius: 5em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: var(--scrollbar-thumb-dark);
+	border-radius: 5em;
 }
 
 @media only screen and (max-width: 768px){
