@@ -86,6 +86,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	flex: 1;
 }
 .poems-lists *{
 	padding: 0.25em;
@@ -152,7 +153,7 @@ body{
 .poems-lists .poems-paging{
 	display: flex;
 	flex-direction: row;
-	flex: 1 !important;
+	margin-top: auto;
 }
 
 .poems-base .poems-paging span{

@@ -2206,7 +2206,7 @@
 	  ]
 	}
   ]
-  let n = 120
+  let n = 136
   function nxt(){
 	if(n < json.length){
 		n++
@@ -2241,8 +2241,8 @@
 	]
 	let txts = post.replace(/\r/gi, "").split("\n\n")
 	for(let i = 0; i < txts.length; i++){
-		let values = txts[i].replace(/\n/gi, "\n").replace(/-([\w]+)-/gi, "")
-		txt += `${lists[i]}\n${values}\n\n`
+		let values = txts[i].replace(/\n/gi, "\n")//.replace(/-([\w]+)-/gi, "\n")
+		txt += `${values}\n\n`
 	}
 	navigator.clipboard.writeText(txt)
 	alert("Copied")
