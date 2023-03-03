@@ -62,7 +62,7 @@ app.get(write, (req, res) => {
 app.post(write, body, (req, res) => {
 	const title = req.body.title
 	const author = req.body.author || "Unknown Author"
-	const content = req.body.content.replace(/\-([\w]+)\-\n/gi, "").replace(/\r/gi, "")
+	const content = req.body.content.replace(/\r/gi, "")
 	if(title == undefined || content == undefined || title == "" || content == "")
 		return res.send("No Result")
 	let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
