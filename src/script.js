@@ -81,6 +81,8 @@ async function read(id_num){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
 	document.title = poem.title
+	document.querySelector("meta[name='og:title']").setAttribute("content", poem.title)
+	document.querySelector("meta[name='og:description']").setAttribute("content", `By: ${poem.author}`)
 }
 
 window.onload = () => {
