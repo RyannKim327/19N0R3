@@ -71,7 +71,8 @@ body{
 }
 .poems-base ul li{
 	margin-left: 1.5em;
-	list-style: decimal-leading-zero; 
+	list-style: decimal-leading-zero;
+	font-weight: bolder;
 }
 .poems-base sub{
 	font-size: xx-small;
@@ -92,9 +93,14 @@ body{
 	padding: 0.25em;
 }
 .poems-lists ul li{
-	padding: 0.1em;
 	list-style: decimal-leading-zero;
 	display: block;
+	padding: 0 1em;
+	margin: 0.1em 1em;
+}
+.poems-lists ul li:hover{
+	background-color: var(--scrollbar-thumb-dark);
+	border-radius: 5em;
 }
 #poem-content{
 	overflow-y: scroll;
@@ -165,7 +171,7 @@ body{
 }
 
 .poems-base .poems-paging span:hover{
-	background-color: var(--scrollbar-thumb);
+	background-color: var(--scrollbar-thumb-dark);
 	color: var(--nav-color);
 }
 
