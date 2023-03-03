@@ -81,7 +81,8 @@ body{
 }
 .poems-lists ul li{
 	padding: 0.1em;
-	width: 90%;
+	list-style: decimal-leading-zero;
+	display: block;
 }
 #poem-content{
 	overflow-y: scroll;
@@ -134,6 +135,22 @@ body{
 }
 .poems-heading .poem-menu ul li .poem-icon{
 	display: none;
+}
+
+.poems-base .poems-paging{
+	display: flex;
+	flex-direction: row;
+}
+
+.poems-base .poems-paging span{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0.25em;
+}
+
+.poems-base .poems-paging span:hover{
+	background-color: var(--scrollbar-thumb);
 }
 
 .poems-stanza{

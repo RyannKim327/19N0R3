@@ -11,6 +11,8 @@ const get = async (url) => {
 let total = 0
 let max = 20
 let poem_id = 1
+let page = 0
+let set_of_poems = []
 let _s = () => {
 	total = 0
 	filter()
@@ -22,8 +24,9 @@ let filter = async () => {
 	let s = document.getElementById("search").value
 	const lists = document.getElementById("lists")
 	let t = ""
+	set_of_poems = list
 	if(list.length <= 0) return lists.innerHTML = "There is no Poem listed yet"
-	for(let x = 0; x < list.length; x++){
+	for(let x = page; x < list.length; x++){
 	let e = list[x]
 		if(s == ""){
 			if(total < max){
@@ -175,4 +178,19 @@ if(url_data.get('p') != null){
 	read(url_data.get('p'))
 }else{
 	read(1)
+}
+
+let next_page = document.getElementById("poem-next-page")
+let prev_page = document.getElementById("poem-prev-page")
+next_page.onclick = () => {
+	if((page + max) <= set_of_poems.length){
+		page += max
+		_s()
+	}
+}
+prev_page.onclick = () => {
+	if((page - max) >= 0){
+		page -= max
+		_s()
+	}
 }
