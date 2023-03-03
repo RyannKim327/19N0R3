@@ -81,6 +81,7 @@ body{
 }
 .poems-lists ul li{
 	padding: 0.1em;
+	width: 90%;
 }
 #poem-content{
 	overflow-y: scroll;

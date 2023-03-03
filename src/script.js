@@ -92,11 +92,11 @@ let search = document.getElementById("search")
 search.onkeyup = () => {
 	_s()
 }
-read(1)
 
 function execute(id_num){
 	read(id_num)
 	document.getElementById("search").value = ""
+	window.location.search = "?p=" + id_num
 	_s()
 }
 
@@ -116,6 +116,7 @@ function sizing(){
 
 document.getElementById("home").onclick = () => {
 	read(poem_id)
+	window.location.search = "?p=" + poem_id
 }
 
 document.getElementById("about").onclick = () => {
@@ -164,3 +165,11 @@ document.getElementById("poems-nav-icon").onclick = () => {
 }
 
 setInterval(sizing, 100)
+
+const url = window.location.search
+const url_data = new URLSearchParams(url)
+if(url_data.get('p') != null){
+	read(url_data.get('p'))
+}else{
+	read(1)
+}
