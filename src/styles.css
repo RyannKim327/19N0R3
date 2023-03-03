@@ -45,6 +45,15 @@ body{
 	flex-direction: column;
 	justify-content: center;
 }
+
+.poems-base .search-base{
+	border: 1px var(--color) solid;
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1em;
+}
+
 .poems-base input::placeholder{
 	color: var(--placeholder);
 	font-family: 'Times New Roman', Times, serif;
@@ -52,9 +61,7 @@ body{
 }
 .poems-base input{
 	background-color: var(--base-background);
-	width: auto;
-	border: 1px var(--color) solid;
-	border-radius: var(--radius);
+	width: 100%;
 	color: var(--color);
 	padding: 0 0.5em;
 }
