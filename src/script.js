@@ -24,16 +24,18 @@ let filter = async () => {
 	let s = document.getElementById("search").value
 	const lists = document.getElementById("lists")
 	let t = ""
+	let num_of_filter = 0
 	set_of_poems = list
 	if(list.length <= 0) return lists.innerHTML = "There is no Poem listed yet"
 	for(let x = page; x < list.length; x++){
-	let e = list[x]
+		let e = list[x]
 		if(s == ""){
 			if(total < max){
 				let title = e.title.replace(/(\(.*?\))/gi, "")
 				t += `<li class="poems_title" id="poem_id_${e.id}" onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
 				total++
 			}
+			num_of_filter++
 		}else{
 			let f = e.title.toLowerCase()
 			let g = s.toLowerCase()
@@ -43,9 +45,13 @@ let filter = async () => {
 					let title = e.title.replace(/(\(.*?\))/gi, "")
 					t += `<li onclick="execute('${e.id}')">${title} <sub>${e.author}</sub></a></li>`
 					total++
+					num_of_filter++
 				}
 			}
 		}
+	}
+	if(num_of_filter <= 0){
+		t += "There is no poems with this filter"
 	}
 	lists.innerHTML = t
 	document.getElementById("poems-lists").textContent = "Poems lists - [" + list.length + " poems]"
