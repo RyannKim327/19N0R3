@@ -79,7 +79,6 @@ async function read(id_num){
 	document.getElementById("poem-content").style = undefined
 	document.getElementById("home").style.color = "#00de00"
 	document.getElementById("about").style.color = "#ffffff"
-	document.getElementById("contact").style.color = "#ffffff"
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
@@ -139,24 +138,11 @@ document.getElementById("about").onclick = () => {
 	content.classList = "poem-about"
 	document.getElementById("home").style.color = "#ffffff"
 	document.getElementById("about").style.color = "#00de00"
-	document.getElementById("contact").style.color = "#ffffff"
 }
 
-document.getElementById("contact").onclick = () => {
-	let title = document.getElementById("poem-title")
-	let author = document.getElementById("poem-author")
-	let content = document.getElementById("poem-content")
-	title.textContent = "Contact us"
-	author.textContent = ""
-	content.textContent = ""
-	content.style.textAlign = "justify"
-	content.style.width = "50%"
-	content.style.alignSelf = "center"
-	content.style.overflow = "hidden"
-	content.classList = "poem-about"
-	document.getElementById("home").style.color = "#ffffff"
-	document.getElementById("about").style.color = "#ffffff"
-	document.getElementById("contact").style.color = "#00de00"
+document.getElementById("share").onclick = () => {
+	navigator.clipboard.writeText(`${window.location}`)
+	alert("Copied to clipboard")
 }
 
 document.getElementById("poems-nav-icon").onclick = () => {
