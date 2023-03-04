@@ -5,7 +5,7 @@ const path = require("path")
 const app = express()
 const body = parser.urlencoded({ extended: false })
 
-const write = "/write/my/poem"
+const write = "/compose"
 
 const PORT = 3000 | 5000 | process.env.PORT
 
@@ -55,26 +55,30 @@ app.use("/read/:id", (req, res) => {
 	res.send(js)
 })
 
-app.get(write, (req, res) => {
-	res.sendFile(__dirname + "/write.html")
-})
-
 app.post(write, body, (req, res) => {
-	const title = req.body.title
+	let users = JSON.parse(fs.readFileSync("users.json", "utf8"))
 	const author = req.body.author || "Unknown Author"
-	const content = req.body.content.replace(/\r/gi, "")
-	if(title == undefined || content == undefined || title == "" || content == "")
-		return res.send("No Result")
-	let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
-	let id = json.poems.length + 1
-	json.poems.push({
-		id,
-		title,
-		author,
-		content
-	})
-	fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
-	res.sendFile(__dirname + "/write.html")
+	if(users[author] == undefined){
+		return res.send("User doesn't exists")
+	}else{
+		if(users[author].password == req.body.pass){
+			const title = req.body.title
+			const content = req.body.content.replace(/\r/gi, "")
+			if(title == undefined || content == undefined || title == "" || content == "")
+				return res.send("No Result")
+			let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
+			let id = json.poems.length + 1
+			json.poems.push({
+				id,
+				title,
+				author,
+				content
+			})
+			fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
+		}else{
+			return res.send("User password doesn't match to our database")
+		}
+	}
 })
 
 app.use("/search/:q", (req, res) => {
