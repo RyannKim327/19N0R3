@@ -39,6 +39,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	min-width: 20em;
+	min-height: 93vh;
 }
 .poems-base div{
 	display: flex;
@@ -93,9 +94,17 @@ body{
 .poems-lists *{
 	padding: 0.25em;
 }
+
+.poems-lists ul{
+	overflow-y: scroll;
+	min-height: 70vh;
+	max-height: 70vh;
+}
+
 .poems-lists ul li{
 	list-style: decimal-leading-zero;
-	display: block;
+	display: flex;
+	flex-direction: column;
 	padding: 0 1em;
 	margin: 0.1em 1em;
 }
