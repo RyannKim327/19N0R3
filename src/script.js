@@ -136,7 +136,9 @@ document.getElementById("about").onclick = () => {
 	let content = document.getElementById("poem-content")
 	title.textContent = "About"
 	author.textContent = ""
-	content.textContent = "Greetings, I am Ryann Kim Sesgundo, the one behind this project 19N0R3 Poetry. This is just a platform, where I try to practice my skills in development, also in designing, with the combination of my hobby, which is writing poems. There are lot of studies happens, before I've made this, ans lots of version released, and I'm much happy that you're here and reading some poems, written by the people and contributors behind this small platform. Enjoy and I hope that you'll liked it."
+	content.innerHTML = "&emsp;Greetings, I am Ryann Kim Sesgundo, the one behind this project 19N0R3 Poetry. This is just a platform, where I try to practice my skills in development, also in designing, with the combination of my hobby, which is writing poems. There are lot of studies happens, before I've made this, ans lots of version released, and I'm much happy that you're here and reading some poems, written by the people and contributors behind this small platform. Enjoy and I hope that you'll liked it."
+	content.innerHTML += "<br><br>"
+	content.innerHTML += "&emsp;If you want to contribute and share your poems to this platform, kindly message us on https://facebook.com/MPOP.ph so that, we can send an application you need to use, this is a part of our terms of service policy, where we need to monitor, to avoid the spem and make published poems more appropiate. The main goal here is to give inspiration for every individual, also motivation for everyone."
 	content.style.textAlign = "justify"
 	content.style.width = "50%"
 	content.style.alignSelf = "center"
