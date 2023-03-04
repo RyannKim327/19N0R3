@@ -55,17 +55,79 @@ app.use("/read/:id", (req, res) => {
 	res.send(js)
 })
 
+app.post("/login", body, (req, res) => {
+	let users = JSON.parse(fs.readFileSync("users.json", "utf8"))
+	let username = req.body.username
+	let password = req.body.password
+
+	if(users[username.toLowerCase()] == undefined){
+		res.send(JSON.stringify({
+			"register": false,
+			"msg": "Username might not be existed or wrong password"
+		}))
+	}else{
+		if(users[username.toLowerCase()].password == password){
+			res.send(JSON.stringify({
+				"register": true,
+				"msg": "You're now logged in"
+			}))
+		}else{
+			res.send(JSON.stringify({
+				"register": false,
+				"msg": "Username might not be existed or wrong password"
+			}))
+		}
+	}
+})
+
+app.post("/register", body, (req, res) => {
+	let users = JSON.parse(fs.readFileSync("users.json", "utf8"))
+	let username = req.body.username
+	let password = req.body.password
+	let passwordv2 = req.body.passwordv2
+
+	if(users[username.toLowerCase()] == undefined){
+		if(password == passwordv2){
+			users[username.toLowerCase()] = {
+				username,
+				password
+			}
+			fs.writeFileSync("users.json", JSON.stringify(users), "utf8")
+			res.send(JSON.stringify({
+				"register": true,
+				"msg": "Thank you for joining us, you are now alread signed in."
+			}))
+		}else{
+			res.send(JSON.stringify({
+				"register": false,
+				"msg": "Mismatch Passwords"
+			}))
+		}
+	}else{
+		res.send(JSON.stringify({
+			"register": false,
+			"msg": "Username is already taken"
+		}))
+	}
+})
+
 app.post(write, body, (req, res) => {
 	let users = JSON.parse(fs.readFileSync("users.json", "utf8"))
 	const author = req.body.author || "Unknown Author"
-	if(users[author] == undefined){
-		return res.send("User doesn't exists")
+	if(users[author.toLowerCase()] == undefined){
+		return res.send(JSON.stringify({
+			"isPosted": false,
+			"msg": "Username is not existed to our database"
+		}))
 	}else{
-		if(users[author].password == req.body.pass){
+		if(users[author.toLowerCase()].password == req.body.password){
 			const title = req.body.title
 			const content = req.body.content.replace(/\r/gi, "")
 			if(title == undefined || content == undefined || title == "" || content == "")
-				return res.send("No Result")
+				return res.send(JSON.stringify({
+					"isPosted": false,
+					"msg": "Incomplete data"
+				}))
 			let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
 			let id = json.poems.length + 1
 			json.poems.push({
@@ -75,8 +137,15 @@ app.post(write, body, (req, res) => {
 				content
 			})
 			fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
+			res.send(JSON.stringify({
+				"isPosted": true,
+				"msg": "Your poem is now posted"
+			}))
 		}else{
-			return res.send("User password doesn't match to our database")
+			return res.send(JSON.stringify({
+				"isPosted": false,
+				"msg": "Username is not existed to our database"
+			}))
 		}
 	}
 })
