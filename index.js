@@ -39,6 +39,19 @@ app.get("/read", (req, res) => {
 	res.sendFile(`${__dirname}/read.html`)
 })
 
+app.get("/download", (req,res) => {
+	res.download(`${__dirname}/res/app.apk`)
+})
+
+app.get("/app_updates", (req, res) => {
+	let json = {
+		"description": "New update has arrived, kindly download the application for better experience",
+		"versionName": "0.0.1",
+		"forceToVersion": 1
+	}
+	res.send(JSON.stringify(json))
+})
+
 app.use("/read/:id", (req, res) => {
 	const json = JSON.parse(fs.readFileSync("data.json", "utf8"))
 	let js = {}

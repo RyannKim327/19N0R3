@@ -164,6 +164,10 @@ document.getElementById("poems-nav-icon").onclick = () => {
 	}, 1000);
 }
 
+document.getElementById("download").onclick = () => {
+	location.href = "/download"
+}
+
 setInterval(sizing, 100)
 
 const url = window.location.search
