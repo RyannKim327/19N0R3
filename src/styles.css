@@ -222,7 +222,7 @@ body{
 		z-index: 1;
 		box-shadow: 1px 1px 3px var(--background);
 		border-radius: 0.25em;
-		animation: slide 0.1s;
+		animation: slide 1s;
 	}
 	.poems-heading div .poems-nav-logo{
 		display: flex;
@@ -248,7 +248,7 @@ body{
 	}
 	@keyframes slide{
 		from{
-			translate: -100px;
+			translate: -75em;
 		}to{
 			translate: 0;
 		}
