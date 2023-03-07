@@ -63,6 +63,12 @@ async function read(id_num){
 	let content = document.getElementById("poem-content")
 	let api = await fetch(`/read/${id_num}`)
 	let poem = await api.json()
+	console.log(poem)
+	if(poem.content == undefined || poem.title == undefined){
+		poem_id = 1
+		api = await fetch(`/read/1`)
+		poem = await api.json()
+	}
 	let txt = ""
 	let lists = [
 		"-i-", "-ii-", "-iii-", '-iv-', '-v-',
