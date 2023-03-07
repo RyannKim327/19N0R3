@@ -211,6 +211,10 @@ body{
 	border-radius: 5em;
 }
 
+.poems-heading div .poems-nav-logo{
+	display: none;
+}
+
 @media only screen and (max-width: 768px){
 	.poems-lists{
 		display: none;
@@ -218,18 +222,13 @@ body{
 		z-index: 1;
 		box-shadow: 1px 1px 3px var(--background);
 		border-radius: 0.25em;
+		animation: slide 0.1s;
 	}
 	.poems-heading div .poems-nav-logo{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		margin-right: 1em;
-	}
-	.poems-heading div .poems-nav-logo p{
-		min-width: 1em;
-		background-color: var(--nav-color);
-		padding: 0.1em;
-		margin: 0.1em;
 	}
 	.poem-about{
 		width: 75% !important;
@@ -239,5 +238,19 @@ body{
 	}
 	.poems-heading .poem-menu ul li .poem-icon{
 		display: block;
+	}
+	@-webkit-keyframes slide{
+		from{
+			translate: -75em;
+		}to{
+			translate: 0;
+		}
+	}
+	@keyframes slide{
+		from{
+			translate: -100px;
+		}to{
+			translate: 0;
+		}
 	}
 }
