@@ -105,12 +105,12 @@ body{
 	list-style: decimal-leading-zero;
 	display: flex;
 	flex-direction: column;
-	padding: 0 1em;
-	margin: 0.1em 1em;
+	padding: 0 0.5em;
+	margin: 0.1em 0.5em;
+	border-radius: var(--radius);
 }
 .poems-lists ul li:hover{
 	background-color: var(--scrollbar-thumb-dark);
-	border-radius: 5em;
 }
 #poem-content{
 	overflow-y: scroll;
