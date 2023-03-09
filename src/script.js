@@ -51,7 +51,7 @@ let filter = async () => {
 		}
 	}
 	if(num_of_filter <= 0){
-		t += "There is no poems with this filter"
+		t += "<li>There is no poems with this filter</li>"
 	}
 	lists.innerHTML = t
 	document.getElementById("poems-lists").textContent = "Poems lists - [" + list.length + " poems]"
