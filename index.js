@@ -163,6 +163,51 @@ app.post(write, body, (req, res) => {
 	}
 })
 
+app.post("/poem_update", body, (req, res) => {
+	let users = JSON.parse(fs.readFileSync("users.json", "utf8"))
+	const author = req.body.author || "Unknown Author"
+	if(users[author.toLowerCase()] == undefined){
+		return res.send(JSON.stringify({
+			"isPosted": false,
+			"msg": "Username is not existed to our database"
+		}))
+	}else{
+		if(users[author.toLowerCase()].password == req.body.password){
+			const title = req.body.title
+			const poem_id = req.body.id
+			const content = req.body.content.replace(/\r/gi, "")
+			if(title == undefined || content == undefined || title == "" || content == "" || poem_id == "" || poem_id == undefined)
+				return res.send(JSON.stringify({
+					"isPosted": false,
+					"msg": "Incomplete data"
+				}))
+			let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
+			if(json[poem_id - 1]['title'] != title || json[poem_id - 1]['author'] != author){
+				return res.send(JSON.stringify({
+					"isPosted": false,
+					"msg": "Declined Permission"
+				}))
+			}
+			json.poems[poem_id - 1] = {
+				poem_id,
+				title,
+				author,
+				content
+			}
+			fs.writeFileSync("data.json", JSON.stringify(json), "utf8")
+			res.send(JSON.stringify({
+				"isPosted": true,
+				"msg": "Your poem is now updated"
+			}))
+		}else{
+			return res.send(JSON.stringify({
+				"isPosted": false,
+				"msg": "Username is not existed to our database"
+			}))
+		}
+	}
+})
+
 app.use("/search/:q", (req, res) => {
 	let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
 	let s = req.params.q
