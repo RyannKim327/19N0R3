@@ -182,14 +182,14 @@ app.post("/poem_update", body, (req, res) => {
 					"msg": "Incomplete data"
 				}))
 			let json = JSON.parse(fs.readFileSync("data.json", "utf8"))
-			if(json[poem_id - 1]['title'] != title || json[poem_id - 1]['author'] != author){
+			if(json.poems[poem_id - 1]['title'] != title || json.poems[poem_id - 1]['author'] != author){
 				return res.send(JSON.stringify({
 					"isPosted": false,
 					"msg": "Declined Permission"
 				}))
 			}
 			json.poems[poem_id - 1] = {
-				poem_id,
+				id: parseInt(poem_id),
 				title,
 				author,
 				content
