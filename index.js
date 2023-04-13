@@ -2,6 +2,7 @@ const express = require("express")
 const fs = require("fs")
 const parser = require("body-parser")
 const path = require("path")
+const cors = require("cors")
 const app = express()
 const body = parser.urlencoded({ extended: false })
 
@@ -14,6 +15,7 @@ const gex = (string) => {
 	return new RegExp(str, "i")
 }
 
+app.use(cors())
 app.use(express.static("public"))
 
 app.use("/res", express.static(path.join(`${__dirname}/src`)))
