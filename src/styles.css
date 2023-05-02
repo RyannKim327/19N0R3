@@ -1,18 +1,18 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 
 :root{
-	--background: #faf881;
+	--background: #f0d8cc;
 	--color: #ffffff;
 	--radius: 0.25em;
 
 	--placeholder: #dedede;
 
-	--base-background: #c58940;
+	--base-background: #cba692;
 	--nav-color: #b99b6b;
 
-	--scrollbar-background: #a77436;
-	--scrollbar-thumb: #77562e;
-	--scrollbar-thumb-dark: #47331b;
+	--scrollbar-background: #312f2f;
+	--scrollbar-thumb: #80786b;
+	--scrollbar-thumb-dark: #756763;
 }
 *{
 	border: none;
@@ -38,8 +38,8 @@ body{
 	border-radius: var(--radius);
 	display: flex;
 	flex-direction: column;
-	min-width: 20em;
-	min-height: 93vh;
+	min-width: 45%;
+	height: 90vh;
 }
 .poems-base div{
 	display: flex;
@@ -82,7 +82,7 @@ body{
 
 .poems-content{
 	width: 100%;
-	height: 40em;
+	height: 92vh;
 }
 .poems-lists{
 	margin-right: 0.25em;
@@ -90,6 +90,8 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	flex: 1;
+	min-width: 20%;
+	height: 92vh;
 }
 .poems-lists *{
 	padding: 0.25em;
@@ -97,8 +99,8 @@ body{
 
 .poems-lists ul{
 	overflow-y: scroll;
-	min-height: 70vh;
-	max-height: 70vh;
+	min-height: 50vh;
+	max-height: 67vh;
 }
 
 .poems-lists ul li{
