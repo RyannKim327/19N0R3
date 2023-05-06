@@ -1,14 +1,15 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--background: #f0d8cc;
+	--background: #e1dcd9;
 	--color: #ffffff;
 	--radius: 0.25em;
 
 	--placeholder: #dedede;
 
-	--base-background: #cba692;
-	--nav-color: #b99b6b;
+	--base-background: #a67f78;
+	--nav-color: #324385;
 
 	--scrollbar-background: #312f2f;
 	--scrollbar-thumb: #80786b;
@@ -104,7 +105,6 @@ body{
 }
 
 .poems-lists ul li{
-	list-style: decimal-leading-zero;
 	display: flex;
 	flex-direction: column;
 	padding: 0 0.5em;
@@ -117,8 +117,9 @@ body{
 #poem-content{
 	overflow-y: scroll;
 	text-align: center;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-style: italic;
+	font-family: 'Rochester', cursive;
+	font-size: large;
+	font-style: oblique !important;
 	font-weight: lighter;
 }
 .poems-content .poems-heading{
@@ -188,7 +189,7 @@ body{
 }
 
 .poems-stanza{
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Gideon Roman', cursive;
 	font-style: normal;
 	font-weight: bold;
 	font-variant: small-caps;
