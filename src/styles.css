@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--background: #e1dcd9;
-	--color: #ffffff;
+	--background: #c7ffc3;
+	--color: #16530c;
 	--radius: 0.25em;
 
-	--placeholder: #dedede;
+	--placeholder: #00790c;
 
-	--base-background: #a67f78;
-	--nav-color: #324385;
+	--base-background: #7cff98;
+	--nav-color: #0c8c4a;
 
-	--scrollbar-background: #312f2f;
-	--scrollbar-thumb: #80786b;
-	--scrollbar-thumb-dark: #756763;
+	--scrollbar-background: transparent;
+	--scrollbar-thumb: #034f04;
+	--scrollbar-thumb-dark: #32ad36;
 }
 *{
 	border: none;
@@ -201,6 +201,7 @@ body{
 
 ::-webkit-scrollbar-track{
 	background-color: var(--scrollbar-background);
+	border: 1px var(--scrollbar-thumb) solid;
 	border-radius: 5em;
 }
 
