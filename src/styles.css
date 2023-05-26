@@ -120,7 +120,7 @@ body{
 	font-family: 'Rochester', cursive;
 	font-size: large;
 	font-style: oblique !important;
-	font-weight: lighter;
+	font-weight: bold;
 }
 .poems-content .poems-heading{
 	display: flex;
@@ -191,7 +191,8 @@ body{
 .poems-stanza{
 	font-family: 'Gideon Roman', cursive;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: bolder;
+	font-size: smaller;
 	font-variant: small-caps;
 }
 
