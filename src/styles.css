@@ -2,22 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--background: #edffec;
-	--color: #16530c;
+	--background: #ffffff;
+	--color: #000000;
 	--radius: 0.25em;
 
-	--placeholder: #00790c;
+	--placeholder: #ffffff;
 
-	--base-background: #e1f8e1;
-	--nav-color: #0c8c4a;
+	--base-background: #13132050;
+	--nav-color: #79659b;
 
-	--shadow: #8cff98aa;
+	--shadow: #131320aa;
 
 	--scrollbar-background: transparent;
-	--scrollbar-thumb: #50d152;
-	--scrollbar-thumb-dark: #32ad36;
+	--scrollbar-thumb: #79659b;
+	--scrollbar-thumb-dark: #523880;
 
-	--selected: #000000;
+	--selected: #ffffff;
 }
 *{
 	border: none;
@@ -66,7 +66,7 @@ body{
 	text-align: center;
 }
 .poems-base input{
-	background-color: var(--base-background);
+	background-color: transparent;
 	width: 100%;
 	color: var(--color);
 	padding: 0 0.5em;
