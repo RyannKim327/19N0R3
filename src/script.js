@@ -88,8 +88,8 @@ async function read(id_num){
 	poem_id = id_num
 	content.classList = ""
 	document.getElementById("poem-content").style = undefined
-	document.getElementById("home").style.color = "var(--color)"
-	document.getElementById("about").style.color = "#ffffff"
+	document.getElementById("about").style.color = "var(--color)"
+	document.getElementById("home").style.color = "var(--selected)"
 	if(window.innerWidth < 760){
 		document.getElementById("poems-lists-v2").style = "none"
 	}
@@ -149,8 +149,8 @@ document.getElementById("about").onclick = () => {
 	content.style.alignSelf = "center"
 	content.style.overflow = "hidden"
 	content.classList = "poem-about"
-	document.getElementById("home").style.color = "#ffffff"
-	document.getElementById("about").style.color = "var(--color)"
+	document.getElementById("about").style.color = "var(--selected)"
+	document.getElementById("home").style.color = "var(--color)"
 }
 
 document.getElementById("share").onclick = () => {

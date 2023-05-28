@@ -2,18 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--background: #c7ffc3;
+	--background: #edffec;
 	--color: #16530c;
 	--radius: 0.25em;
 
 	--placeholder: #00790c;
 
-	--base-background: #7cff98;
+	--base-background: #e1f8e1;
 	--nav-color: #0c8c4a;
 
+	--shadow: #8cff98aa;
+
 	--scrollbar-background: transparent;
-	--scrollbar-thumb: #034f04;
+	--scrollbar-thumb: #50d152;
 	--scrollbar-thumb-dark: #32ad36;
+
+	--selected: #000000;
 }
 *{
 	border: none;
@@ -84,9 +88,9 @@ body{
 .poems-content{
 	width: 100%;
 	height: 92vh;
-	box-shadow: 3px 3px 5px #00790caa,
-	-3px -3px 5px inset #00790caa,
-	-1px -1px 3px #00790caa;
+	box-shadow: 3px 3px 5px var(--shadow),
+	-3px -3px 5px inset var(--shadow),
+	-1px -1px 3px var(--shadow);
 }
 .poems-lists{
 	margin-right: 0.25em;
@@ -96,9 +100,9 @@ body{
 	flex: 1;
 	min-width: 20%;
 	height: 92vh;
-	box-shadow: -3px 3px 5px #00790caa,
-	3px -3px 5px inset #00790caa,
-	1px -1px 3px #00790caa;
+	box-shadow: -3px 3px 5px var(--shadow),
+	3px -3px 5px inset var(--shadow),
+	1px -1px 3px var(--shadow);
 }
 .poems-lists *{
 	padding: 0.25em;
