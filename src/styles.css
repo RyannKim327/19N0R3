@@ -238,7 +238,7 @@ body{
 		position: absolute;
 		z-index: 1;
 		box-shadow: 1px 1px 3px var(--background);
-		border-radius: 0.25em;
+		border-radius: var(--radius);
 		animation: slide 3s;
 		border: 0;
 	}
