@@ -4,18 +4,23 @@
 :root{
 	--background: #ffffff;
 	--color: #000000;
+	--color2: #182531;
 	--radius: 0.25em;
 
-	--placeholder: #ffffff;
+	--placeholder: #000000;
 
-	--base-background: #13132050;
+	--base-background: #ffffff;
 	--nav-color: #79659b;
 
-	--shadow: #131320aa;
+	--hover: #182531;
+	--hover-color: #c4d4e0;
+
+	--shadow: #a7c5dc;
+	--shadow2: #c4d4e0;
 
 	--scrollbar-background: transparent;
-	--scrollbar-thumb: #79659b;
-	--scrollbar-thumb-dark: #523880;
+	--scrollbar-thumb: #000000;
+	--scrollbar-thumb-dark: #131320;
 
 	--selected: #ffffff;
 }
@@ -88,9 +93,8 @@ body{
 .poems-content{
 	width: 100%;
 	height: 92vh;
-	box-shadow: 3px 3px 5px var(--shadow),
-	-3px -3px 5px inset var(--shadow),
-	-1px -1px 3px var(--shadow);
+	box-shadow: 5px 5px 20px var(--shadow);
+	border-radius: .5em;
 }
 .poems-lists{
 	margin-right: 0.25em;
@@ -100,9 +104,8 @@ body{
 	flex: 1;
 	min-width: 20%;
 	height: 92vh;
-	box-shadow: -3px 3px 5px var(--shadow),
-	3px -3px 5px inset var(--shadow),
-	1px -1px 3px var(--shadow);
+	box-shadow: -10px 10px 20px var(--shadow),
+	5px -5px 15px var(--shadow2);
 }
 .poems-lists *{
 	padding: 0.25em;
@@ -122,7 +125,8 @@ body{
 	border-radius: var(--radius);
 }
 .poems-lists ul li:hover{
-	background-color: var(--scrollbar-thumb-dark);
+	background-color: var(--hover);
+	color: var(--hover-color);
 }
 #poem-content{
 	overflow-y: scroll;
@@ -130,7 +134,8 @@ body{
 	font-family: 'Rochester', cursive;
 	font-size: large;
 	font-style: oblique !important;
-	font-weight: bold;
+	font-weight: 50;
+	color: var(--color2);
 }
 .poems-content .poems-heading{
 	display: flex;
@@ -194,8 +199,8 @@ body{
 }
 
 .poems-base .poems-paging span:hover{
-	background-color: var(--scrollbar-thumb-dark);
-	color: var(--nav-color);
+	background-color: var(--hover);
+	color: var(--hover-color);
 }
 
 .poems-stanza{
