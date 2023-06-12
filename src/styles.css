@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--background: #ffffff;
+	--background: #c2d5c7;
 	--color: #000000;
 	--color2: #182531;
-	--radius: 0.25em;
+	--radius: 0.5em;
 
 	--placeholder: #000000;
 
-	--base-background: #ffffff;
+	--base-background: #c4d4e0;
 	--nav-color: #79659b;
 
 	--hover: #182531;
-	--hover-color: #c4d4e0;
+	--hover-color: #50595f;
 
-	--shadow: #a7c5dc;
-	--shadow2: #c4d4e0;
+	--shadow: #3777a4aa;
+	--shadow2: #ffffff90;
 
 	--scrollbar-background: transparent;
 	--scrollbar-thumb: #000000;
@@ -38,14 +38,17 @@ body{
 }
 
 .poems-container{
+	background-color: var(--base-background);
 	display: flex;
 	flex-direction: row;
 	margin: 1em;
+	box-shadow: 5px 5px 20px var(--shadow),
+	-8px -10px 15px var(--shadow2);
+	border-radius: var(--radius);
 }
 .poems-base{
-	background-color: var(--base-background);
+	background-color: transparent;
 	padding: 0.5em;
-	border-radius: var(--radius);
 	display: flex;
 	flex-direction: column;
 	min-width: 45%;
@@ -93,19 +96,15 @@ body{
 .poems-content{
 	width: 100%;
 	height: 92vh;
-	box-shadow: 5px 5px 20px var(--shadow);
-	border-radius: .5em;
 }
 .poems-lists{
-	margin-right: 0.25em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	flex: 1;
 	min-width: 20%;
 	height: 92vh;
-	box-shadow: -10px 10px 20px var(--shadow),
-	5px -5px 15px var(--shadow2);
+	border-right: 1px var(--shadow) solid;
 }
 .poems-lists *{
 	padding: 0.25em;
@@ -124,10 +123,13 @@ body{
 	margin: 0.1em 0.5em;
 	border-radius: var(--radius);
 }
-.poems-lists ul li:hover{
-	background-color: var(--hover);
+
+.poems-lists ul li:hover,
+.poems-base .poems-paging span:hover{
+	border: 1.5px var(--hover) solid;
 	color: var(--hover-color);
 }
+
 #poem-content{
 	overflow-y: scroll;
 	text-align: center;
@@ -198,11 +200,6 @@ body{
 	border-radius: 5em;
 }
 
-.poems-base .poems-paging span:hover{
-	background-color: var(--hover);
-	color: var(--hover-color);
-}
-
 .poems-stanza{
 	font-family: 'Gideon Roman', cursive;
 	font-style: normal;
@@ -236,12 +233,14 @@ body{
 
 @media only screen and (max-width: 768px){
 	.poems-lists{
+		background-color: var(--base-background);
 		display: none;
 		position: absolute;
 		z-index: 1;
 		box-shadow: 1px 1px 3px var(--background);
 		border-radius: 0.25em;
 		animation: slide 3s;
+		border: 0;
 	}
 	.poems-heading div .poems-nav-logo{
 		display: flex;
