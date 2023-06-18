@@ -231,6 +231,41 @@ body{
 	display: none;
 }
 
+#abt-dev{
+	position: absolute;
+	align-self: center;
+	justify-self: center;
+	z-index: 1;
+	padding: 1em;
+	background-color: var(--base-background);
+	box-shadow: 5px 5px 20px var(--shadow),
+	-8px -10px 15px var(--shadow2);
+	border-radius: var(--radius);
+	border: var(--shadow) 1px groove;
+	text-align: center;
+	max-width: 50%;
+	left: 25%;
+	right: 25%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+#abt-dev > img {
+	position: relative;
+	width: 25%;
+	border-radius: 25em;
+	top: -7em;
+	margin-bottom: -7em;
+	border: 3px var(--shadow) solid;
+}
+
+#abt-dev > blockquote{
+	border-left: 3px var(--color2) solid;
+	padding-left: 0.5em;
+	text-align: justify;
+}
+
 @media only screen and (max-width: 768px){
 	.poems-lists{
 		background-color: var(--base-background);
