@@ -264,6 +264,8 @@ body{
 	border-left: 3px var(--color2) solid;
 	padding-left: 0.5em;
 	text-align: justify;
+	overflow-y: scroll;
+	max-height: 25vh;
 }
 
 @media only screen and (max-width: 768px){
