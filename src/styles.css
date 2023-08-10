@@ -24,6 +24,11 @@
 
 	--selected: #ffffff;
 }
+@font-face {
+	font-family: "baybayin";
+	src: url("font.ttf");
+}
+
 *{
 	border: none;
 	box-sizing: 0;
@@ -32,6 +37,7 @@
 	user-select: none;
 	outline: none;
 }
+
 body{
 	background-color: var(--background);
 	color: var(--color);
@@ -152,8 +158,11 @@ body{
 	flex-direction: row;
 	justify-content: space-around;
 }
+.baybayin{
+	font-family: 'baybayin', serif !important;
+}
 .poems-heading div h5, .poems-heading div h3{
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',  Arial, serif;
 }
 .poems-heading div h5{
 	margin: 0.45em;

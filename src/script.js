@@ -82,9 +82,36 @@ async function read(id_num){
 		let values = txts[i].replace(/\n/gi, "<br>").replace(/-([\w]+)-/gi, "")
 		txt += `<br><span class='poems-stanza'>${lists[i]}</span>${values}<br>`
 	}
-	title.textContent = poem.title
-	author.textContent = poem.author
-	content.innerHTML = txt
+	let x = ""
+	for(let _ = 0; _ < poem.title.length; _++){
+		const code = poem.title.charCodeAt(_)
+		if(code >= 5888 && code <= 5942){
+			x += `<span class='baybayin'>${poem.title[_]}</span>`
+		}else{
+			x += poem.title[_]
+		}
+	}
+	title.innerHTML = x
+	x = ""
+	for(let _ = 0; _ <  poem.author.length; _++){
+		const code =  poem.author.charCodeAt(_)
+		if(code >= 5888 && code <= 5942){
+			x += `<span class='baybayin'>${ poem.author[_]}</span>`
+		}else{
+			x +=  poem.author[_]
+		}
+	}
+	author.innerHTML = x
+	x = ""
+	for(let _ = 0; _ <  txt.length; _++){
+		const code =  txt.charCodeAt(_)
+		if(code >= 5888 && code <= 5942){
+			x += `<span class='baybayin'>${ txt[_]}</span>`
+		}else{
+			x +=  txt[_]
+		}
+	}
+	content.innerHTML = x
 	poem_id = id_num
 	content.classList = ""
 	document.getElementById("poem-content").style = undefined
