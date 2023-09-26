@@ -11,7 +11,8 @@ def getAllPoems():
         result.append({
             "id": i['id'],
             "title": i['title'],
-            "content": i['content']
+            "content": i['content'],
+            "author": i['author']
         })
     return jsonify({
         "status": 200,
