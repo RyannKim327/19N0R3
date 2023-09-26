@@ -82,7 +82,7 @@ body {
 	height: 100vh;
 }
 
-.loading{
+#loading{
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -91,7 +91,7 @@ body {
 	background-color: var(--loading-bg);
 }
 
-.loading > .circle{
+#loading > .circle{
 	border-radius: 50%;
 	border: 2px #ffffff solid;
 	width: 3em;
