@@ -20,7 +20,7 @@
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
-}
+} 
 
 .root{
     border: 1px var(--main-text-color) solid;
