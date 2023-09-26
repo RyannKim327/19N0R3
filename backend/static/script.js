@@ -16,7 +16,9 @@ setInterval(() => {
 			stored_data = new_data
 
 			// Update List
-			alert(new_data)
+			for(let i = 0; i < r.data.length; i++){
+				
+			}
 		}
 	})
 })
