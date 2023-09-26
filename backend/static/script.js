@@ -17,6 +17,7 @@ setInterval(() => {
 
 			// Update List
 			for(let i = 0; i < r.data.length; i++){
+				let list = r.data[i]
 				
 			}
 		}
