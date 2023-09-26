@@ -20,8 +20,9 @@ setInterval(() => {
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
+				let _list = document.crea
 				let _title = document.createElement("h4")
-				let _author = document.crea
+				let _author = document.createElement("h5")
 				document.getElementById("lists")
 			}
 		}
