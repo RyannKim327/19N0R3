@@ -77,4 +77,5 @@ body {
 	margin: var(--margin);
 	margin-right: 0;
 	text-align: center;
+	max-height: 100;
 }
