@@ -46,9 +46,6 @@ body {
 	flex-direction: row;
 	align-content: space-between;
 	width: 100%;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 }
 
 .main > .lists{
@@ -58,8 +55,8 @@ body {
 	-moz-box-sizing: border-box;
 }
 
-.main > .lists{
-	width: 15%;
+.main > .content{
+	width: 100%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
