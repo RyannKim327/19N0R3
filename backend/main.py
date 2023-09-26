@@ -15,12 +15,13 @@ def getAllPoems():
 	data = db.query("SELECT * FROM poems")
 	result = []
 	for i in data.fetchall():
-		result.append({
-			"id": i['id'],
-			"title": i['title'],
-			"content": i['content'],
-			"author": i['author']
-		})
+		result.append(i)
+		# result.append({
+		# 	"id": i['id'],
+		# 	"title": i['title'],
+		# 	"content": i['content'],
+		# 	"author": i['author']
+		# })
 	return jsonify({
 		"status": 200,
 		"data": result
