@@ -90,3 +90,8 @@ body {
 	right: 0;
 	background-color: var(--loading-bg);
 }
+
+.loading > .circle{
+	border-radius: 50%;
+	border: 1;
+}
