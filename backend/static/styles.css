@@ -80,3 +80,7 @@ body {
 	height: 100vh;
 }
 
+.loading{
+	position: fixed;
+	top: 0;
+}
