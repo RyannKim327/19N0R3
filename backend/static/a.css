@@ -49,10 +49,12 @@ body {
 }
 
 .main > .lists{
-	width: 15%;
+	width: 25%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	margin: var(--margin);
+	margin-left: 0;
 }
 
 .main > .content{
@@ -60,4 +62,6 @@ body {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	margin: var(--margin);
+	margin-right: 0;
 }
