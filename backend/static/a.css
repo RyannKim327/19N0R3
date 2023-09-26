@@ -1,3 +1,7 @@
+:root{
+    --main-background: #
+}
+
 *{
     border: 0;
     margin: 0;
@@ -5,4 +9,8 @@
     user-select: none;
     outline: 0;
     box-sizing: border-box;
+}
+
+body {
+
 }
