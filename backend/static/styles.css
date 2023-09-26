@@ -97,5 +97,11 @@ body {
 	width: 3em;
 	height: 3em;
 	border-left: 0;
-	
+
+}
+
+@keyframes load{
+	from{
+		transform: ;
+	}
 }
