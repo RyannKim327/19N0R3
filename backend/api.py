@@ -6,4 +6,7 @@ from database.db import database
 def getAllPoems():
     db = database()
     data = db.query("SELECT * FROM poems")
-    
+    return jsonify({
+        "status": 200,
+        "data": result
+    })
