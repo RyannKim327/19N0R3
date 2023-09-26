@@ -1,1 +1,4 @@
-node_modules/*
+.autogit
+backend/__pycache__
+node_modules
+venv
