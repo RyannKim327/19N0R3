@@ -99,7 +99,7 @@ body {
 
 #loading > .circle{
 	border-radius: 50%;
-	border: 2px #ffffff solid;
+	border: 2px var(--main-background) solid;
 	width: 3em;
 	height: 3em;
 	border-left: 0;
