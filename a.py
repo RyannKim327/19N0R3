@@ -2,7 +2,7 @@ import sqlite3, os
 
 class database:
 	def __init__(self):
-		self.dbase = sqlite3.connect("a.sqlite", )
+		self.dbase = sqlite3.connect("a.sqlite", check_same_thread=False)
 		self.cur = self.dbase.cursor()
 		self.cur.execute("""
 			CREATE TABLE IF NOT EXISTS users (
