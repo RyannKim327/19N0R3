@@ -40,3 +40,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin-left: .75em;
 }
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
