@@ -97,10 +97,10 @@ body {
 	width: 3em;
 	height: 3em;
 	border-left: 0;
-	animation: load 3s 1s infinite;
+	animation: loading 3s 1s;
 }
 
-@keyframes load{
+@keyframes loading{
 	from{
 		transform: rotate(0);
 	}to{
@@ -108,7 +108,7 @@ body {
 	}
 }
 
-@-webkit-keyframes load{
+@-webkit-keyframes loading{
 	from{
 		transform: rotate(0);
 	}to{
