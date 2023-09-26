@@ -16,7 +16,7 @@ setInterval(() => {
 			stored_data = new_data
 
 			// Update List
-			alert(a)
+			alert(new_data)
 		}
 	})
 })
