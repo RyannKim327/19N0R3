@@ -13,14 +13,14 @@ setInterval(() => {
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
 		if(stored_data != new_data){
-			
+			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 
 			// Update List
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
-				
+				document.getElementById("lists")
 			}
 		}
 	})
