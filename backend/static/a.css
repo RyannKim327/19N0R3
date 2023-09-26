@@ -65,6 +65,10 @@ body {
 	padding: 0 .5em;
 }
 
+.main > .lists > input{
+	color: var(--main-text-color);
+}
+
 .main > .content{
 	width: 100%;
 	box-sizing: border-box;
