@@ -97,8 +97,8 @@ body {
 	width: 3em;
 	height: 3em;
 	border-left: 0;
-	border-left: 0;
-	animation: loading 1s 0s infinite;
+	border-right: 0;
+	animation: loading 1s infinite;
 }
 
 @keyframes loading{
