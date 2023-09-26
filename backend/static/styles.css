@@ -93,6 +93,7 @@ body {
 	background-color: var(--loading-bg);
 	align-items: center;
 	align-content: center;
+	justify-content: center;
 }
 
 #loading > .circle{
