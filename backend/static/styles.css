@@ -95,4 +95,7 @@ body {
 	border-radius: 50%;
 	border: 2px #ffffff solid;
 	width: 3em;
+	height: 3em;
+	border-left: 0;
 }
+
