@@ -102,6 +102,16 @@ body {
 
 @keyframes load{
 	from{
-		transform: ;
+		transform: rotate(0);
+	}to{
+		transform: rotate(360);
+	}
+}
+
+@-webkit-keyframes load{
+	from{
+		transform: rotate(0);
+	}to{
+		transform: rotate(360);
 	}
 }
