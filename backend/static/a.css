@@ -30,3 +30,7 @@ body {
     padding: var(--padding);
     border-radius: ;
 }
+
+.root > .header{
+    
+}
