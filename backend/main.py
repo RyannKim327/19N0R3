@@ -12,7 +12,7 @@ def index():
 @app.route("/api/getAllPoems")
 def getAllPoems():
 	db = database()
-	data = db.query("SELECT * FROM poems")
+	data = db.query("SELECT * FROM poems ORDER BY ID DESC")
 	result = []
 	for i in data.fetchall():
 		result.append({
