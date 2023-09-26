@@ -93,5 +93,6 @@ body {
 
 .loading > .circle{
 	border-radius: 50%;
-	border: 1;
+	border: 2px #ffffff solid;
+	width: 3em;
 }
