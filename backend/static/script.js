@@ -17,12 +17,13 @@ setInterval(() => {
 
 			// Update List
 
-			let ul =  createe
+			let ul = document.createElement("ul")
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				
 			}
+			document.get
 		}
 	})
 })
