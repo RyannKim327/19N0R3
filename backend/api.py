@@ -9,7 +9,9 @@ def getAllPoems():
     result = []
     for i in data.fetchall():
         result.append({
-            "id": i['id']
+            "id": i['id'],
+            "title": i['title'],
+            "content": i['content']
         })
     return jsonify({
         "status": 200,
