@@ -5,4 +5,5 @@ from database.db import database
 @app.route("/api/getAllPoems")
 def getAllPoems():
     db = database()
-    db
+    data = db.query("SELECT * FROM poems")
+    

@@ -25,20 +25,3 @@ class database:
 		if not "SELECT" in query:
 			self.dbase.commit()
 		return a
-	
-	def createAccount(self, username: str, password: str, retype: str):
-		password = hashlib.sha1(password.encode()).hexdigest()
-		retype = hashlib.sha1(retype.encode()).hexdigest()
-		if password != retype:
-			return "Password not match"
-		if len(password) < 8:
-			return "Password must atleast 8 characters long"
-		
-		a = self.query(f"SELECT * FROM users WHERE penname = '{username}'").fetchall()
-		if len(a) > 0:
-			return "User is already existsed"
-		else:
-			self.query(f"""
-				INSERT INTO users (penname, password) VALUES ('{username}', '{password}')
-			""")
-			return "Account created"
