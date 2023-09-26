@@ -1,7 +1,7 @@
 from flask import jsonify
 from main import app
-from database
+from database import database
 
 @app.route("/api/getAllPoems")
 def getAllPoems():
-    db =
+    db = database()
