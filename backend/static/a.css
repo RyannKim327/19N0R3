@@ -1,48 +1,50 @@
 :root{
-    --main-background: #e0ccb1;
-    --main-text-color: #000000;
+	--main-background: #e0ccb1;
+	--main-text-color: #000000;
 
-    --border-color: #000000;
+	--border-color: #000000;
 
-    --margin: .5em;
-    --padding: .25em;
+	--margin: .5em;
+	--padding: .25em;
 
-    --radius: .15em
+	--radius: .15em
 }
 
 *{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    outline: 0;
-    box-sizing: border-box;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	outline: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: var(--main-background);
-    color: var(--main-text-color);
-    padding: var(--margin);
+	background-color: var(--main-background);
+	color: var(--main-text-color);
+	padding: var(--margin);
 }  
 
 .root{
-    border: 1px var(--main-text-color) solid;
-    padding: var(--padding);
-    border-radius: ;
+	border: 1px var(--main-text-color) solid;
+	padding: var(--padding);
+	border-radius: ;
 }
 
 .root > .header{
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .root > .header > h5{
-    font-family: 'Courier New', Courier, monospace;
-    margin-left: .75em;
+	font-family: 'Courier New', Courier, monospace;
+	margin-left: .75em;
 }
 
 .main{
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	width: 100%;
+	box-sizing: border-box;
 }
