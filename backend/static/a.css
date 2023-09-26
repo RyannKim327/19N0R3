@@ -60,6 +60,8 @@ body {
 .main > .lists > input{
 	width: 100%;
 	background-color: transparent;
+	border-radius: .25em;
+	border: 1px var(--border-color) solid;
 }
 
 .main > .content{
