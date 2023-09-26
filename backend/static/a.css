@@ -28,7 +28,7 @@ body {
 .root{
 	border: 1px var(--main-text-color) solid;
 	padding: var(--padding);
-	border-radius: ;
+	border-radius: var(--radius);
 }
 
 .root > .header{
