@@ -7,7 +7,10 @@ def getAllPoems():
     db = database()
     data = db.query("SELECT * FROM poems")
     result = []
-    for i in data
+    for i in data.fetchall():
+        result.append({
+            "id": i['id']
+        })
     return jsonify({
         "status": 200,
         "data": result
