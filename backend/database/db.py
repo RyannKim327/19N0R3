@@ -24,4 +24,6 @@ class database:
 		a = self.cur.execute(query)
 		if not "SELECT" in query:
 			self.dbase.commit()
-		return a
+			return "Done"
+		else:
+			return a
