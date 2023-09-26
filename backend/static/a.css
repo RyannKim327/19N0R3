@@ -62,10 +62,10 @@ body {
 	background-color: transparent;
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
-	padding: 0 .5em;
+	padding: .1em .5em;
 }
 
-.main > .lists > input{
+.main > .lists > input::placeholder{
 	color: var(--main-text-color);
 }
 
