@@ -76,4 +76,5 @@ body {
 	-moz-box-sizing: border-box;
 	margin: var(--margin);
 	margin-right: 0;
+	text-align: center;
 }
