@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from database.db import database
 
 app = Flask(__name__, static_url_path="/static")
@@ -11,17 +11,17 @@ def index():
 
 @app.route("/api/getAllPoems")
 def getAllPoems():
-    db = database()
-    data = db.query("SELECT * FROM poems")
-    result = []
-    for i in data.fetchall():
-        result.append({
-            "id": i['id'],
-            "title": i['title'],
-            "content": i['content'],
-            "author": i['author']
-        })
-    return jsonify({
-        "status": 200,
-        "data": result
-    })
+	db = database()
+	data = db.query("SELECT * FROM poems")
+	result = []
+	for i in data.fetchall():
+		result.append({
+			"id": i['id'],
+			"title": i['title'],
+			"content": i['content'],
+			"author": i['author']
+		})
+	return jsonify({
+		"status": 200,
+		"data": result
+	})
