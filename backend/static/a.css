@@ -1,5 +1,6 @@
 :root{
-    --main-background: #f2f5ff;
+    --main-background: #c4c6ca;
+    --main-text-color: #000000
 }
 
 *{
@@ -12,5 +13,5 @@
 }
 
 body {
-
+    background-color: var();
 }
