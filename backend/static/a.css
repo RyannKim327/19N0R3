@@ -35,4 +35,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-.root > .header{
+.root > .header > h5{
+    margin-left: .75em;
+}
