@@ -35,6 +35,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .root > .header > h5{
+    font-family: 'Courier New', Courier, monospace;
     margin-left: .75em;
 }
