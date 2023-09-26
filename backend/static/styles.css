@@ -84,13 +84,14 @@ body {
 
 #loading{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	background-color: var(--loading-bg);
+	color: var(--main-background);
 	align-items: center;
 	align-content: center;
 	justify-content: center;
