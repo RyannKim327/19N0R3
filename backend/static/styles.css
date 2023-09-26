@@ -97,6 +97,7 @@ body {
 	width: 3em;
 	height: 3em;
 	border-left: 0;
+	transform: rotate(45deg);
 	animation: loading 3s 1s;
 }
 
