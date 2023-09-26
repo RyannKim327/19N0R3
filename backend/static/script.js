@@ -8,7 +8,7 @@ const content = document.getElementById("content")
 let stored_data = ""
 
 setInterval(() => {
-	fetch("/api/getAllPoems").then(r = > {
+	fetch("/api/getAllPoems").then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
@@ -16,7 +16,7 @@ setInterval(() => {
 			stored_data = new_data
 
 			// Update List
-			
+			for(let i = 0; i < )
 		}
 	})
 })
