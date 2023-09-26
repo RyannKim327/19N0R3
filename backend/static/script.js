@@ -16,6 +16,9 @@ setInterval(() => {
 			stored_data = new_data
 
 			// Update List
+
+			let ul =  createe
+
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				
