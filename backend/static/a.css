@@ -57,6 +57,11 @@ body {
 	margin-left: 0;
 }
 
+.main > .lists > input{
+	width: 100%;
+	background-color: transparent;
+}
+
 .main > .content{
 	width: 100%;
 	box-sizing: border-box;
