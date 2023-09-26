@@ -89,6 +89,8 @@ body {
 	left: 0;
 	right: 0;
 	background-color: var(--loading-bg);
+	align-items: center;
+	align-content: center;
 }
 
 #loading > .circle{
