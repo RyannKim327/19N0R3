@@ -24,7 +24,10 @@ setInterval(() => {
 				let _title = document.createElement("h4")
 				let _author = document.createElement("h5")
 
-				_list.app
+				_title.textContent = list
+
+				_list.appendChild(_title)
+				_list.appendChild(_author)
 
 				document.getElementById("lists").appendChild(_list)
 			}
