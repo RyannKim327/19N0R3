@@ -26,6 +26,8 @@ function getCookie(key){
 	return ""
 }
 
+function 
+
 const title = document.getElementById("title")
 const content = document.getElementById("content")
 
