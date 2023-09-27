@@ -21,7 +21,10 @@
 	box-sizing: border-box;
 }
 
-@font-face
+@font-face{
+	font-family: "baybayin";
+	font
+}
 
 body {
 	background-color: var(--main-background);
