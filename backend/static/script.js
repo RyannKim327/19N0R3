@@ -75,6 +75,7 @@ setInterval(() => {
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
-		let data = getCookie("title")
+		document.getElementById("title").textContent = getCookie("title")
+		document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
 	})
 })
