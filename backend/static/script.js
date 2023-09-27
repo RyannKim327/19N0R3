@@ -50,24 +50,25 @@ setInterval(() => {
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				let search = document.getElementById("search").value
-				if(list.title.includes(search) || )
-				let _list = document.createElement("li")
-				let _title = document.createElement("h4")
-				let _author = document.createElement("h5")
+				if(list.title.includes(search) || list.content.includes(search)){
+					let _list = document.createElement("li")
+					let _title = document.createElement("h4")
+					let _author = document.createElement("h5")
 
-				_title.textContent = list['title']
-				_author.textContent = list['author']
+					_title.textContent = list['title']
+					_author.textContent = list['author']
 
-				_list.appendChild(_title)
-				_list.appendChild(_author)
+					_list.appendChild(_title)
+					_list.appendChild(_author)
 
-				_list.onclick = (event) => {
-					document.getElementById("title").textContent = list['title']
-					document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
-					setCookie("poemID", list['ID'])
+					_list.onclick = (event) => {
+						document.getElementById("title").textContent = list['title']
+						document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
+						setCookie("poemID", list['ID'])
+					}
+
+					document.getElementById("lists").appendChild(_list)
 				}
-
-				document.getElementById("lists").appendChild(_list)
 			}
 		}
 	})
