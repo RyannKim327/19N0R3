@@ -76,7 +76,8 @@ setInterval(() => {
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
-		document.getElementById("title").textContent = getCookie("title")
-		document.getElementById("content").innerHTML = getCookie("content").replace(/\n/gi, "<br>")
+		const cookie_data = getCookie("ID")
+		document.getElementById("title").textContent = 
+		document.getElementById("content").innerHTML = .replace(/\n/gi, "<br>")
 	})
 })
