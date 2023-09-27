@@ -51,7 +51,7 @@ setInterval(() => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
-		document.getElementById("title").textContent = temp_data[parseInt(cookie_data) - 1]['title']
+		document.getElementById("title").innerHTML = temp_data[parseInt(cookie_data) - 1]['title']
 		document.getElementById("content").innerHTML = temp_data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
 		r.data.reverse()
 		let search = document.getElementById("search").value
