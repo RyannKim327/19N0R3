@@ -40,7 +40,7 @@ setInterval(() => {
 					}).then((r) => {
 						return r.json()
 					}).then((r) => {
-						alert("test")
+						alert(r)
 					}).catch((e) => {
 						alert(e)
 					})
