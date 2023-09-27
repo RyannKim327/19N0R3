@@ -28,4 +28,4 @@ def getAllPoems():
 @app.route("/api/getPoem", methods=["POST"])
 def getPoem():
 	data = request.data
-	print(data)
+	return data
