@@ -58,8 +58,6 @@ body {
 	-moz-box-sizing: border-box;
 	margin: var(--margin);
 	margin-left: 0;
-	overflow-y: scroll;
-	max-height: 90vh;
 }
 
 .main > .lists > input{
@@ -75,6 +73,8 @@ body {
 }
 
 .main > .lists > #lists{
+	overflow-y: scroll;
+	max-height: 90vh;
 	list-style: none;
 }
 
