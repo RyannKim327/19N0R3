@@ -75,5 +75,6 @@ setInterval(() => {
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
+		let 
 	})
 })
