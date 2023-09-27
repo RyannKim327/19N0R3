@@ -101,7 +101,7 @@ body {
 	margin: var(--margin);
 	margin-right: 0;
 	text-align: center;
-	height: %;
+	height: 90vh;
 }
 
 .main > .content > #content{
