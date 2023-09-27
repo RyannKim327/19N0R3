@@ -75,8 +75,8 @@ body {
 	list-style: none;
 }
 
-.main > .lists > #lists{
-	border-radius: .75em;
+.main > .lists > #lists > li{
+	border-radius: .25em;
 	border: 1px var(--border-color) solid;
 }
 
