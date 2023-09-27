@@ -104,6 +104,10 @@ body {
 	height: 90vh;
 }
 
+.main > .content > #content{
+	overflow
+}
+
 #loading{
 	display: flex;
 	flex-direction: column;
