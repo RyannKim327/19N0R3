@@ -26,7 +26,9 @@ function getCookie(key){
 	return ""
 }
 
-function 
+function read(text){
+	
+}
 
 const title = document.getElementById("title")
 const content = document.getElementById("content")
