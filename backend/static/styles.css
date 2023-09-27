@@ -105,7 +105,7 @@ body {
 }
 
 .main > .content > #content{
-	padding: 0 .5em;
+	margin: 1em;
 	overflow-y: scroll;
 	height: 95%;
 	box-sizing: border-box;
