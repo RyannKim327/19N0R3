@@ -31,7 +31,7 @@ setInterval(() => {
 				_list.appendChild(_author)
 
 				_list.onclick = (event) => {
-					
+					alert("test")
 				}
 
 				document.getElementById("lists").appendChild(_list)
