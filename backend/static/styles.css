@@ -78,6 +78,7 @@ body {
 .main > .lists > #lists > li{
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
+	margin: .5em .25em;
 }
 
 .main > .content{
