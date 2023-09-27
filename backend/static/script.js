@@ -31,8 +31,6 @@ const content = document.getElementById("content")
 
 let stored_data = ""
 
-
-
 setInterval(() => {
 	fetch("/api/getAllPoems").then(r => {
 		return r.json()
