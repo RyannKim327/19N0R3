@@ -40,6 +40,7 @@ setInterval(() => {
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
 		document.getElementById("title").textContent = temp_data[parseInt(cookie_data) - 1]['title']
 		document.getElementById("content").innerHTML = temp_data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
+		r.data.reverse()
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
