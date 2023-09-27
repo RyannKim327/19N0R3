@@ -21,6 +21,8 @@
 	box-sizing: border-box;
 }
 
+@font-face
+
 body {
 	background-color: var(--main-background);
 	color: var(--main-text-color);
