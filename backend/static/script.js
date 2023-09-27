@@ -36,13 +36,13 @@ setInterval(() => {
 						"method": "POST",
 						"body": JSON.stringify({
 							"poemID": list['id']
-						}).then((r) => {
-							return r.json()
-						}).then((r) => {
-							alert("test")
-						}).catch((e) => {
-							alert(e)
 						})
+					}).then((r) => {
+						return r.json()
+					}).then((r) => {
+						alert("test")
+					}).catch((e) => {
+						alert(e)
 					})
 				}
 
