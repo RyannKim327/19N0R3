@@ -13,7 +13,10 @@ function getCookie(key){
 	const cookie = document.cookie
 	const name = `${key}=`
 	const decode = decodeURIComponent(cookie)
-	const data = decode.split("")
+	const data = decode.split(";")
+	for(let d in data){
+		const new_data = d[]
+	}
 }
 
 const title = document.getElementById("title")
