@@ -52,8 +52,8 @@ setInterval(() => {
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
-				search = search.toLoweCase()
-				if(list['title'].toLoweCase().includes(search) || list['content'].toLoweCase().includes(search) || list['author'].toLoweCase().includes(search)){
+				search = search.toLowerCase()
+				if(list['title'].toLowerCase().includes(search) || list['content'].toLowerCase().includes(search) || list['author'].toLowerCase().includes(search)){
 					let _list = document.createElement("li")
 					let _title = document.createElement("h4")
 					let _author = document.createElement("h5")
