@@ -20,7 +20,7 @@ def getAllPoems():
 			"id": i[0],
 			"title": i[1],
 			"content": i[2],
-			"author": user[2]
+			"author": user[1]
 		})
 	return jsonify({
 		"status": 200,
