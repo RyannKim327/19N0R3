@@ -33,7 +33,9 @@ setInterval(() => {
 				_list.onclick = (event) => {
 					fetch("/api/getPoem", {
 						"method": "POST",
-						"body"
+						"body": JSON.stringify({
+							"poemID": _
+						})
 					})
 				}
 
