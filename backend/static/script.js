@@ -12,7 +12,8 @@ function setCookie(key, value){
 function getCookie(key){
 	const cookie = document.cookie
 	const name = `${key}=`
-	const decode = 
+	const decode = decodeURIComponent(cookie)
+	const data = decode.split("")
 }
 
 const title = document.getElementById("title")
