@@ -19,7 +19,6 @@
 	user-select: none;
 	outline: 0;
 	box-sizing: border-box;
-	font-family: "baybayin";
 }
 
 @font-face {
@@ -33,6 +32,8 @@ body {
 	padding: var(--margin);
 	overflow: hidden;
 }  
+
+.baybayin
 
 .root{
 	border: 1px var(--main-text-color) solid;
