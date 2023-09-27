@@ -2,7 +2,9 @@ window.onload = () => {
 	document.getElementById("loading").style.display = "none"
 }
 
-
+function setCookie(key, value){
+	
+}
 
 const title = document.getElementById("title")
 const content = document.getElementById("content")
