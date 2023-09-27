@@ -70,8 +70,7 @@ setInterval(() => {
 					// })
 					document.getElementById("title").textContent = list['title']
 					document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
-					setCookie("title", list['title'])
-					setCookie("content", list['content'])
+					setCookie("poemID", list['ID'])
 				}
 
 				document.getElementById("lists").appendChild(_list)
