@@ -45,7 +45,7 @@ setInterval(() => {
 					// 	alert(e)
 					// })
 					document.getElementById("title").textContent = list['title']
-					document.getElementById("content").textContent = list['content'].replace(/\n)
+					document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
 				}
 
 				document.getElementById("lists").appendChild(_list)
