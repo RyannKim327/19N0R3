@@ -75,9 +75,9 @@ setInterval(() => {
 
 				document.getElementById("lists").appendChild(_list)
 			}
+			const cookie_data = getCookie("poemID")
+			document.getElementById("title").textContent = r.data[cookie_data - 1]['title']
+			document.getElementById("content").innerHTML = r.data[cookie_data - 1]['content'].replace(/\n/gi, "<br>")
 		}
-		const cookie_data = getCookie("poemID")
-		document.getElementById("title").textContent = r.data[cookie_data - 1]['title']
-		document.getElementById("content").innerHTML = r.data[cookie_data - 1]['content'].replace(/\n/gi, "<br>")
 	})
 })
