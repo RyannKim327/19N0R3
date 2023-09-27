@@ -36,6 +36,7 @@ setInterval(() => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
+		let temp_data = r.data.reverse()
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
 		document.getElementById("title").textContent = r.data[parseInt(cookie_data) - 1]['title']
 		document.getElementById("content").innerHTML = r.data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
