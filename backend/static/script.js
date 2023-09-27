@@ -60,19 +60,6 @@ setInterval(() => {
 				_list.appendChild(_author)
 
 				_list.onclick = (event) => {
-					// alert("hi")
-					// fetch("/api/getPoem", {
-					// 	"method": "POST",
-					// 	"body": JSON.stringify({
-					// 		"poemID": list['id']
-					// 	})
-					// }).then((r) => {
-					// 	return r.json()
-					// }).then((r) => {
-					// 	alert(JSON.stringify(r))
-					// }).catch((e) => {
-					// 	alert(e)
-					// })
 					document.getElementById("title").textContent = list['title']
 					document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
 					setCookie("poemID", list['ID'])
