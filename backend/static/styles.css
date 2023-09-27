@@ -19,11 +19,12 @@
 	user-select: none;
 	outline: 0;
 	box-sizing: border-box;
+	font-family: "baybayin";
 }
 
 @font-face {
-	font-family: ;
-	src: url();
+	font-family: "baybayin";
+	src: url("/static/font.ttf");
 }
 
 body {
