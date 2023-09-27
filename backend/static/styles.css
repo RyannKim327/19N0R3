@@ -58,6 +58,7 @@ body {
 	-moz-box-sizing: border-box;
 	margin: var(--margin);
 	margin-left: 0;
+	overflow-y: scroll;
 }
 
 .main > .lists > input{
