@@ -38,8 +38,8 @@ setInterval(() => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
-		document.getElementById("title").textContent = r.data[parseInt(cookie_data) - 1]['title']
-		document.getElementById("content").innerHTML = r.data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
+		document.getElementById("title").textContent = temp_data[parseInt(cookie_data) - 1]['title']
+		document.getElementById("content").innerHTML = temp_data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
