@@ -25,6 +25,7 @@ body {
 	background-color: var(--main-background);
 	color: var(--main-text-color);
 	padding: var(--margin);
+	overflow: hidden;
 }  
 
 .root{
