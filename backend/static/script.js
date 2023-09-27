@@ -31,6 +31,7 @@ setInterval(() => {
 				_list.appendChild(_author)
 
 				_list.onclick = (event) => {
+					alert("hi")
 					fetch("/api/getPoem", {
 						"method": "POST",
 						"body": JSON.stringify({
