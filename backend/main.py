@@ -29,4 +29,4 @@ def getAllPoems():
 def getPoem():
 	data = request.data.poemID
 	db = database()
-	data = db.que
+	data = db.query(f"SELECT * FROM poems WHERE ID = {}")
