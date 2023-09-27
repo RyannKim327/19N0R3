@@ -32,5 +32,7 @@ def getPoem():
 	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchall()
 	return jsonify({
 		"ID": data[0],
-		
+		"title": data[1],
+		"content": data[2],
+		"author": data[3]
 	})
