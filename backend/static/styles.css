@@ -106,6 +106,10 @@ body {
 
 .main > .content > #content{
 	overflow-y: scroll;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max
 }
 
 #loading{
