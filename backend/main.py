@@ -7,8 +7,6 @@ app = Flask(__name__, static_url_path="/static")
 def index():
 	return render_template("a.html")
 
-
-
 @app.route("/api/getAllPoems")
 def getAllPoems():
 	db = database()
