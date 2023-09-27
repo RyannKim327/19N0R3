@@ -37,7 +37,9 @@ setInterval(() => {
 							"poemID": list['id']
 						}).then((r) => {
 							return r.json()
-						}).then
+						}).then((r) => {
+							alert("test")
+						})
 					})
 				}
 
