@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from database.db import database
 
 app = Flask(__name__, static_url_path="/static")
@@ -28,4 +28,5 @@ def getAllPoems():
 	})
 
 @app.route("/api/getPoem", methods=["POST"])
-def getPoem()
+def getPoem():
+	data = request.data
