@@ -31,7 +31,9 @@ setInterval(() => {
 				_list.appendChild(_author)
 
 				_list.onclick = (event) => {
-					alert("test")
+					fetch("/api/getPoem", {
+						"method"
+					})
 				}
 
 				document.getElementById("lists").appendChild(_list)
