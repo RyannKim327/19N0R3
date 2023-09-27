@@ -15,7 +15,7 @@ def getAllPoems():
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchone()
 		result.append({
-			"id": i[0],
+			"ID": i[0],
 			"title": i[1],
 			"content": i[2],
 			"author": user[1]
