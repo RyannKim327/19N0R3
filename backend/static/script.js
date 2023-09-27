@@ -70,12 +70,14 @@ setInterval(() => {
 					// })
 					document.getElementById("title").textContent = list['title']
 					document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
+					setCookie(list['title'])
+					
 				}
 
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
 		document.getElementById("title").textContent = getCookie("title")
-		document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
+		document.getElementById("content").innerHTML = getCookie('content').replace(/\n/gi, "<br>")
 	})
 })
