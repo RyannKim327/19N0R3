@@ -78,6 +78,6 @@ setInterval(() => {
 			}
 		}
 		document.getElementById("title").textContent = getCookie("title")
-		document.getElementById("content").innerHTML = getCookie('content').replace(/\n/gi, "<br>")
+		document.getElementById("content").innerHTML = getCookie("content").replace(/\n/gi, "<br>")
 	})
 })
