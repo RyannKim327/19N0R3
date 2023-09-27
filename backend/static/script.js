@@ -37,7 +37,7 @@ setInterval(() => {
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
 		const cookie_data = getCookie("poemID")
-		alert(parseInt(cookie_data.replace(" = ", "")))
+		alert(parseInt(cookie_data))
 		document.getElementById("title").textContent = r.data[cookie_data - 1]['title']
 		document.getElementById("content").innerHTML = r.data[cookie_data - 1]['content'].replace(/\n/gi, "<br>")
 		if(stored_data != new_data){
