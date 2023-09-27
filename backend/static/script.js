@@ -6,10 +6,12 @@ function setCookie(key, value){
 	const date = new Date()
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
 	let xp = `expires=${date.toUTCString()}`
-	document.cookie = `${__name__}=${__data__};${xp};path=/`
+	document.cookie = `${key}=${value};${xp};path=/`
 }
 
-function getCookie()
+function getCookie(key){
+
+}
 
 const title = document.getElementById("title")
 const content = document.getElementById("content")
