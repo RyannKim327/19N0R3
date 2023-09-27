@@ -77,6 +77,7 @@ setInterval(() => {
 			}
 		}
 		const cookie_data = getCookie("poemID")
+		alert(r.data[cookie_data - 1]['title'])
 		document.getElementById("title").textContent = r.data[cookie_data - 1]['title']
 		document.getElementById("content").innerHTML = r.data[cookie_data - 1]['content'].replace(/\n/gi, "<br>")
 	})
