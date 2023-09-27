@@ -15,8 +15,10 @@ function getCookie(key){
 	const decode = decodeURIComponent(cookie)
 	const data = decode.split(";")
 	for(let d in data){
-		const new_data = data[d]
-		while(new_data[0] )
+		let new_data = data[d]
+		while(new_data[0] == " "){
+			new_data = new_data.s
+		}
 	}
 }
 
