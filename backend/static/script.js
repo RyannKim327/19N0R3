@@ -41,7 +41,9 @@ setInterval(() => {
 		document.getElementById("title").textContent = temp_data[parseInt(cookie_data) - 1]['title']
 		document.getElementById("content").innerHTML = temp_data[parseInt(cookie_data) - 1]['content'].replace(/\n/gi, "<br>")
 		r.data.reverse()
-		if(stored_data != new_data || ){
+		let search = document.getElementById("search").value
+		let stored_search = ""
+		if(stored_data != new_data || search != s){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 
@@ -49,7 +51,6 @@ setInterval(() => {
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
-				let search = document.getElementById("search").value
 				console.log(search)
 				if(list['title'].includes(search) || list['content'].includes(search)){
 					let _list = document.createElement("li")
