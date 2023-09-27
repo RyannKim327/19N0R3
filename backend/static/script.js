@@ -34,7 +34,7 @@ setInterval(() => {
 					fetch("/api/getPoem", {
 						"method": "POST",
 						"body": JSON.stringify({
-							"poemID": _
+							"poemID": list['id']
 						})
 					})
 				}
