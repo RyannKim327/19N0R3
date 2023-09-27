@@ -20,15 +20,18 @@ function getCookie(key){
 			new_data = new_data.substring(1)
 		}
 		if(new_data.indexOf(key) == 0){
-			return new_data.substring
+			return new_data.substring(key.length, new_data.length)
 		}
 	}
+	return ""
 }
 
 const title = document.getElementById("title")
 const content = document.getElementById("content")
 
 let stored_data = ""
+
+
 
 setInterval(() => {
 	fetch("/api/getAllPoems").then(r => {
