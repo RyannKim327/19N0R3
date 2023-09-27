@@ -27,3 +27,4 @@ def getAllPoems():
 		"data": result
 	})
 
+@app.route("/api/getPoem")
