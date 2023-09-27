@@ -2,6 +2,8 @@ window.onload = () => {
 	document.getElementById("loading").style.display = "none"
 }
 
+document.cookie
+
 const title = document.getElementById("title")
 const content = document.getElementById("content")
 
