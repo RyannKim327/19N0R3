@@ -78,8 +78,8 @@ setInterval(() => {
 					_list.appendChild(_author)
 
 					_list.onclick = (event) => {
-						document.getElementById("title").textContent = list['title']
-						document.getElementById("content").innerHTML = list['content'].replace(/\n/gi, "<br>")
+						document.getElementById("title").textContent = read(list['title'])
+						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
 						setCookie("poemID", list['ID'])
 					}
 
