@@ -50,6 +50,7 @@ setInterval(() => {
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				let search = document.getElementById("search").value
+				console.log(search)
 				if(list['title'].includes(search) || list['content'].includes(search)){
 					let _list = document.createElement("li")
 					let _title = document.createElement("h4")
