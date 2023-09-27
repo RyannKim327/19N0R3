@@ -17,8 +17,9 @@ function getCookie(key){
 	for(let d in data){
 		let new_data = data[d]
 		while(new_data[0] == " "){
-			new_data = new_data.s
+			new_data = new_data.substring(1)
 		}
+		if(new_data.indexOf(0))
 	}
 }
 
