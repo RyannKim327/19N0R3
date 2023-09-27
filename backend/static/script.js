@@ -10,7 +10,8 @@ function setCookie(key, value){
 }
 
 function getCookie(key){
-
+	const cookie = document.cookie
+	const 
 }
 
 const title = document.getElementById("title")
