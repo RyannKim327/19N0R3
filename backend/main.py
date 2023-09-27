@@ -29,4 +29,8 @@ def getAllPoems():
 def getPoem():
 	req = request.data.poemID
 	db = database()
-	data = db.query(f"SELECT * FROM poems WHERE ID = {req}")
+	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchall()
+	return jsonify({
+		"ID": data[0],
+		
+	})
