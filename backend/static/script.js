@@ -71,14 +71,14 @@ setInterval(() => {
 					let _title = document.createElement("h4")
 					let _author = document.createElement("h5")
 
-					_title.textContent = list['title']
-					_author.textContent = list['author']
+					_title.innerHTML = read(list['title'])
+					_author.innerHTML = read(list['author'])
 
 					_list.appendChild(_title)
 					_list.appendChild(_author)
 
 					_list.onclick = (event) => {
-						document.getElementById("title").textContent = read(list['title'])
+						document.getElementById("title").innerHTML = read(list['title'])
 						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
 						setCookie("poemID", list['ID'])
 					}
