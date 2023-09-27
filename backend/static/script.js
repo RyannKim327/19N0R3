@@ -19,7 +19,9 @@ function getCookie(key){
 		while(new_data[0] == " "){
 			new_data = new_data.substring(1)
 		}
-		if(new_data.indexOf(0))
+		if(new_data.indexOf(key) == 0){
+			return new_data.substring
+		}
 	}
 }
 
