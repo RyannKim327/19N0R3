@@ -75,6 +75,6 @@ setInterval(() => {
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
-		let 
+		let data = getCookie("title")
 	})
 })
