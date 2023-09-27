@@ -43,16 +43,17 @@ setInterval(() => {
 		r.data.reverse()
 		let search = document.getElementById("search").value
 		let stored_search = ""
-		if(stored_data != new_data || search != s){
+		if(stored_data != new_data || search != stored_search){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
+			stored_search = search
 
 			// Update List
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				console.log(search)
-				if(list['title'].includes(search) || list['content'].includes(search)){
+				if(list['title'].includes(search) || list['content'].includes(search) || list['author'].includes(search)){
 					let _list = document.createElement("li")
 					let _title = document.createElement("h4")
 					let _author = document.createElement("h5")
