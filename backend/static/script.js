@@ -30,6 +30,10 @@ setInterval(() => {
 				_list.appendChild(_title)
 				_list.appendChild(_author)
 
+				_list.onclick = (event) => {
+					
+				}
+
 				document.getElementById("lists").appendChild(_list)
 			}
 		}
