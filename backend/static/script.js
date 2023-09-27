@@ -44,7 +44,7 @@ setInterval(() => {
 					// }).catch((e) => {
 					// 	alert(e)
 					// })
-					
+					document.getElementById("title").textContent = 
 				}
 
 				document.getElementById("lists").appendChild(_list)
