@@ -71,7 +71,10 @@ body {
 	color: var(--main-text-color);
 }
 
-.main > .lists > 
+.main > .lists > #lists{
+	list-style: none;
+}
+.main > .lists > #lists{
 
 .main > .content{
 	width: 100%;
