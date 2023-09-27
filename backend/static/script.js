@@ -49,6 +49,7 @@ setInterval(() => {
 
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
+				if(document.getElementById("search").value)
 				let _list = document.createElement("li")
 				let _title = document.createElement("h4")
 				let _author = document.createElement("h5")
