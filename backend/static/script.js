@@ -44,7 +44,8 @@ setInterval(() => {
 					// }).catch((e) => {
 					// 	alert(e)
 					// })
-					document.getElementById("title").textContent = 
+					document.getElementById("title").textContent = list['title']
+					document.getElementById("content").textContent = list['content']
 				}
 
 				document.getElementById("lists").appendChild(_list)
