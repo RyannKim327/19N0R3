@@ -27,7 +27,7 @@ def getAllPoems():
 		"data": result
 	})
 
-@app.route("/api/getPoem", methods=["POST"])
+@app.route("/api/getPoem", method=["POST"])
 def getPoem():
 	data = request.data
 	print(data)
