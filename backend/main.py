@@ -28,4 +28,5 @@ def getAllPoems():
 @app.route("/api/getPoem", methods=["POST"])
 def getPoem():
 	data = request.data.poemID
-	
+	db = database()
+	data = db.que
