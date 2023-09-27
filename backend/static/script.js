@@ -27,7 +27,16 @@ function getCookie(key){
 }
 
 function read(text){
-	
+	x = ""
+	for(let _ = 0; _ <  txt.length; _++){
+		const code =  txt.charCodeAt(_)
+		if(code >= 5888 && code <= 5942){
+			x += `<span class='baybayin'>${ txt[_]}</span>`
+		}else{
+			x +=  txt[_]
+		}
+	}
+	return x
 }
 
 const title = document.getElementById("title")
