@@ -5,4 +5,5 @@ class Object1:
     def sample(self):
         print("Sample")
 
-Object1().sample()
+variable = Object1()
+variable.sample()
