@@ -58,35 +58,35 @@ setInterval(() => {
 			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 			r.data.reverse()
 			let search = document.getElementById("search").value || ""
-				document.getElementById("lists").innerHTML = ""
-				stored_data = new_data
-				stored_search = search
+			document.getElementById("lists").innerHTML = ""
+			stored_data = new_data
+			stored_search = search
 
-				// Update List
+			// Update List
 
-				for(let i = 0; i < r.data.length; i++){
-					let list = r.data[i]
-					search = search.toLowerCase()
-					if(list['title'].toLowerCase().includes(search) || list['content'].toLowerCase().includes(search) || list['author'].toLowerCase().includes(search)){
-						let _list = document.createElement("li")
-						let _title = document.createElement("h4")
-						let _author = document.createElement("h5")
+			for(let i = 0; i < r.data.length; i++){
+				let list = r.data[i]
+				search = search.toLowerCase()
+				if(list['title'].toLowerCase().includes(search) || list['content'].toLowerCase().includes(search) || list['author'].toLowerCase().includes(search)){
+					let _list = document.createElement("li")
+					let _title = document.createElement("h4")
+					let _author = document.createElement("h5")
 
-						_title.innerHTML = read(list['title'])
-						_author.innerHTML = read(list['author'])
+					_title.innerHTML = read(list['title'])
+					_author.innerHTML = read(list['author'])
 
-						_list.appendChild(_title)
-						_list.appendChild(_author)
+					_list.appendChild(_title)
+					_list.appendChild(_author)
 
-						_list.onclick = (event) => {
-							document.getElementById("title").innerHTML = read(list['title'])
-							document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
-							setCookie("poemID", list['ID'])
-						}
-
-						document.getElementById("lists").appendChild(_list)
+					_list.onclick = (event) => {
+						document.getElementById("title").innerHTML = read(list['title'])
+						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
+						setCookie("poemID", list['ID'])
 					}
+
+					document.getElementById("lists").appendChild(_list)
 				}
+			}
 		})
 	}
 })
