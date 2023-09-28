@@ -54,7 +54,7 @@ setInterval(() => {
 		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 		r.data.reverse()
-		let search = document.getElementById("search").value
+		let search = document.getElementById("search").value || ""
 		let stored_search = ""
 		if(stored_data != new_data || search != stored_search){
 			document.getElementById("lists").innerHTML = ""
