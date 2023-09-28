@@ -46,7 +46,7 @@ let stored_data = ""
 let time = 1000
 let intervals = 0
 
-setInterval(() => {
+setInterval(async () => {
 	fetch("/api/getAllPoems").then(r => {
 		return r.json()
 	}).then((r) => {
