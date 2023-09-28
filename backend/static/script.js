@@ -47,6 +47,7 @@ let stored_data = ""
 setInterval(() => {
 	let temp_data = r.data.reverse()
 	let stored_search = ""
+	let search = document.getElementById("search").value || ""
 
 	if(stored_data != new_data || search != stored_search){
 		fetch("/api/getAllPoems").then(r => {
@@ -57,7 +58,6 @@ setInterval(() => {
 			document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 			r.data.reverse()
-			let search = document.getElementById("search").value || ""
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 			stored_search = search
