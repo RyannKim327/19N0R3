@@ -44,6 +44,7 @@ const content = document.getElementById("content")
 
 let stored_data = ""
 let time = 1000
+let intervals = 0
 
 setInterval(() => {
 	fetch("/api/getAllPoems").then(r => {
@@ -91,5 +92,8 @@ setInterval(() => {
 	})
 	if(intervals >= 10){
 		time = 10000
+	}else{
+		time = 1000
 	}
+	intervals++
 }, time)
