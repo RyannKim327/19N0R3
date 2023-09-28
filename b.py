@@ -5,4 +5,4 @@ class Object1:
     def sample(self):
         print("Sample")
 
-Object1.sample()
+Object1().sample()
