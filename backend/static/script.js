@@ -86,7 +86,7 @@ setInterval(async () => {
 					}
 
 					document.getElementById("lists").appendChild(_list)
-				}else if()
+				}
 			}
 		}
 	})
