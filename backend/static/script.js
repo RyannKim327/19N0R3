@@ -55,13 +55,13 @@ setInterval(() => {
 		}).then((r) => {
 			new_data = JSON.stringify(r)
 			const cookie_data = getCookie("poemID").replace(/=/gi, "")
+			let temp_data = r.data.reverse()
 			document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 			r.data.reverse()
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 			stored_search = search
-			let temp_data = r.data.reverse()
 
 			// Update List
 
