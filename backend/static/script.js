@@ -91,7 +91,7 @@ setInterval(() => {
 		}
 	})
 	if(intervals >= 10){
-		time = 10000
+		time = 60000
 	}else{
 		time = 1000
 	}
