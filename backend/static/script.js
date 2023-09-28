@@ -45,11 +45,12 @@ const content = document.getElementById("content")
 let stored_data = ""
 
 setInterval(() => {
+	let temp_data = r.data.reverse()
+
 	fetch("/api/getAllPoems").then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
-		let temp_data = r.data.reverse()
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
 		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
