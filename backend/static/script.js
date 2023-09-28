@@ -43,7 +43,7 @@ const title = document.getElementById("title")
 const content = document.getElementById("content")
 
 let stored_data = ""
-let time = 
+let time = 1000
 
 setInterval(() => {
 	fetch("/api/getAllPoems").then(r => {
@@ -89,4 +89,5 @@ setInterval(() => {
 			}
 		}
 	})
+	if()
 }, time)
