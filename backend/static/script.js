@@ -47,13 +47,13 @@ let stored_data = ""
 setInterval(() => {
 	let stored_search = ""
 	let search = document.getElementById("search").value || ""
-	let 
+	let new_data = {}
 	
 	if(stored_data != new_data || search != stored_search){
 		fetch("/api/getAllPoems").then(r => {
 			return r.json()
 		}).then((r) => {
-			let new_data = JSON.stringify(r)
+			new_data = JSON.stringify(r)
 			const cookie_data = getCookie("poemID").replace(/=/gi, "")
 			document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
