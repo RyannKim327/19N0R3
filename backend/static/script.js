@@ -91,7 +91,7 @@ setInterval(async () => {
 		}
 	})
 	if((intervals % 10) == 0){
-		time = 60000
+		time = 15000
 	}else{
 		time = 1000
 	}
