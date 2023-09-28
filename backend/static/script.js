@@ -47,6 +47,7 @@ let stored_data = ""
 setInterval(() => {
 	let stored_search = ""
 	let search = document.getElementById("search").value || ""
+	let 
 	
 	if(stored_data != new_data || search != stored_search){
 		fetch("/api/getAllPoems").then(r => {
