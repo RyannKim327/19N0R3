@@ -90,7 +90,7 @@ setInterval(async () => {
 			}
 		}
 	})
-	if(intervals >= 10){
+	if((intervals % 10) == 0){
 		time = 60000
 	}else{
 		time = 1000
