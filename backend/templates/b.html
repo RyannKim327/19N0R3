@@ -28,7 +28,9 @@
 	<script>
 		let username = document.getElementById("username")
 		username.onchange = (event) => {
-			fetch("/api/check-user").then(r => {
+			fetch("/api/check-user", {
+				"method": "POST"
+			}).then(r => {
 				return r.json()
 			}).then(r => {
 				if(r.total.length > 0){
