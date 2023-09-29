@@ -124,7 +124,12 @@ body {
 
 .container > .form{
 	display: flex;
-	flex-direction: ;
+	flex-direction: column;
+	align-content: center;
+}
+
+.container > .form > span{
+	
 }
 
 #loading{
