@@ -36,7 +36,6 @@
 			}).then(r => {
 				return r.json()
 			}).then(r => {
-				alert(JSON.stringify(r))
 				if(r.total > 0){
 					document.getElementById("confirmPassword").style.display = "none"
 				}else{
