@@ -41,5 +41,8 @@ def getPoem():
 		"author": data[3]
 	})
 
-@app.route("/api/confirmUser")
+@app.route("/api/confirmUser", methods=["POST"])
 def confirmUser():
+	req = request.data.username
+	db = database()
+	db.query("SELECT * FROM users")
