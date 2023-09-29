@@ -28,7 +28,9 @@
 	<script>
 		let username = document.getElementById("username")
 		username.onchange = (event) => {
-			fetch("/api/check-user")
+			fetch("/api/check-user").then(r => {
+				return r.json()
+			}).then(r => )
 		}
 	</script>
 </html>
