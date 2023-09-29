@@ -45,4 +45,4 @@ def getPoem():
 def confirmUser():
 	req = request.data.username
 	db = database()
-	db.query(f"SELECT * FROM users WHERE penname = '{}'")
+	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'")
