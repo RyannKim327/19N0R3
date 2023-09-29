@@ -130,7 +130,9 @@ body {
 	justify-content: center;
 }
 
-.container > .form > label{
+.container > .form > label,
+.container > .form > button{
+	background-color: transparent;
 	display: flex;
 	flex-direction: row;
 	padding: 0 .25em;
