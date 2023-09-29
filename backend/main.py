@@ -44,6 +44,7 @@ def getPoem():
 @app.route("/api/confirm-user", methods=["POST"])
 def confirmUser():
 	req = request.data.username
+	print(request.data)
 	db = database()
 	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'").fetchall()
 	return jsonify({
