@@ -135,7 +135,7 @@ body {
 	background-color: transparent;
 	display: flex;
 	flex-direction: row;
-	padding: 0 .25em;
+	padding: .01em .25em;
 	margin: .25em;
 	border: 1px var(--border-color) solid;
 	border-radius: .5em;
