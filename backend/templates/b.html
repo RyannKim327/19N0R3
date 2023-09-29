@@ -34,7 +34,6 @@
 					"username": username.value
 				})
 			}).then(r => {
-				alert(JSON.stringify(r))
 				return r.json()
 			}).then(r => {
 				if(r.total.length > 0){
