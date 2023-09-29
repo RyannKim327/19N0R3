@@ -116,6 +116,11 @@ body {
 	-moz-box-sizing: border-box;
 }
 
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
 #loading{
 	display: flex;
 	flex-direction: column;
