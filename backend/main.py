@@ -55,5 +55,5 @@ def confirmUser():
 	# 	"total": len(data),
 	# 	"data": data
 	# })
-	
+	js = json.loads(request.data)
 	return request.data
