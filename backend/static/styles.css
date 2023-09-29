@@ -131,7 +131,9 @@ body {
 .container > .form > span{
 	display: flex;
 	flex-direction: row;
-	padding: .;
+	padding: .25em 0 ;
+	margin: .25em;
+	border: 1px var(--border-color) solid;
 }
 
 #loading{
