@@ -55,4 +55,4 @@ def confirmUser():
 	# 	"data": data
 	# })
 	print(request.data)
-	return request
+	return request.data
