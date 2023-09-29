@@ -32,7 +32,8 @@
 				return r.json()
 			}).then(r => {
 				if(r.total.length > 0){
-					document.getElementById("confirmPassword")
+					document.getElementById("confirmPassword").innerHTML = ""
+					document.getElementById("confirmPassword").style = "hidden"
 				}
 			})
 		}
