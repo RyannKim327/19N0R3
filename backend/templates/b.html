@@ -39,7 +39,7 @@
 				alert(JSON.stringify(r))
 				if(r.total > 0){
 					document.getElementById("confirmPassword").innerHTML = ""
-					document.getElementById("confirmPassword").style = "none"
+					document.getElementById("confirmPassword").style.display = "none"
 				}
 			}).catch(e => {
 				alert(e)
