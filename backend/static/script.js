@@ -47,7 +47,7 @@ let time = 1000
 let intervals = 0
 
 setInterval(async () => {
-	await fetch("/api/getAllPoems").then(r => {
+	await fetch("/api/get-all-poems").then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
