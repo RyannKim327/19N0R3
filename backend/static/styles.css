@@ -139,6 +139,7 @@ body {
 .container > .form > span > input{
 	background-color:  transparent;
 	color: var(--main-text-color);
+	margin-left: .15em;
 }
 
 #loading{
