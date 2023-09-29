@@ -37,7 +37,7 @@
 				return r.json()
 			}).then(r => {
 				alert(JSON.stringify(r))
-				if(r.total.length > 0){
+				if(r.total > 0){
 					document.getElementById("confirmPassword").innerHTML = ""
 					document.getElementById("confirmPassword").style = "none"
 				}
