@@ -136,7 +136,10 @@ body {
 	border: 1px var(--border-color) solid;
 }
 
-.container > .
+.container > .form > span > input{
+	background-color:  transparent;
+	color: var(--main-text-color);
+}
 
 #loading{
 	display: flex;
