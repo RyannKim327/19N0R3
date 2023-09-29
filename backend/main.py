@@ -46,7 +46,7 @@ def confirmUser():
 	req = request.data.username
 	print(request.data)
 	db = database()
-	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'").fetchall()
+	data = [] # db.query(f"SELECT * FROM users WHERE penname = '{req}'").fetchall()
 	return jsonify({
 		"status": 200,
 		"req": request.data,
