@@ -128,7 +128,7 @@ body {
 	align-content: center;
 }
 
-.container > .form > span{
+.container > .form > label{
 	display: flex;
 	flex-direction: row;
 	padding: 0 .25em;
@@ -136,7 +136,7 @@ body {
 	border: 1px var(--border-color) solid;
 }
 
-.container > .form > span > input{
+.container > .form > label > input{
 	background-color:  transparent;
 	color: var(--main-text-color);
 	margin-left: .15em;
