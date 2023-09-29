@@ -134,7 +134,7 @@ body {
 	padding: 0 .25em;
 	margin: .25em;
 	border: 1px var(--border-color) solid;
-	border-radius: ;
+	border-radius: .5em;
 }
 
 .container > .form > label > input{
