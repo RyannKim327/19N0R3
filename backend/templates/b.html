@@ -28,7 +28,7 @@
 	<script>
 		let username = document.getElementById("username")
 		username.onchange = (event) => {
-			fetch("/api/confirm-user", {
+			fetch("/api/confirm-user", json={
 				"method": "POST",
 				"body": JSON.stringify({
 					"username": username.value
