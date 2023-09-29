@@ -45,4 +45,8 @@ def getPoem():
 def confirmUser():
 	req = request.data.username
 	db = database()
-	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'")
+	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'").fetchall()
+	return jsonify({
+		"status": 200,
+		"data": 
+	})
