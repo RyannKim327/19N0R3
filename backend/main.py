@@ -41,3 +41,5 @@ def getPoem():
 		"author": data[3]
 	})
 
+@app.route("/api/confirmUser")
+def confirmUser():
