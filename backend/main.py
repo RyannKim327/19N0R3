@@ -56,4 +56,4 @@ def confirmUser():
 	# 	"data": data
 	# })
 	js = json.loads(request.data)
-	return request.data
+	return js
