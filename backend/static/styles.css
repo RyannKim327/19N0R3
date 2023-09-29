@@ -134,6 +134,7 @@ body {
 	padding: 0 .25em;
 	margin: .25em;
 	border: 1px var(--border-color) solid;
+	border-radius: ;
 }
 
 .container > .form > label > input{
@@ -143,7 +144,7 @@ body {
 }
 
 .container > .form > label > label{
-	
+	cursor: pointer;
 }
 
 #loading{
