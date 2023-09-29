@@ -22,7 +22,7 @@
 					<label for="password1"><i class="fa-solid fa-check fa-2xs"></i></label>
 					<input type="password" id="password1">
 				</label>
-				<button id="">Register</button>
+				<button id="proceed">Register</button>
 			</div>
 		</div>
 	</body>
@@ -39,6 +39,7 @@
 			}).then(r => {
 				if(r.total > 0){
 					document.getElementById("confirmPassword").style.display = "none"
+					document.getElementById("proceed").textContent = "Login"
 				}else{
 					document.getElementById("confirmPassword").style.display = "flex"
 				}
