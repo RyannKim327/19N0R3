@@ -48,7 +48,7 @@ def confirmUser():
 	data = db.query(f"SELECT * FROM users WHERE penname = '{req}'").fetchall()
 	return jsonify({
 		"status": 200,
-		"data": f"There are {len(data)} data/s",
+		"msg": f"There are {len(data)} data/s",
 		"total": len(data),
-		"data"
+		"data": data
 	})
