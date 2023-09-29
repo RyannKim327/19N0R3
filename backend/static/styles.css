@@ -131,10 +131,12 @@ body {
 .container > .form > span{
 	display: flex;
 	flex-direction: row;
-	padding: .25em 0 ;
+	padding: 0 .25em;
 	margin: .25em;
 	border: 1px var(--border-color) solid;
 }
+
+.container > .
 
 #loading{
 	display: flex;
