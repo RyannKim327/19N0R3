@@ -33,8 +33,8 @@
 				"body": JSON.stringify({
 					"username": username.value
 				})
-			}).then(r => {
-				
+			}).then(r => {(r.json)
+				alert
 				return r.json()
 			}).then(r => {
 				if(r.total.length > 0){
