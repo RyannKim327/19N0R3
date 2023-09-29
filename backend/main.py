@@ -11,7 +11,7 @@ def index():
 def login():
 	return render_template("b.html")
 
-@app.route("/api/getAllPoems")
+@app.route("/api/get-all-poems")
 def getAllPoems():
 	db = database()
 	data = db.query("SELECT * FROM poems ORDER BY ID DESC")
@@ -29,7 +29,7 @@ def getAllPoems():
 		"data": result
 	})
 
-@app.route("/api/getPoem", methods=["POST"])
+@app.route("/api/get-poem", methods=["POST"])
 def getPoem():
 	req = request.data.poemID
 	db = database()
@@ -41,7 +41,7 @@ def getPoem():
 		"author": data[3]
 	})
 
-@app.route("/api/confirmUser", methods=["POST"])
+@app.route("/api/confirm-user", methods=["POST"])
 def confirmUser():
 	req = request.data.username
 	db = database()
