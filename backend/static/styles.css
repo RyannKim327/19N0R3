@@ -120,12 +120,14 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	text-align: center;
 }
 
 .container > .form{
 	display: flex;
 	flex-direction: column;
 	align-content: center;
+	justify-content: center;
 }
 
 .container > .form > label{
