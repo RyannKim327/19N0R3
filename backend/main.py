@@ -48,7 +48,7 @@ def confirmUser():
 	print(req['username'])
 	username = req['username']
 	db = database()
-	data = db.query(f"SELECT * FROM users WHERE penname = '{username}'").fetchall()
+	data = db.query(f"SELECT * FROM users WHERE penname = '{username}' COLLATE NOCASE").fetchall()
 	print(data)
 	return jsonify({
 		"status": 200,
