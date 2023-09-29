@@ -142,6 +142,10 @@ body {
 	margin-left: .15em;
 }
 
+.container > .form > label > label{
+	
+}
+
 #loading{
 	display: flex;
 	flex-direction: column;
