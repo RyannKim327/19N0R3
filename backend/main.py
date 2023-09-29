@@ -54,4 +54,4 @@ def confirmUser():
 	# 	"total": len(data),
 	# 	"data": data
 	# })
-	return request.data
+	return request
