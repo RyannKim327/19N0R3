@@ -147,6 +147,11 @@ body {
 	margin-left: .15em;
 }
 
+.container > .form > button{
+	text-align: center;
+}
+
+
 .container > .form > label > label{
 	cursor: pointer;
 }
