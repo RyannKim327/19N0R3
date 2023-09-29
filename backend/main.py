@@ -8,6 +8,8 @@ def index():
 	return render_template("a.html")
 
 @app.route("/login")
+def login():
+	return render_template("b.html")
 
 @app.route("/api/getAllPoems")
 def getAllPoems():
