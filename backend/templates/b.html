@@ -31,7 +31,9 @@
 			fetch("/api/check-user").then(r => {
 				return r.json()
 			}).then(r => {
-				if(r.)
+				if(r.total.length > 0){
+					document.getElementById("confirmPassword")
+				}
 			})
 		}
 	</script>
