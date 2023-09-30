@@ -68,6 +68,7 @@ def credentials():
 	password = encrypt(data['password'])
 	if data['password1'] == "":
 		x = db.query(f"SELECT * FROM users WHERE penname = '{username}' AND password = '{password}' COLLATE NOCASE").fetchone()
+		if x 
 		return jsonify({
 			"status": 200,
 			"ID": x[0],
