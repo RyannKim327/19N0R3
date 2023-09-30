@@ -64,7 +64,7 @@ def credentials():
 	data = json.loads(request.data)
 	db = database()
 	print(data['password1'])
-	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "- -")
+	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "- - ")
 	password = encrypt(data['password'])
 	print(username)
 	if data['password1'] == "":
