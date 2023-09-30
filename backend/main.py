@@ -66,5 +66,6 @@ def credentials():
 	db = database()
 	username = data['username']
 	password = encrypt(data['password'])
-	if
-	db.query(f"SELECT * FROM users WHERE penname = '{username}'")
+	if data['password1'] == "":
+		db.query(f"SELECT * FROM users WHERE penname = '{username}'")
+	elif 
