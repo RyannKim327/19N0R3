@@ -28,7 +28,7 @@
 	</body>
 	<script>
 		let username = document.getElementById("username")
-		let button = document.getElementById("confirmPassword")
+		let button = document.getElementById("proceed")
 		username.onchange = (event) => {
 			fetch("/api/confirm-user", {
 				"method": "POST",
