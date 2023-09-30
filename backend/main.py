@@ -64,7 +64,7 @@ def credentials():
 	data = json.loads(request.data)
 	db = database()
 	print(data['password1'])
-	username = data['username'].replace("'", "\'").replace('')
+	username = data['username'].replace("'", "\'").replace('"', '\"')
 	password = encrypt(data['password'])
 	if data['password1'] == "":
 		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE NOCASE").fetchone()
