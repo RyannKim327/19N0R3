@@ -75,7 +75,10 @@ def credentials():
 				"username": x[1]
 			})
 		else:
-			return json
+			return jsonify({
+				"status": 404,
+				"msg": "Account not found"
+			})
 	elif encrypt(data['password1'] == password):
 		return jsonify({
 			"hehe": 1
