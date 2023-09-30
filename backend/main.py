@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 from database.db import database
-import json
+import json, hashlib
+
+def encrypt(str)
 
 app = Flask(__name__, static_url_path="/static")
 
