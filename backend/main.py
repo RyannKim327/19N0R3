@@ -74,4 +74,4 @@ def credentials():
 			"username": x[1]
 		})
 	elif encrypt(data['password1'] == password):
-		pass
+		return 
