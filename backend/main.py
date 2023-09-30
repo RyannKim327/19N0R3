@@ -57,3 +57,5 @@ def confirmUser():
 		"total": len(data),
 		"data": data
 	})
+
+@app.route("/api/credentials")
