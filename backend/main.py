@@ -3,7 +3,7 @@ from database.db import database
 import json, hashlib
 
 def encrypt(text):
-	return hashlib.
+	return hashlib.sha1(text.encode()).hexdigest()
 
 app = Flask(__name__, static_url_path="/static")
 
