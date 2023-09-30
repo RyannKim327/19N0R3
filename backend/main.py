@@ -65,4 +65,6 @@ def credentials():
 	data = json.loads(request.data)
 	db = database()
 	username = data['username']
+	password = encrypt(data['password'])
+	if
 	db.query(f"SELECT * FROM users WHERE penname = '{username}'")
