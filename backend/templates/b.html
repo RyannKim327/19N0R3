@@ -39,11 +39,11 @@
 				return r.json()
 			}).then(r => {
 				if(r.total > 0){
-					button.style.display = "none"
-					document.getElementById("proceed").textContent = "Login"
+					document.getElementById("confirmPassword").style.display = "none"
+					button.textContent = "Login"
 				}else{
-					button.style.display = "flex"
-					document.getElementById("proceed").textContent = "Register"
+					document.getElementById("confirmPassword").style.display = "flex"
+					button.textContent = "Register"
 				}
 			}).catch(e => {
 				alert(e)
