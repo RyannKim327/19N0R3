@@ -60,3 +60,5 @@ def confirmUser():
 @app.route("/api/credentials", methods=["POST"])
 def credentials():
 	data = json.loads(request.data)
+	db = database()
+	db.query()
