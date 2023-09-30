@@ -79,6 +79,7 @@ def credentials():
 				"msg": "Account not found"
 			})
 	else:
+		if password
 		if encrypt(data['password1']) == password:
 			return jsonify({
 				"hehe": 1
