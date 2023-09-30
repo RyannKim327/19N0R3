@@ -59,4 +59,5 @@ def confirmUser():
 	})
 
 @app.route("/api/credentials", methods=["POST"])
-def 
+def credentials():
+	data = 
