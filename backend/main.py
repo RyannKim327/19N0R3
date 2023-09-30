@@ -61,4 +61,4 @@ def confirmUser():
 def credentials():
 	data = json.loads(request.data)
 	db = database()
-	db.query(f"SELECT * FROM users WHERE penname = ")
+	db.query(f"SELECT * FROM users WHERE penname = {data}")
