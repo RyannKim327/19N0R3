@@ -63,10 +63,11 @@ def confirmUser():
 def credentials():
 	data = json.loads(request.data)
 	db = database()
+	print(data['password1'])
 	username = data['username']
 	password = encrypt(data['password'])
 	if data['password1'] == "":
-		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE ").fetchone()
+		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE NOCASE").fetchone()
 		return jsonify({
 			"status": 200,
 			"ID": x[0],
