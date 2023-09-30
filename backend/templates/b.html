@@ -27,7 +27,8 @@
 		</div>
 	</body>
 	<script>
-		let username = document.getElementById("username")
+		const username = document.getElementById("username")
+		const button = document.getElementById("confirmPassword")
 		username.onchange = (event) => {
 			fetch("/api/confirm-user", {
 				"method": "POST",
@@ -48,6 +49,5 @@
 				alert(e)
 			})
 		}
-		document.get
 	</script>
 </html>
