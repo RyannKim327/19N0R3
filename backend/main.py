@@ -66,6 +66,7 @@ def credentials():
 	print(data['password1'])
 	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "- -")
 	password = encrypt(data['password'])
+	print(username)
 	if data['password1'] == "":
 		x = db.query(f"SELECT * FROM users WHERE penname = '{username}' AND password = '{password}' COLLATE NOCASE").fetchone()
 		if x:
