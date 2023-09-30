@@ -89,3 +89,8 @@ def credentials():
 					"status": 500,
 					"msg": "Account not found"
 				})
+		else:
+			return jsonify({
+				"status": 500,
+				"msg": "Password must be 8 characters"
+			})
