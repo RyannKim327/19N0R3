@@ -67,6 +67,7 @@ def credentials():
 	username = data['username']
 	password = encrypt(data['password'])
 	if data['password1'] == "":
-		db.query(f"SELECT * FROM users WHERE password = '{}' penname = '{username}'")
+		ddb.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}'").fetchone()
+
 	elif encrypt(data['password1'] == password):
 		pass
