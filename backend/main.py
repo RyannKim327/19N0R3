@@ -87,7 +87,7 @@ def credentials():
 			else:
 				return jsonify({
 					"status": 500,
-					"msg": "Account not found"
+					"msg": "Password not match"
 				})
 		else:
 			return jsonify({
