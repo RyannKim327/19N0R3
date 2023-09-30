@@ -78,7 +78,7 @@ def credentials():
 				"status": 500,
 				"msg": "Account not found"
 			})
-	elif encrypt(data['password1'] == password):
+	elif encrypt(data['password1']) == password:
 		return jsonify({
 			"hehe": 1
 		})
