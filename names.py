@@ -1,3 +1,5 @@
+import random
+
 f = [
     "Nicanor",
     "Eleonora",
@@ -18,5 +20,7 @@ l = [
     "Dela Cruz",
     "Cruz",
     "Ramos",
-    "Dela Pe"
+    "Dela Peña",
+    "Delos Reyes",
+    "Reyes"
 ]
