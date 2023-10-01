@@ -160,5 +160,6 @@ f = ""
 
 if random.randint(0, 1) == 1:
     n = random.randint(0, len(name_pairs))
-    n2 = random.randint(0, len(name_pairs))
-    f += f"{name_pairs[n]}"
+    n2 = random.randint(0, len(name_pairs) -1)
+    l = random.randint(0, len(surnames) - 1)
+    f += f"{name_pairs[n]} {name_pairs[n2]}"
