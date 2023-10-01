@@ -9,7 +9,8 @@ f = [
     "Mario",
     "Maria",
     "Antonio",
-    "Eliazar"
+    "Eliazar",
+    "Jennifer"
 ]
 
 l = [
@@ -22,7 +23,8 @@ l = [
     "Ramos",
     "Dela Peña",
     "Delos Reyes",
-    "Reyes"
+    "Reyes",
+    "Mercado"
 ]
 
 x = ["Nicanor Mercado"]
