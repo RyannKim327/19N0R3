@@ -161,4 +161,4 @@ f = ""
 if random.randint(0, 1) == 1:
     n = random.randint(0, len(name_pairs))
     n2 = random.randint(0, len(name_pairs))
-    
+    f += f"{name_pairs[n]}"
