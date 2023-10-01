@@ -159,4 +159,6 @@ surnames = [
 f = ""
 
 if random.randint(0, 1) == 1:
-    f += random.randint(0, len(name_pairs))
+    n = random.randint(0, len(name_pairs))
+    n2 = random.randint(0, len(name_pairs))
+    
