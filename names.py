@@ -28,6 +28,9 @@ l = [
 x = []
 y = 1
 while(y < 60){
-    n = random.randint(0, len(f))
+    f1 = random.randint(0, len(f))
+    l1 = random.randint(0, len(l))
+    n = f1 + " " l1
+    if n 
     y += 1
 }
