@@ -158,7 +158,7 @@ surnames = [
 
 f = ""
 
-if random.randint(0, 1) == 1:
+if random.randint(0, 100) % 2 == 0:
 	n = random.randint(0, len(name_pairs) - 1)
 	n2 = random.randint(0, len(name_pairs) - 1)
 	l = random.randint(0, len(surnames) - 1)
@@ -166,6 +166,6 @@ if random.randint(0, 1) == 1:
 else:
 	n = random.randint(0, len(name_pairs) - 1)
 	l = random.randint(0, len(surnames) - 1)
-	f += f"{name_pairs[n]} {surnames[l]}"
+	f += f"{name_pairs[n][0]} {surnames[l]}"
 
 print(f)
