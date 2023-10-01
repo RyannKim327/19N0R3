@@ -24,3 +24,7 @@ l = [
     "Delos Reyes",
     "Reyes"
 ]
+
+x = []
+y = 1
+while()
