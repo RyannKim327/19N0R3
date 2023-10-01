@@ -156,4 +156,6 @@ surnames = [
 	"Hamilton"
 ]
 
-a = 
+f = ""
+
+if random.ran
