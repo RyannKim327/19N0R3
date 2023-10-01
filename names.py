@@ -15,5 +15,8 @@ l = [
     "De Dios",
     "Martinez",
     "Tianco",
-    "E"
+    "Dela Cruz",
+    "Cruz",
+    "Ramos",
+    "Dela Pe"
 ]
