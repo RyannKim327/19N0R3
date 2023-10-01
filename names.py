@@ -27,7 +27,7 @@ l = [
 
 x = []
 y = 1
-while(y < 60){
+while(y < 60):
     f1 = random.randint(0, len(f))
     l1 = random.randint(0, len(l))
     n = f1 + " " l1
@@ -35,4 +35,3 @@ while(y < 60){
         x.append(n)
         print(n)
         y += 1
-}
