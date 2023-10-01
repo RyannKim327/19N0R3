@@ -25,7 +25,7 @@ l = [
     "Reyes"
 ]
 
-x = []
+x = ["Nicanor Mercado"]
 y = 1
 while(y <= 60):
     f1 = f[random.randint(0, len(f) - 1)]
