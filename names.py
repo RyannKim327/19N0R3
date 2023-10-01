@@ -158,4 +158,5 @@ surnames = [
 
 f = ""
 
-if random.ran
+if random.randint(0, 1) == 1:
+    f += random.randint(0, len(name_pairs))
