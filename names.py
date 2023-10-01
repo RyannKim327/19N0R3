@@ -33,6 +33,6 @@ while(y < 60){
     n = f1 + " " l1
     if not n in x:
         x.append(n)
-        print()
+        print(n)
         y += 1
 }
