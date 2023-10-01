@@ -28,9 +28,9 @@ l = [
 x = []
 y = 1
 while(y < 60):
-    f1 = random.randint(0, len(f))
-    l1 = random.randint(0, len(l))
-    n = f1 + " " l1
+    f1 = f[random.randint(0, len(f))]
+    l1 = lrandom.randint(0, len(l))
+    n = f1 + " " + l1
     if not n in x:
         x.append(n)
         print(n)
