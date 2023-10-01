@@ -28,6 +28,6 @@ l = [
 x = []
 y = 1
 while(y < 60){
-    n = 
+    n = random.randint
     y += 1
 }
