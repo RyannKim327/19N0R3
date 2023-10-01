@@ -3,5 +3,8 @@ f = [
     "Eleonora",
     "Sebastian",
     "Enrico",
+    "Rene",
+    "Mario",
+    "Maria",
     ""
 ]
