@@ -28,7 +28,9 @@
 	</body>
 	<script src="/static/script.js"></script>
 	<script>
-		if(getCookies)
+		if(getCookie("credentials") != ""){
+			
+		}
 		let username = document.getElementById("username")
 		let button = document.getElementById("proceed")
 		username.onchange = (event) => {
