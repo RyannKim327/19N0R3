@@ -1,4 +1,4 @@
-import sqlite3, hashlib, json
+import sqlite3
 
 class database:
 	def __init__(self):
