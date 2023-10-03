@@ -21,6 +21,8 @@ def getAllPoems():
 		params = int(request.args.get("n")) - 1
 	else:
 		params = 0
+	if params <= 0:
+		params = 0
 	limit = 10
 	params = limit * params
 	db = database()
