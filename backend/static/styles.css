@@ -116,6 +116,8 @@ body {
 	-moz-box-sizing: border-box;
 }
 
+.main > .content > 
+
 .container {
 	display: flex;
 	flex-direction: row;
