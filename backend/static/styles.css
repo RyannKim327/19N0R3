@@ -86,7 +86,8 @@ body {
 
 .main > .lists > #lists{
 	overflow-y: scroll;
-	max-height: 85vh;
+	padding: ;
+	max-height: 80vh;
 	list-style: none;
 }
 
