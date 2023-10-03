@@ -50,8 +50,10 @@ def getPoem():
 	req = json.loads(request.data)['poemID']
 	db = database()
 	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchone()
-	user = db.query(f"SELECT * FROM users").fetchone()
-	return user
+	user = db.query(f"SELECT * FROM users").fetchone()[1]
+	return jsonify({
+		"a": user
+	})
 	# return jsonify({
 	# 	"ID": data[0],
 	# 	"title": data[1],
