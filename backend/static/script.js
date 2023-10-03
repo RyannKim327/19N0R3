@@ -48,9 +48,8 @@ let intervals = 0
 
 setInterval(async () => {
 	if(getCookie("poemID") == ""){
-		setCookie()
+		setCookie("poemID", 1)
 	}
-
 	await fetch("/api/get-all-poems").then(r => {
 		return r.json()
 	}).then((r) => {
