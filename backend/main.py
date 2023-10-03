@@ -17,7 +17,7 @@ def login():
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
-	print(request.data.n)
+	print(request)
 	db = database()
 	data = db.query("SELECT * FROM poems ORDER BY ID DESC")
 	result = []
