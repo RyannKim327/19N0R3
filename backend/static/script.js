@@ -47,15 +47,13 @@ let time = 1000
 let intervals = 0
 
 setInterval(async () => {
+	if(getCookie("poemID"))
 	await fetch("/api/get-all-poems").then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
 		let cookie_data = getCookie("poemID").replace(/=/gi, "")
-		if(cookie_data == undefined){
-			cookie_data = "1"
-		}
 		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 		r.data.reverse()
