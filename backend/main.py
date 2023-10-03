@@ -83,7 +83,7 @@ def credentials():
 			if encrypt(data['password1']) == password:
 				return jsonify({
 					"status": 200,
-					"msg": "New account "
+					"msg": "New account Created successfully"
 				})
 			else:
 				return jsonify({
