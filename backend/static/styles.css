@@ -99,7 +99,11 @@ body {
 	width: 0;
 }
 
-.main > .lists > .page{}
+.main > .lists > .page{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
 .main > .lists > .page > button{
 	background-color: transparent;
 	padding: .25em 0;
