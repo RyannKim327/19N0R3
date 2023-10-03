@@ -49,7 +49,9 @@ let intervals = 0
 async function poem(id) {
 	fetch("/api/get-poem", {
 		"method": "POST",
-		JSON.s
+		"body": JSON.stringify({
+			"poemID": id
+		})
 	}).then(r => {
 		return r.json()
 	}).then(r => {
