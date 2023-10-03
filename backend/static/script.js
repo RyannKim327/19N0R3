@@ -53,8 +53,14 @@ setInterval(async () => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
 		const cookie_data = getCookie("poemID").replace(/=/gi, "")
-		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
-		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
+		if(cookie_data == undefined){
+
+			document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
+			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
+		}else{
+			document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
+			document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
+		}
 		r.data.reverse()
 		let search = document.getElementById("search").value || ""
 		let stored_search = ""
