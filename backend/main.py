@@ -48,6 +48,7 @@ def getAllPoems():
 @app.route("/api/get-poem", methods=["POST"])
 def getPoem():
 	req = json.loads(request.data)['poemID']
+	return req
 	db = database()
 	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchall()
 	return jsonify({
