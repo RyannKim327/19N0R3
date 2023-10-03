@@ -29,7 +29,7 @@ def getAllPoems():
 	params = limit * params
 	db = database()
 	data = db.query(f"SELECT * FROM poems ORDER BY ID LIMIT {params}, {limit}")
-	total = db.query("SELECT SUM(ID) FROM poems")
+	total = db.query("SELECT SUM(*) FROM poems").fetchone()
 	result = []
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchone()
@@ -41,7 +41,7 @@ def getAllPoems():
 		})
 	return jsonify({
 		"status": 200,
-		"total": total.fetchone(),
+		"total": total,
 		"data": result
 	})
 
