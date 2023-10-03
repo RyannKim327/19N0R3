@@ -95,8 +95,8 @@ body {
 	border: 1px var(--border-color) solid;
 	margin: .5em .25em;
 }
-.main > .lists > #lists:sc{
-
+.main > .lists > #lists::-webkit-scrollbar{
+	width: 0;
 }
 
 .main > .lists > .page > button{
