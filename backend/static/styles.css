@@ -86,7 +86,6 @@ body {
 
 .main > .lists > #lists{
 	overflow-y: scroll;
-	padding: ;
 	max-height: 80vh;
 	list-style: none;
 }
@@ -104,7 +103,9 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-self: self-end;
 }
+
 .main > .lists > .page > button{
 	background-color: transparent;
 	padding: .25em 0;
