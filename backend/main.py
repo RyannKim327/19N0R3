@@ -41,6 +41,7 @@ def getAllPoems():
 		})
 	return jsonify({
 		"status": 200,
+		"total": total.fetchone(),
 		"data": result
 	})
 
