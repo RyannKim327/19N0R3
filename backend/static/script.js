@@ -53,6 +53,7 @@ setInterval(async () => {
 	await fetch("/api/get-all-poems").then(r => {
 		return r.json()
 	}).then((r) => {
+		console.log(r)
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
 		let cookie_data = getCookie("poemID").replace(/=/gi, "")
