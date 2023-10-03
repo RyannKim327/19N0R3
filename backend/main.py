@@ -15,7 +15,7 @@ def index():
 def login():
 	return render_template("b.html")
 
-@app.route("/api/get-all-poems")
+@app.route("/api/get-all-poems", methods=["GET"])
 def getAllPoems():
 	print(request.query_string.n)
 	db = database()
