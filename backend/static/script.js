@@ -1,6 +1,3 @@
-window.onload = () => {
-	document.getElementById("loading").style.display = "none"
-}
 
 function setCookie(key, value){
 	const date = new Date()
@@ -60,6 +57,10 @@ async function poem(poemID) {
 		document.getElementById("title").innerHTML = read(data['title'])
 		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
 	})
+}
+
+window.onload = () => {
+	document.getElementById("loading").style.display = "none"
 }
 
 setInterval(async () => {
