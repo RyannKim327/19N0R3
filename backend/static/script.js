@@ -47,7 +47,7 @@ let time = 1000
 let intervals = 0
 
 setInterval(async () => {
-	if(getCookie("poemID"))
+	console.log(getCookie("poemID"))
 	await fetch("/api/get-all-poems").then(r => {
 		return r.json()
 	}).then((r) => {
