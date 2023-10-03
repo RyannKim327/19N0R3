@@ -95,6 +95,9 @@ body {
 	border: 1px var(--border-color) solid;
 	margin: .5em .25em;
 }
+.main > .lists > #lists:sc{
+
+}
 
 .main > .lists > .page > button{
 	background-color: transparent;
