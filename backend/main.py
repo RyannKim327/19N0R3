@@ -17,8 +17,8 @@ def login():
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
-	if request.args.get("n"):
-		params = int(request.args.get("n")) - 1
+	if request.args.get("p"):
+		params = int(request.args.get("p")) - 1
 	else:
 		params = 0
 	if params <= 0:
