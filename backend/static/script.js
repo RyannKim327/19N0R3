@@ -52,9 +52,9 @@ setInterval(async () => {
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
-		const cookie_data = getCookie("poemID").replace(/=/gi, "")
+		let cookie_data = getCookie("poemID").replace(/=/gi, "")
 		if(cookie_data == undefined){
-			cookie_data = 
+			cookie_data = "1"
 		}
 		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
