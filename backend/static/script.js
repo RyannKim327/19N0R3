@@ -46,11 +46,11 @@ let stored_data = ""
 let time = 1000
 let intervals = 0
 
-async function poem(id) {
+async function poem(poemID) {
 	fetch("/api/get-poem", {
 		"method": "POST",
 		"body": JSON.stringify({
-			"poemID": id
+			"poemID": poemID
 		})
 	}).then(r => {
 		return r.json()
