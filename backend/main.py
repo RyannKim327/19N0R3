@@ -81,7 +81,7 @@ def credentials():
 	else:
 		if len(data['password']) >= 8:
 			if encrypt(data['password1']) == password:
-				username.replace("--", "-").replace("'", "").replace('')
+				username = username.replace("--", "-").replace("'", "").replace('"', "")
 				db = database()
 				db.query(f"INSERT INTO users (username, password) VALUES ('{username}', '{password}')")
 				return jsonify({
