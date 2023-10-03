@@ -81,8 +81,9 @@ def credentials():
 	else:
 		if len(data['password']) >= 8:
 			if encrypt(data['password1']) == password:
+				username.replace("-")
 				db = database()
-				db.query(f"INSERT INTO users (username, password) VALUES ('{}', '{})")
+				db.query(f"INSERT INTO users (username, password) VALUES ('{username}', '{password}')")
 				return jsonify({
 					"status": 200,
 					"msg": "New account Created successfully"
