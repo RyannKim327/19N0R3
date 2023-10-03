@@ -19,7 +19,6 @@ def login():
 def getAllPoems():
 	params = int(request.args.get("n"))
 	limit = 10
-	params = limit
 	db = database()
 	data = db.query(f"SELECT * FROM poems ORDER BY ID DESC LIMIT {limit}, {params}")
 	result = []
