@@ -86,7 +86,8 @@ def credentials():
 				db.query(f"INSERT INTO users (username, password) VALUES ('{username}', '{password}')")
 				return jsonify({
 					"status": 200,
-					"msg": "New account Created successfully"
+					"msg": "New account Created successfully",
+					"username": 
 				})
 			else:
 				return jsonify({
