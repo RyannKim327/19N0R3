@@ -38,7 +38,7 @@ def getAllPoems():
 			"content": i[2],
 			"author": user[1]
 		})
-	total = db.query("SELECT COUNT(*) FROM poems").fetchone()
+	total = db.query("SELECT COUNT(*) FROM poems").fetchone()[0]
 	return jsonify({
 		"status": 200,
 		"total": total,
