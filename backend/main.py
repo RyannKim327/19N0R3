@@ -87,7 +87,7 @@ def credentials():
 				return jsonify({
 					"status": 200,
 					"msg": "New account Created successfully",
-					"username": 
+					"username": username
 				})
 			else:
 				return jsonify({
