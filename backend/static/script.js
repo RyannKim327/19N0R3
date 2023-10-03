@@ -50,7 +50,8 @@ async function poem(id) {
 	fetch("/api/get-poem").then(r => {
 		return r.json()
 	}).then(r => {
-		
+		document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
+		document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 	})
 }
 
