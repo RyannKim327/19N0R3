@@ -71,10 +71,8 @@ setInterval(async () => {
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
 		let temp_data = r.data.reverse()
-		let cookie_data = getCookie("poemID").replace(/=/gi, "")
 		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
-		poem(cookie_data)
 		r.data.reverse()
 		let search = document.getElementById("search").value || ""
 		let stored_search = ""
@@ -102,6 +100,7 @@ setInterval(async () => {
 					_list.onclick = (event) => {
 						document.getElementById("title").innerHTML = read(list['title'])
 						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
+						poem(list['ID'])
 						setCookie("poemID", list['ID'])
 					}
 
