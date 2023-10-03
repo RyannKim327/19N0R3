@@ -111,7 +111,7 @@ body {
 .main > .content > #content{
 	margin: .5em;
 	overflow-y: scroll;
-	height: 95%;
+	height: 90%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
