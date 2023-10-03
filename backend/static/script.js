@@ -1,4 +1,3 @@
-
 function setCookie(key, value){
 	const date = new Date()
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
@@ -61,6 +60,8 @@ async function poem(poemID) {
 
 window.onload = () => {
 	document.getElementById("loading").style.display = "none"
+	let cookie_data = getCookie("poemID").replace(/=/gi, "")
+	poem(cookie_data)
 }
 
 setInterval(async () => {
