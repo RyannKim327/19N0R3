@@ -46,6 +46,8 @@ let stored_data = ""
 let time = 1000
 let intervals = 0
 
+async function poem
+
 setInterval(async () => {
 	if(getCookie("poemID") == ""){
 		setCookie("poemID", 1)
