@@ -47,7 +47,10 @@ let time = 1000
 let intervals = 0
 
 async function poem(id) {
-	fetch("/api/get-poem").then(r => {
+	fetch("/api/get-poem", {
+		"method": "POST",
+		JSON.s
+	}).then(r => {
 		return r.json()
 	}).then(r => {
 		let data = r.data
