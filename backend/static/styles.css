@@ -116,7 +116,9 @@ body {
 	-moz-box-sizing: border-box;
 }
 
-.main > .content > 
+.main > .content > #content::-webkit-scrollbar{
+	width: 0;
+}
 
 .container {
 	display: flex;
