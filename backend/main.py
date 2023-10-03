@@ -82,7 +82,8 @@ def credentials():
 		if len(data['password']) >= 8:
 			if encrypt(data['password1']) == password:
 				return jsonify({
-					"hehe": 1
+					"status": 200,
+					"msg": "New account "
 				})
 			else:
 				return jsonify({
