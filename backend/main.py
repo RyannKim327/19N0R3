@@ -111,3 +111,4 @@ def credentials():
 				"status": 500,
 				"msg": "Password must be 8 characters"
 			})
+
