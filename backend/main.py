@@ -17,9 +17,10 @@ def login():
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
-	if 
 	if request.args.get("p"):
-		params = int(request.args.get("p")) - 1
+		if request.args.get("p").isdigit():
+			params = int(request.args.get("p")) - 1
+		else: params = 0
 	else:
 		params = 0
 	if params <= 0:
@@ -28,6 +29,7 @@ def getAllPoems():
 	params = limit * params
 	db = database()
 	data = db.query(f"SELECT * FROM poems ORDER BY ID LIMIT {params}, {limit}")
+	data
 	result = []
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchone()
