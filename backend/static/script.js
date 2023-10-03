@@ -55,7 +55,8 @@ async function poem(id) {
 	}).then(r => {
 		return r.json()
 	}).then(r => {
-		let data = r.data
+		// let data = r.data
+		console.log(r)
 		// document.getElementById("title").innerHTML = read(data['title'])
 		// document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
 	})
