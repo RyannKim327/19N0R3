@@ -50,7 +50,7 @@ setInterval(async () => {
 	if(getCookie("poemID") == ""){
 		setCookie("poemID", 1)
 	}
-	await fetch("/api/get-all-poems").then(r => {
+	await fetch("/api/get-all-poems?p=0").then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
