@@ -20,7 +20,7 @@ def getAllPoems():
 	params = int(request.args.get("n"))
 	limit = 10
 	db = database()
-	data = db.query(f"SELECT * FROM poems ORDER BY ID LIMIT {limit}, {params}")
+	data = db.query(f"SELECT * FROM poems ORDER BY ID LIMIT {params}, {limit}")
 	result = []
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchone()
