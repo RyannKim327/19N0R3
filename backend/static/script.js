@@ -53,7 +53,7 @@ async function poem(poemID) {
 	}).then(r => {
 		let data = r
 		document.getElementById("title").innerHTML = read(data['title'])
-		document.getElementById("title").innerHTML = read(data['title'])
+		document.getElementById("author").innerHTML = read(data['author'])
 		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
 		// console.log(r)
 	})
