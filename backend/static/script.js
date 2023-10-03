@@ -55,10 +55,10 @@ async function poem(poemID) {
 	}).then(r => {
 		return r.json()
 	}).then(r => {
-		// let data = r.data
+		let data = r
 		console.log(r)
-		// document.getElementById("title").innerHTML = read(data['title'])
-		// document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
+		document.getElementById("title").innerHTML = read(data['title'])
+		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
 	})
 }
 
