@@ -51,15 +51,15 @@ def getPoem():
 	db = database()
 	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchone()
 	user = db.query(f"SELECT * FROM users").fetchone()[1]
-	return jsonify({
-		"a": user
-	})
 	# return jsonify({
-	# 	"ID": data[0],
-	# 	"title": data[1],
-	# 	"content": data[2],
-	# 	"author": 1
+	# 	"a": user
 	# })
+	return jsonify({
+		"ID": data[0],
+		"title": data[1],
+		"content": data[2],
+		"author": user
+	})
 
 @app.route("/api/confirm-user", methods=["POST"])
 def confirmUser():
