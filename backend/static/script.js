@@ -73,7 +73,7 @@ setInterval(async () => {
 		let cookie_data = getCookie("poemID").replace(/=/gi, "")
 		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
-		poem(po)
+		poem(cookie_data)
 		r.data.reverse()
 		let search = document.getElementById("search").value || ""
 		let stored_search = ""
