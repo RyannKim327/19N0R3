@@ -99,6 +99,7 @@ body {
 	width: 0;
 }
 
+.main > .lists > .page{}
 .main > .lists > .page > button{
 	background-color: transparent;
 	padding: .25em 0;
