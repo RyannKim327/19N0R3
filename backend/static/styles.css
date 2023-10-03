@@ -101,6 +101,8 @@ body {
 	padding: .25em 0;
 	width: 45%;
 	border-radius: 1em;
+	border: 1px var(--border-color) solid;
+	cursor: pointer;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
