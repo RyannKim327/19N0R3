@@ -25,7 +25,7 @@ def getAllPoems():
 		params = 0
 	if params <= 0:
 		params = 0
-	limit = 10
+	limit = 15
 	params = limit * params
 	db = database()
 	data = db.query(f"SELECT * FROM poems ORDER BY ID DESC LIMIT {params}, {limit}")
