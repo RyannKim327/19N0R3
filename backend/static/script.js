@@ -47,7 +47,11 @@ let time = 1000
 let intervals = 0
 
 async function poem(id) {
-	fetch("")
+	fetch("/api/get-poem").then(r => {
+		return r.json()
+	}).then(r => {
+		
+	})
 }
 
 setInterval(async () => {
