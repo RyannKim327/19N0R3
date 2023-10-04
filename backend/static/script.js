@@ -117,20 +117,20 @@ async function fetching(){
 }
 
 document.getElementById("prev").onclick = (event) => {
-	n--
-	if(n <= 0){
-		n = 0
+	n++
+	total = Math.floor(total / 15)
+	console.log(total)
+	console.log(n)
+	if(n > total){
+		n = total
 	}
 	fetching()
 }
 
 document.getElementById("next").onclick = (event) => {
-	n++
-	total = Math.floor(total / 15)
-	console.log(total)
-	console.log(n)
-	if(n <= total){
-		n = total
+	n--
+	if(n <= 0){
+		n = 0
 	}
 	fetching()
 }
