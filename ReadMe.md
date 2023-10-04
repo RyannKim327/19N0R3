@@ -19,4 +19,4 @@ pip istall flask
 
 ---
 ### Installation Instruction
-> Before you install these packages, you need first to install and activate the virtual environment, to activate, you need to execute `virtualenv venv` to have an environment, then `venv/Scripts/`
+> Before you install these packages, you need first to install and activate the virtual environment, to activate, you need to execute `virtualenv venv` to have an environment, then `venv/Scripts/activate` to activate, and you may proceed in installing some required packages.
