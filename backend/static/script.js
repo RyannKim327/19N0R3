@@ -64,12 +64,12 @@ window.onload = () => {
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
 }
-let n = 0
+let page = 0
 let total = 0
 
 async function fetching(){
-	console.log(`/api/get-all-poems?p=${n}`)
-	await fetch(`/api/get-all-poems?p=${n}`).then(r => {
+	console.log(`/api/get-all-poems?p=${page}`)
+	await fetch(`/api/get-all-poems?p=${page}`).then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
@@ -117,20 +117,20 @@ async function fetching(){
 }
 
 document.getElementById("prev").onclick = (event) => {
-	n++
+	page++
 	total = Math.floor(total / 15)
 	console.log(total)
-	console.log(n)
-	if(n > total){
-		n = total
+	console.log(page)
+	if(page > total){
+		page = total
 	}
 	fetching()
 }
 
 document.getElementById("next").onclick = (event) => {
-	n--
-	if(n <= 0){
-		n = 0
+	page--
+	if(page < 0){
+		page = 0
 	}
 	fetching()
 }
