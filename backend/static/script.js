@@ -67,10 +67,12 @@ window.onload = () => {
 let n = 0
 let total = 0
 document.getElementById("prev").onclick = (event) => {
+	alert("hi")
 	n--
 	if(n <= 0){
 		n = 0
 	}
+	fetching
 }
 
 document.getElementById("next").onclick = (event) => {
@@ -79,9 +81,56 @@ document.getElementById("next").onclick = (event) => {
 	if(n >= 5){
 		n = 0
 	}
+	fetching
 }
 
+async function fetching(){
+	await fetch(`/api/get-all-poems?p=${n}`).then(r => {
+		return r.json()
+	}).then((r) => {
+		let new_data = JSON.stringify(r)
+		let temp_data = r.data.reverse()
+		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
+		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
+		r.data.reverse()
+		let search = document.getElementById("search").value || ""
+		let stored_search = ""
+		if(stored_data != new_data || search != stored_search){
+			document.getElementById("lists").innerHTML = ""
+			stored_data = new_data
+			stored_search = search
 
+			total = r.total
+
+			// Update List
+
+			for(let i = 0; i < r.data.length; i++){
+				let list = r.data[i]
+				search = search.toLowerCase()
+				if(search.trim() == "" || list['title'].toLowerCase().includes(search) || list['content'].toLowerCase().includes(search) || list['author'].toLowerCase().includes(search)){
+					let _list = document.createElement("li")
+					let _title = document.createElement("h4")
+					let _author = document.createElement("h5")
+
+					_title.innerHTML = read(list['title'])
+					_author.innerHTML = read(list['author'])
+
+					_list.appendChild(_title)
+					_list.appendChild(_author)
+
+					_list.onclick = (event) => {
+						document.getElementById("title").innerHTML = read(list['title'])
+						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
+						poem(list['ID'])
+						setCookie("poemID", list['ID'])
+					}
+
+					document.getElementById("lists").appendChild(_list)
+				}
+			}
+		}
+	})
+}
 
 setInterval(async () => {
 	if(getCookie("poemID") == ""){
