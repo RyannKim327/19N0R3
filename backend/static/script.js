@@ -69,15 +69,12 @@ let total = 0
 
 async function fetching(){
 	let search = document.getElementById("search").value
-	console.log(`/api/get-all-poems?p=${page}&q=${search}`)
 	await fetch(`/api/get-all-poems?p=${page}&q=${search}`).then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
-		let temp_data = r.data.reverse()
 		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
-		r.data.reverse()
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
