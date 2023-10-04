@@ -54,10 +54,18 @@ body {
 	align-items: center;
 }
 
-.head > ul{
+.head > .nav > ul{
 	display: flex;
 	flex-direction: row;
 	list-style: none;
+}
+
+.head > .nav > ul > li{
+	cursor: pointer;
+}
+
+.head > .nav > ul > li:nth-child(even){
+	margin: 0 .5em;
 }
 
 .root > .header{
