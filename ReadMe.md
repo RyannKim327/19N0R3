@@ -12,4 +12,11 @@
 pip install virtualenv
 ```
 
-2. 
+2. **Flask**
+```Bash
+pip istall flask
+```
+
+---
+### Installation Instruction
+> Before you install	
