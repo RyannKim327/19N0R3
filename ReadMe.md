@@ -1,4 +1,4 @@
-### We are Poet
+### We Write Poetry
 #### MPOP Reverse II
 
 ---
