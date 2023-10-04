@@ -129,8 +129,8 @@ document.getElementById("next").onclick = (event) => {
 	total = Math.floor(total / 15)
 	console.log(total)
 	console.log(n)
-	if(n > total){
-		n = 0
+	if(n <= total){
+		n = total
 	}
 	fetching()
 }
