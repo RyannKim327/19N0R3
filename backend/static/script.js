@@ -76,9 +76,8 @@ document.getElementById("prev").onclick = (event) => {
 
 document.getElementById("next").onclick = (event) => {
 	n++
-	total = total / 15
-	alert(total)
-	if(n >= 5){
+	total = Math.floor(total / 15)
+	if(n >= total){
 		n = 0
 	}
 	fetching()
