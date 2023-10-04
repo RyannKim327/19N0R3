@@ -68,7 +68,16 @@ let n = 0
 
 document.getElementById("prev").onclick = (event) => {
 	n--
-	
+	if(n <= 0){
+		n = 0
+	}
+}
+
+document.getElementById("next").onclick = (event) => {
+	n++
+	if(n <= 0){
+		n = 0
+	}
 }
 
 setInterval(async () => {
