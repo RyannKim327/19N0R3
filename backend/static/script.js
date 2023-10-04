@@ -64,7 +64,7 @@ window.onload = () => {
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
 }
-let page = 0
+let page = 1
 let total = 0
 
 async function fetching(){
@@ -104,7 +104,7 @@ async function fetching(){
 				}
 
 				document.getElementById("lists").appendChild(_list)
-				document.getElementById("pager").textContent = `Page {}`
+				document.getElementById("pager").textContent = `Page ${page}`
 			}
 		}
 	})
