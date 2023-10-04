@@ -126,6 +126,8 @@ document.getElementById("prev").onclick = (event) => {
 document.getElementById("next").onclick = (event) => {
 	n++
 	total = Math.floor(total / 15)
+	console.log(total)
+	console.log(n)
 	if(n >= total){
 		n = 0
 	}
