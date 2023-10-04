@@ -68,7 +68,6 @@ let page = 0
 let total = 0
 
 async function fetching(){
-	console.log(`/api/get-all-poems?p=${page}`)
 	await fetch(`/api/get-all-poems?p=${page}`).then(r => {
 		return r.json()
 	}).then((r) => {
@@ -118,12 +117,9 @@ async function fetching(){
 
 document.getElementById("prev").onclick = (event) => {
 	page++
-	total = Math.floor(total / 15)
-	console.log(total)
-	console.log(total)
-	console.log(page)
-	if(page > total){
-		page = total
+	newTotal = Math.floor(total / 15)
+	if(page > newTotal){
+		page = newTotal
 	}
 	fetching()
 }
