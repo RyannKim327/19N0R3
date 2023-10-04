@@ -120,6 +120,7 @@ document.getElementById("prev").onclick = (event) => {
 	page++
 	total = Math.floor(total / 15)
 	console.log(total)
+	console.log(total)
 	console.log(page)
 	if(page > total){
 		page = total
