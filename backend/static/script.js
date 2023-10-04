@@ -66,22 +66,6 @@ window.onload = () => {
 }
 let n = 0
 let total = 0
-document.getElementById("prev").onclick = (event) => {
-	n--
-	if(n <= 0){
-		n = 0
-	}
-	fetching()
-}
-
-document.getElementById("next").onclick = (event) => {
-	n++
-	total = Math.floor(total / 15)
-	if(n >= total){
-		n = 0
-	}
-	fetching()
-}
 
 async function fetching(){
 	await fetch(`/api/get-all-poems?p=${n}`).then(r => {
@@ -98,11 +82,11 @@ async function fetching(){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 			stored_search = search
-
+			
 			total = r.total
-
+			
 			// Update List
-
+			
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				search = search.toLowerCase()
@@ -129,6 +113,23 @@ async function fetching(){
 			}
 		}
 	})
+}
+
+document.getElementById("prev").onclick = (event) => {
+	n--
+	if(n <= 0){
+		n = 0
+	}
+	fetching()
+}
+
+document.getElementById("next").onclick = (event) => {
+	n++
+	total = Math.floor(total / 15)
+	if(n >= total){
+		n = 0
+	}
+	fetching()
 }
 
 setInterval(async () => {
