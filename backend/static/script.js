@@ -64,12 +64,18 @@ window.onload = () => {
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
 }
+let n = 0
+
+document.getElementById("prev").onclick = (event) => {
+	n--
+	
+}
 
 setInterval(async () => {
 	if(getCookie("poemID") == ""){
 		setCookie("poemID", 1)
 	}
-	await fetch("/api/get-all-poems").then(r => {
+	await fetch(`/api/get-all-poems?p=${n}`).then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
