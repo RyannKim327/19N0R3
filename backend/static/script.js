@@ -69,6 +69,7 @@ let total = 0
 
 async function fetching(){
 	let search = document.getElementById("search").value
+	console.log(`/api/get-all-poems?p=${page}&q=${search}`)
 	await fetch(`/api/get-all-poems?p=${page}&q=${search}`).then(r => {
 		return r.json()
 	}).then((r) => {
@@ -88,26 +89,24 @@ async function fetching(){
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				search = search.toLowerCase()
-				if(search.trim() == "" || list['title'].toLowerCase().includes(search) || list['content'].toLowerCase().includes(search) || list['author'].toLowerCase().includes(search)){
-					let _list = document.createElement("li")
-					let _title = document.createElement("h4")
-					let _author = document.createElement("h5")
+				let _list = document.createElement("li")
+				let _title = document.createElement("h4")
+				let _author = document.createElement("h5")
 
-					_title.innerHTML = read(list['title'])
-					_author.innerHTML = read(list['author'])
+				_title.innerHTML = read(list['title'])
+				_author.innerHTML = read(list['author'])
 
-					_list.appendChild(_title)
-					_list.appendChild(_author)
+				_list.appendChild(_title)
+				_list.appendChild(_author)
 
-					_list.onclick = (event) => {
-						document.getElementById("title").innerHTML = read(list['title'])
-						document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
-						poem(list['ID'])
-						setCookie("poemID", list['ID'])
-					}
-
-					document.getElementById("lists").appendChild(_list)
+				_list.onclick = (event) => {
+					document.getElementById("title").innerHTML = read(list['title'])
+					document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
+					poem(list['ID'])
+					setCookie("poemID", list['ID'])
 				}
+
+				document.getElementById("lists").appendChild(_list)
 			}
 		}
 	})
