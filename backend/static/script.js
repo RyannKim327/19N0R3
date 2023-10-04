@@ -68,6 +68,7 @@ let n = 0
 let total = 0
 
 async function fetching(){
+	console.log(`/api/get-all-poems?p=${n}`)
 	await fetch(`/api/get-all-poems?p=${n}`).then(r => {
 		return r.json()
 	}).then((r) => {
