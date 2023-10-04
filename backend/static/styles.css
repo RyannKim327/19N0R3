@@ -90,6 +90,7 @@ body {
 	overflow-y: scroll;
 	max-height: 80vh;
 	list-style: none;
+	margin: .5em 0;
 }
 
 .main > .lists > #lists > li{
