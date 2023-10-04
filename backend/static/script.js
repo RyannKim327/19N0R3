@@ -68,9 +68,8 @@ let page = 0
 let total = 0
 
 async function fetching(){
-	let search = document.getElementById("search").value || ""
-	let stored_search = ""
-	await fetch(`/api/get-all-poems?p=${page}`).then(r => {
+	let search = document.getElementById("search").value
+	await fetch(`/api/get-all-poems?p=${page}&q=${search}`).then(r => {
 		return r.json()
 	}).then((r) => {
 		let new_data = JSON.stringify(r)
@@ -81,7 +80,6 @@ async function fetching(){
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
-			stored_search = search
 			
 			total = r.total
 			
