@@ -50,10 +50,9 @@ body {
 .head{
 	display: flex;
 	flex-direction: row;
-}
-
-.head > .nav{
-	
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
 }
 
 .root > .header{
