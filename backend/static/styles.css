@@ -108,7 +108,7 @@ body {
 	justify-content: center;
 }
 
-.main > .lists > .page > button{
+.main > .lists > .page > button, .main > .lists > .page > span{
 	background-color: transparent;
 	padding: .25em 0;
 	width: 45%;

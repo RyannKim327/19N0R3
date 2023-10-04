@@ -104,6 +104,7 @@ async function fetching(){
 				}
 
 				document.getElementById("lists").appendChild(_list)
+				document.getElementById("pager").textContent = `Page {}`
 			}
 		}
 	})
