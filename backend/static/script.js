@@ -65,7 +65,7 @@ window.onload = () => {
 	poem(cookie_data)
 }
 let n = 0
-
+let total = 0
 document.getElementById("prev").onclick = (event) => {
 	n--
 	if(n <= 0){
@@ -98,6 +98,8 @@ setInterval(async () => {
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
 			stored_search = search
+
+			total = r.data.list
 
 			// Update List
 
