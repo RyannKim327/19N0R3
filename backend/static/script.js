@@ -75,6 +75,7 @@ document.getElementById("prev").onclick = (event) => {
 
 document.getElementById("next").onclick = (event) => {
 	n++
+	total = total / 15
 	if(n <= 0){
 		n = 0
 	}
@@ -99,7 +100,7 @@ setInterval(async () => {
 			stored_data = new_data
 			stored_search = search
 
-			total = r.data.list
+			total = r.total
 
 			// Update List
 
