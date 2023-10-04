@@ -67,21 +67,21 @@ window.onload = () => {
 let n = 0
 let total = 0
 document.getElementById("prev").onclick = (event) => {
-	alert("hi")
 	n--
 	if(n <= 0){
 		n = 0
 	}
-	fetching
+	fetching()
 }
 
 document.getElementById("next").onclick = (event) => {
 	n++
 	total = total / 15
+	alert(total)
 	if(n >= 5){
 		n = 0
 	}
-	fetching
+	fetching()
 }
 
 async function fetching(){
