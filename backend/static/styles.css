@@ -41,12 +41,19 @@ body {
 }
 
 .root{
-	display: flex;
-	flex-direction: column;
 	border: 1px var(--main-text-color) solid;
 	padding: var(--padding);
 	border-radius: var(--radius);
 	width: 100%;
+}
+
+.head{
+	display: flex;
+	flex-direction: row;
+}
+
+.head > .nav{
+	
 }
 
 .root > .header{
