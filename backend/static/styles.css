@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
 
 :root{
-	--main-background: #000000;
-	--main-text-color: #ffffff;
+	--main-background: #dedede;
+	--main-text-color: #131313;
 
-	--border-color: #ffffff;
+	--border-color: #131313;
 
 	--loading-bg: #131320aa;
 
@@ -150,7 +150,7 @@ body {
 	width: 45%;
 	border-radius: 1em;
 	border: 1px var(--border-color) solid;
-	color: var()
+	color: var(--main-text-color);
 	cursor: pointer;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
