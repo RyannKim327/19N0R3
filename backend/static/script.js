@@ -110,7 +110,7 @@ async function fetching(){
 	})
 }
 
-document.getElementById("prev").onclick = (event) => {
+document.getElementById("next").onclick = (event) => {
 	page++
 	newTotal = Math.floor(total / 15)
 	if(page > newTotal + 1){
@@ -119,7 +119,7 @@ document.getElementById("prev").onclick = (event) => {
 	fetching()
 }
 
-document.getElementById("next").onclick = (event) => {
+document.getElementById("prev").onclick = (event) => {
 	page--
 	if(page < 0){
 		page = 0
