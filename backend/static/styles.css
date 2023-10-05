@@ -157,6 +157,10 @@ body {
 	text-align: center;
 }
 
+.main > .lists > .page > span{
+	cursor: default;
+}
+
 .main > .content{
 	width: 100%;
 	box-sizing: border-box;
