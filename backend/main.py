@@ -127,4 +127,6 @@ def sendToAdmin():
 	data = json.loads(request.data)
 	message = data['msg']
 	time = data['time']
+	zone = data['timezone']
+
 	

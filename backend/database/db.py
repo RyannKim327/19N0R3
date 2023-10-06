@@ -19,6 +19,14 @@ class database:
 				'password' TEXT
 			)
 		""")
+		self.cur.execute("""
+			CREATE TABLE IF NOT EXISTS reports (
+				'ID' INTEGER PRIMARY KEY NOT NULL,
+				'msg' TEXT,
+				'time' TEXT,
+				'timezone' TEXT
+			)
+		""")
 
 	def query(self, query: str):
 		a = self.cur.execute(query)
