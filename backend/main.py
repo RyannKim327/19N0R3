@@ -98,7 +98,7 @@ def credentials():
 			})
 		else:
 			return jsonify({
-				"status": 500,
+				"status": 404,
 				"msg": "Account not found"
 			})
 	else:
