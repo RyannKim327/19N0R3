@@ -67,18 +67,12 @@ let total = 0
 
 async function fetching(){
 	let search = document.getElementById("search").value
-	await get_request(`/api/get-all-poems?p=${page}&q=${search}`), (r) => {
+	await get_request(`/api/get-all-poems?p=${page}&q=${search}`, (r) => {
 		let new_data = JSON.stringify(r)
-		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
-		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""
 			stored_data = new_data
-			
 			total = r.total
-			
-			// Update List
-			
 			for(let i = 0; i < r.data.length; i++){
 				let list = r.data[i]
 				search = search.toLowerCase()
