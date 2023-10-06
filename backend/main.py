@@ -124,5 +124,7 @@ def credentials():
 
 @app.route("/api/send-to-admin", methods=["POST"])
 def sendToAdmin():
-	message = request.data
+	data = json.loads(request.data)
+	message = data['msg']
+	time = data['time']
 	
