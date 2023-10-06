@@ -1,3 +1,5 @@
+import { get_request, post_request } from "ryses"
+
 function setCookie(key, value){
 	const date = new Date()
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
@@ -43,7 +45,7 @@ let time = 1000
 let intervals = 0
 
 async function poem(poemID) {
-	fetch("/api/get-poem", {
+	post_request("/api/get-poem", {
 		"method": "POST",
 		"body": JSON.stringify({
 			"poemID": poemID
