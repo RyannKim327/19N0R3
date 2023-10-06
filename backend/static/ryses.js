@@ -1,4 +1,4 @@
-async function get_request(url, _then, _catch){
+async function get_request(url, _then){
 	fetch(url).then(r => {
 		return r.json()
 	}).then(_then).catch(e => {
@@ -6,8 +6,10 @@ async function get_request(url, _then, _catch){
 	})
 }
 
-async function post_request(url, params, _then, _catch){
+async function post_request(url, params, _then){
 	fetch(url, params).then(r => {
 		return r.json()
-	}).then(_then).catch(_catch)
+	}).then(_then).catch(e => {
+		console.log(e)
+	})
 }
