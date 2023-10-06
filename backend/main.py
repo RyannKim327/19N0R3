@@ -68,13 +68,19 @@ def confirmUser():
 	username = req['username']
 	db = database()
 	data = db.query(f"SELECT * FROM users WHERE penname = '{username}' COLLATE NOCASE").fetchall()
-	return jsonify({
-		"status": 200,
-		"req": req,
-		"msg": f"There are {len(data)} data/s",
-		"total": len(data),
-		"data": data
-	})
+	if len(data) > 0:
+		return jsonify({
+			"status": 200,
+			"req": req,
+			"msg": f"There are {len(data)} data/s",
+			"total": len(data),
+			"data": data
+		})
+	else:
+		return jsonify({
+			"status": 404,
+			"mgs": "The credentials "
+		})
 
 @app.route("/api/credentials", methods=["POST"])
 def credentials():
