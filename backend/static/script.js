@@ -97,7 +97,7 @@ async function fetching(){
 				document.getElementById("pager").textContent = `Page ${page}`
 			}
 		}
-	}
+	})
 }
 
 document.getElementById("next").onclick = (event) => {
