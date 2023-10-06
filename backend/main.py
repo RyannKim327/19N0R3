@@ -79,7 +79,7 @@ def confirmUser():
 	else:
 		return jsonify({
 			"status": 404,
-			"mgs": "The credentials "
+			"mgs": "The credentials wasn't matched in any of the data we have, please try again"
 		})
 
 @app.route("/api/credentials", methods=["POST"])
