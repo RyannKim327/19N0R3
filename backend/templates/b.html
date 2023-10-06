@@ -36,10 +36,11 @@
 		let button = document.getElementById("proceed")
 		username.onchange = (event) => {
 			post_request("/api/confirm-user", {
-				"method": "POST",
-				"body": JSON.stringify({
-					"username": username.value
-				}),
+					"method": "POST",
+					"body": JSON.stringify({
+						"username": username.value
+					}),
+				},
 				(r => {
 					if(r.total > 0){
 						document.getElementById("confirmPassword").style.display = "none"
@@ -49,7 +50,7 @@
 						button.textContent = "Register"
 					}
 				})
-			},())
+			})
 			// fetch("/api/confirm-user", {
 			// 	"method": "POST",
 			// 	"body": JSON.stringify({
