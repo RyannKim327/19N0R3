@@ -27,7 +27,7 @@
 		</div>
 	</body>
 	<script src="/static/script.js"></script>
-	<script src=""></script>
+	<script src="/static/ryses.js"></script>
 	<script>
 		if(getCookie("credentials") != ""){
 			location.href = "/"
@@ -35,24 +35,30 @@
 		let username = document.getElementById("username")
 		let button = document.getElementById("proceed")
 		username.onchange = (event) => {
-			fetch("/api/confirm-user", {
+			post_request("/api/confirm-user", {
 				"method": "POST",
 				"body": JSON.stringify({
 					"username": username.value
-				})
-			}).then(r => {
-				return r.json()
-			}).then(r => {
-				if(r.total > 0){
-					document.getElementById("confirmPassword").style.display = "none"
-					button.textContent = "Login"
-				}else{
-					document.getElementById("confirmPassword").style.display = "flex"
-					button.textContent = "Register"
-				}
-			}).catch(e => {
-				console.log(e)
+				},
 			})
+			// fetch("/api/confirm-user", {
+			// 	"method": "POST",
+			// 	"body": JSON.stringify({
+			// 		"username": username.value
+			// 	})
+			// }).then(r => {
+			// 	return r.json()
+			// }).then(r => {
+			// 	if(r.total > 0){
+			// 		document.getElementById("confirmPassword").style.display = "none"
+			// 		button.textContent = "Login"
+			// 	}else{
+			// 		document.getElementById("confirmPassword").style.display = "flex"
+			// 		button.textContent = "Register"
+			// 	}
+			// }).catch(e => {
+			// 	console.log(e)
+			// })
 		}
 		button.onclick = (event) => {
 			fetch("/api/credentials", {
