@@ -1,5 +1,3 @@
-import { get_request, post_request } from "ryses"
-
 function setCookie(key, value){
 	const date = new Date()
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
