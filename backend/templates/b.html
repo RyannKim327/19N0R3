@@ -52,18 +52,16 @@
 			)
 		}
 		button.onclick = (event) => {
-			fetch("/api/credentials", {
+			post_request("/api/credentials", {
 				"method": "POST",
 				"body": JSON.stringify({
 					"username": username.value,
 					"password": document.getElementById("password").value,	
 					"password1": document.getElementById("password1").value
 				})
-			}).then(r => {
-				return r.json()
-			}).then(r => {
+			}, (r) => {
 				alert(JSON.stringify(r))
-			}).catch(e)
+			})
 		}
 	</script>
 </html>
