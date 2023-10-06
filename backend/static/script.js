@@ -50,9 +50,7 @@ async function poem(poemID) {
 		"body": JSON.stringify({
 			"poemID": poemID
 		})
-	}).then(r => {
-		return r.json()
-	}).then(r => {
+	}, (r) => {
 		let data = r
 		document.getElementById("title").innerHTML = read(data['title'])
 		document.getElementById("author").innerHTML = read(data['author'])
@@ -71,9 +69,7 @@ let total = 0
 
 async function fetching(){
 	let search = document.getElementById("search").value
-	await fetch(`/api/get-all-poems?p=${page}&q=${search}`).then(r => {
-		return r.json()
-	}).then((r) => {
+	await get_request(`/api/get-all-poems?p=${page}&q=${search}`), (r) => {
 		let new_data = JSON.stringify(r)
 		// document.getElementById("title").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['title'])
 		// document.getElementById("content").innerHTML = read(temp_data[parseInt(cookie_data) - 1]['content']).replace(/\n/gi, "<br>")
@@ -109,7 +105,7 @@ async function fetching(){
 				document.getElementById("pager").textContent = `Page ${page}`
 			}
 		}
-	})
+	}
 }
 
 document.getElementById("next").onclick = (event) => {
