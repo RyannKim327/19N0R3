@@ -39,7 +39,15 @@
 				"method": "POST",
 				"body": JSON.stringify({
 					"username": username.value
-				},
+				}, (r => {
+					if(r.total > 0){
+						document.getElementById("confirmPassword").style.display = "none"
+						button.textContent = "Login"
+					}else{
+						document.getElementById("confirmPassword").style.display = "flex"
+						button.textContent = "Register"
+					}
+				})
 			})
 			// fetch("/api/confirm-user", {
 			// 	"method": "POST",
