@@ -121,3 +121,8 @@ def credentials():
 				"status": 500,
 				"msg": "Password must be 8 characters"
 			})
+
+@app.route("/api/send-to-admin", methods=["POST"])
+def sendToAdmin():
+	message = request.data
+	
