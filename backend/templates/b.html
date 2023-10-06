@@ -50,15 +50,10 @@
 					button.textContent = "Register"
 				}
 			}).catch(e => {
-				if(e.status == 404){
-					alert(e.msg)
-				}else{
-					alert("Try")
-				}
+				console.log(e)
 			})
 		}
 		button.onclick = (event) => {
-			alert("hi")
 			fetch("/api/credentials", {
 				"method": "POST",
 				"body": JSON.stringify({
