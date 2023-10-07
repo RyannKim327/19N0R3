@@ -50,6 +50,7 @@ async function poem(poemID) {
 		})
 	}, (r) => {
 		let data = r
+		document.title = data['title']
 		document.getElementById("title").innerHTML = read(data['title'])
 		document.getElementById("author").innerHTML = read(data['author'])
 		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
