@@ -11,6 +11,8 @@ app = Flask(__name__, static_url_path="/static")
 def index():
 	return render_template("a.html")
 
+@app.route("/read/<:id:>")
+
 @app.route("/login")
 def login():
 	return render_template("b.html")
