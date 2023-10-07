@@ -42,6 +42,8 @@ let stored_data = ""
 let time = 1000
 let intervals = 0
 
+let share = {}
+
 async function poem(poemID) {
 	post_request("/api/get-poem", {
 		"method": "POST",
@@ -54,6 +56,9 @@ async function poem(poemID) {
 		document.getElementById("title").innerHTML = read(data['title'])
 		document.getElementById("author").innerHTML = read(data['author'])
 		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
+		share['title'] = data['title']
+		share['author'] = data['author']
+		share['ID'] = poemID
 		// console.log(r)
 	})
 }
