@@ -13,7 +13,8 @@ def index():
 
 @app.route("/read/<int:poemID>")
 def read(poemID):
-	return f"<h1>{poemID}</h1>"
+	html = f"<title>{}</title>"
+	return html
 
 @app.route("/login")
 def login():
