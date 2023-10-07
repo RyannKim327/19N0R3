@@ -20,13 +20,12 @@ def read(poemID):
 	html += f"<meta name='og:description' content='Author: {author}'>"
 	html += f"<meta name='description' content='Author {author}'>"
 	html += f"<meta name='og:title' content='{data[1]}'>"
-	html += f"""
-		<script>
-			function setCookie(key, value){
-				const date = new Date()
-				date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
-				let xp = `expires=${date.toUTCString()}`
-				document.cookie = `${key}=${value};${xp};path=/`
+	html += "<script>"
+	html += "function setCookie(key, value){"
+	html += "const date = new Date()"
+	html += "date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))"
+	html += "let xp = `expires=${date.toUTCString()}`"
+	html += document.cookie = `${key}=${value};${xp};path=/`"
 			}
 			let cookie_data = getCookie("poemID").replace(/=/gi, "")
 			setCookie("poemID")
