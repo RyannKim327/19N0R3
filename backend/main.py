@@ -1,6 +1,6 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, send_from_directory, current_app
 from database.db import database
-import json, hashlib
+import json, hashlib, os
 
 def encrypt(text):
 	return hashlib.sha1(text.encode()).hexdigest()
@@ -9,7 +9,6 @@ app = Flask(__name__, static_url_path="/static")
 
 @app.route("/")
 def index():
-	
 	return render_template("a.html")
 
 @app.route("/login")
@@ -19,6 +18,10 @@ def login():
 @app.route("/test")
 def test():
 	return render_template("c.html")
+
+@app.route("/download")
+def download():
+	return send_from_directory(directory=os.path.join(current_app.), filename="app.apk")
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
