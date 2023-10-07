@@ -15,9 +15,9 @@ def index():
 def login():
 	return render_template("b.html")
 
-@app.rout("/test")
+@app.route("/test")
 def test():
-	render_template("c.html")
+	return render_template("c.html")
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
