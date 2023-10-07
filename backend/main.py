@@ -11,9 +11,9 @@ app = Flask(__name__, static_url_path="/static")
 def index():
 	return render_template("a.html")
 
-@app.route("/read/<ID:poemID>")
+@app.route("/read/<int:poemID>")
 def read(poemID):
-	return poemID
+	return 
 
 @app.route("/login")
 def login():
