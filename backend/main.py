@@ -20,7 +20,7 @@ def read(poemID):
 	html += f"<meta name='og:description' content='Author: {author}'>"
 	html += f"<meta name='description' content='Author {author}'>"
 	html += f"<meta name='og:title' content='{data[1]}'>"
-	html += """
+	html += f"""
 		<script>
 			function setCookie(key, value){
 				const date = new Date()
@@ -28,7 +28,8 @@ def read(poemID):
 				let xp = `expires=${date.toUTCString()}`
 				document.cookie = `${key}=${value};${xp};path=/`
 			}
-			setCookie("")
+			let cookie_data = getCookie("poemID").replace(/=/gi, "")
+			setCookie("poemID")
 		</script>
 	"""
 	return html
