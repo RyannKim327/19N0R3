@@ -19,7 +19,7 @@
 					<li onclick="download()">Download</li>
 					<li>Register</li>
 					<li>Login</li>
-					<li>Share poem</li>
+					<li onclick="share()">Share</li>
 				</ul>
 			</div>
 		</div>
@@ -49,6 +49,9 @@
 	<script>
 		function download(){
 			location.href = "/download"
+		}
+		function share(){
+			navigator.clipboard.writeText(`Here's a like of a poem written by ${1}`)
 		}
 	</script>
 </html>
