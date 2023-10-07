@@ -25,12 +25,11 @@ def read(poemID):
 	html += "const date = new Date()"
 	html += "date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))"
 	html += "let xp = `expires=${date.toUTCString()}`"
-	html += document.cookie = `${key}=${value};${xp};path=/`"
-			}
-			let cookie_data = getCookie("poemID").replace(/=/gi, "")
-			setCookie("poemID")
-		</script>
-	"""
+	html += "document.cookie = `${key}=${value};${xp};path=/`"
+	html += "}"
+	html += f"setCookie('poemID', {poemID})"
+	html += "location href = ''"
+	html += "</script>"
 	return html
 
 @app.route("/login")
