@@ -28,7 +28,7 @@ def read(poemID):
 	html += "document.cookie = `${key}=${value};${xp};path=/`"
 	html += "}"
 	html += f"setCookie('poemID', {poemID})"
-	html += "location href = ''"
+	html += "location.href = '/../..'"
 	html += "</script>"
 	return html
 
