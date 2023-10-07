@@ -13,7 +13,9 @@ def index():
 
 @app.route("/read/<int:poemID>")
 def read(poemID):
-	html = f"<title>{}</title>"
+	db = database()
+	db.query(f"SELECT * FROM poems WHERE ID = {poemID}").fetchall()[0]
+	html = f"<h1>{db}</h1>"
 	return html
 
 @app.route("/login")
