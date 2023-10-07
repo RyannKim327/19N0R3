@@ -20,6 +20,17 @@ def read(poemID):
 	html += f"<meta name='og:description' content='Author: {author}'>"
 	html += f"<meta name='description' content='Author {author}'>"
 	html += f"<meta name='og:title' content='{data[1]}'>"
+	html += """
+		<script>
+			function setCookie(key, value){
+				const date = new Date()
+				date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
+				let xp = `expires=${date.toUTCString()}`
+				document.cookie = `${key}=${value};${xp};path=/`
+			}
+			setCookie("")
+		</script>
+	"""
 	return html
 
 @app.route("/login")
