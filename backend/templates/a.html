@@ -47,7 +47,7 @@
 	<script src="/static/script.js"></script>
 	<script>
 		function download(){
-			location.href = "{{ url_for('download', filename='') }}"
+			location.href = "{{ url_for('download', filename='/static/app.apk') }}"
 		}
 	</script>
 </html>
