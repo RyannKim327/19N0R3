@@ -87,6 +87,7 @@ async function fetching(){
 				_list.appendChild(_author)
 
 				_list.onclick = (event) => {
+					document.title = list['title']
 					document.getElementById("title").innerHTML = read(list['title'])
 					document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
 					poem(list['ID'])
