@@ -15,6 +15,10 @@ def index():
 def login():
 	return render_template("b.html")
 
+@app.rout("/test")
+def test():
+	render_template("c.html")
+
 @app.route("/api/get-all-poems")
 def getAllPoems():
 	if request.args.get("p"):
@@ -129,4 +133,3 @@ def sendToAdmin():
 	time = data['time']
 	zone = data['timezone']
 
-	
