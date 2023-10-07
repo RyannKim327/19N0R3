@@ -17,8 +17,8 @@ def read(poemID):
 	data = db.query(f"SELECT * FROM poems WHERE ID = {poemID}").fetchall()[0]
 	author = db.query(f"SELECT * FROM users WHERE ID = {data[3]}").fetchall()[0][1]
 	html = f"<title>{data[1]}</title>"
-	html += f"<meta name='og:description' content='{author}'>"
-	html += f"<meta name='description' content='{author}'>"
+	html += f"<meta name='og:description' content='Author: {author}'>"
+	html += f"<meta name='description' content='Author {author}'>"
 	html += f"<meta name='og:title' content='{data[1]}'>"
 	return html
 
