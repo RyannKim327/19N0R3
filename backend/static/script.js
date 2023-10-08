@@ -59,7 +59,6 @@ async function poem(poemID) {
 		share['title'] = data['title']
 		share['author'] = data['author']
 		share['ID'] = poemID
-		// console.log(r)
 	})
 }
 
@@ -83,6 +82,12 @@ window.onload = () => {
 			}else{
 				poem_list.style.display = "none"
 			}	
+			let mobile_nav = document.getElementById("mobile-nav")
+			if(mobile_nav.style.display == "none"){
+				mobile_nav.style.display = "none"
+			}else{
+				mobile_nav.style.display = "none"
+			}
 		}
 		document.getElementById("ham-nav").onclick = (event) => {
 			let mobile_nav = document.getElementById("mobile-nav")
