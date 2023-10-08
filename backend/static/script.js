@@ -106,6 +106,14 @@ async function fetching(){
 					document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
 					poem(list['ID'])
 					setCookie("poemID", list['ID'])
+					if(window.innerWidth <= 760){
+						let poem_list = document.getElementById("poem-list")
+						if(poem_list.style.display == "none"){
+							poem_list.style.display = "none"
+						}else{
+							poem_list.style.display = "none"
+						}
+					}
 				}
 
 				document.getElementById("lists").appendChild(_list)
