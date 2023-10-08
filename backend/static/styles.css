@@ -304,7 +304,7 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
-	.head > .nav > ul{
+	.main > .nav > ul{
 		background-color: #dedede10;
 		display: none;
 		flex-direction: column;
@@ -317,7 +317,7 @@ body {
 		box-shadow: 3px 3px 5px #000000aa, 3px 3px 5px inset #000000aa;
 	}
 	
-	.head > .nav > ul > li{
+	.main > .nav > ul > li{
 		margin: 0 !important;
 		padding: 0 !important;
 		width: 100%;
