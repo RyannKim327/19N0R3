@@ -176,6 +176,7 @@ body {
 
 .main > .content > #title{
 	font-family: "Gideon Roman";
+	font-style: italic;
 }
 
 .main > .content > #author{
