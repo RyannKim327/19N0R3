@@ -85,7 +85,12 @@ window.onload = () => {
 			}	
 		}
 		document.getElementById("ham-nav").onclick = (event) => {
-			
+			let mobile_nav = document.getElementById("mobile-nav")
+			if(mobile_nav.style.display == "none"){
+				mobile_nav.style.display = "flex"
+			}else{
+				mobile_nav.style.display = "none"
+			}
 		}
 	}
 }
