@@ -178,7 +178,7 @@ body {
 	overflow-y: hidden;
 }
 
-.main > .content > #title{
+.main > .content > .poem-header > #title{
 	font-family: "IBM Plex Serif";
 	font-style: italic;
 }
