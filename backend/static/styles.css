@@ -328,7 +328,8 @@ body {
 		font-size: large;
 	}
 	.main > .lists{
-		display: none;
+		background-color: ;
+		position: absolute;
 	}
 	.main > .content {
 		margin: .5em 0;
