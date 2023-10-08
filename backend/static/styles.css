@@ -1,5 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&family=IBM+Plex+Serif&display=swap');
 
 :root{
 	--main-background: #dedede;
@@ -175,7 +175,7 @@ body {
 }
 
 .main > .content > #title{
-	font-family: "Gideon Roman";
+	font-family: "IBM Plex Serif";
 	font-style: italic;
 }
 
@@ -191,6 +191,8 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: "Rochester";
+	font-style: italic;
+	font-weight: bold;
 }
 
 .main > .content > #content::-webkit-scrollbar{
