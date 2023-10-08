@@ -331,9 +331,11 @@ body {
 	}
 	
 	.main > .lists{
+		display: none;
 		background-color: var(--main-background);
 		position: absolute;
 		width: 40%;
+		transition: ease-in 1s;
 	}
 
 	.main > .lists > .page > #pager{
@@ -343,7 +345,7 @@ body {
 	.main > .content {
 		margin: .5em 0;
 	}
-	
+
 	.main > .content > .poem-header > #toggle-list{
 		display: flex;
 	}
