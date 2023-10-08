@@ -96,6 +96,10 @@ body {
 	margin-left: .75em;
 }
 
+.main > .nav > ul{
+	display: none;
+}
+
 .main{
 	display: flex;
 	flex-direction: row;
@@ -303,7 +307,6 @@ body {
 	}
 }
 
-.main > .nav > ul{
 @media only screen and (max-width: 760px) {
 	.head > .nav > ul{
 		display: none;

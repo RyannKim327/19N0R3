@@ -75,7 +75,7 @@ window.onload = () => {
 			poem_list.style.display = "none"
 		}
 	}
-	if(window.innerWidth <= 760){
+	if(window.innerWidth <= 761){
 		let poem_list = document.getElementById("poem-list")
 		document.getElementById("content").onclick = (event) => {
 			if(poem_list.style.display == "none"){
@@ -116,7 +116,7 @@ async function fetching(){
 					document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
 					poem(list['ID'])
 					setCookie("poemID", list['ID'])
-					if(window.innerWidth <= 760){
+					if(window.innerWidth <= 761){
 						let poem_list = document.getElementById("poem-list")
 						if(poem_list.style.display == "none"){
 							poem_list.style.display = "none"
