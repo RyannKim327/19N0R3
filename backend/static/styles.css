@@ -284,4 +284,7 @@ body {
 	.head > .nav > ul{
 		display: none;
 	}
+	.head > .nav > .ham{
+		margin-right: .5em;
+	}
 }
