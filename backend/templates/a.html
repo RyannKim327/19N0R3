@@ -17,8 +17,8 @@
 					<li>Home</li>
 					<li onclick="about()">About</li>
 					<li onclick="download()">Download</li>
-					<li onclick="">Register</li>
-					<li>Login</li>
+					<li onclick="location.href = '/register'">Register</li>
+					<li onclick="location.href = '/login'">Login</li>
 					<li onclick="sharelink()">Share</li>
 				</ul>
 			</div>
@@ -53,6 +53,9 @@
 		function sharelink(){
 			navigator.clipboard.writeText(`Here's a like of a poem written by ${share['author']} entitled ${share['title']}\n\nYou may read it at http://localhost.com/read/${share['ID']}`)
 			alert("The content is already in your clipboard.")
+		}
+		function about(){
+			alert("Test")
 		}
 	</script>
 </html>
