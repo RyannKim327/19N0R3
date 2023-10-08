@@ -181,7 +181,10 @@ body {
 .main > .content > .poem-header{
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+}
+
+.main > .content > .poem-header > #toggle-list{
+	display: none;
 }
 
 .main > .content > .poem-header > .title{
@@ -189,7 +192,6 @@ body {
 	flex-direction: column;
 	justify-items: center;
 	width: 100%;
-	border: 1px black solid;
 }
 
 .main > .content > .poem-header > .title > #title{
@@ -326,5 +328,8 @@ body {
 	}
 	.main > .content {
 		margin: .5em 0;
+	}
+	.main > .content > .poem-header > #toggle-list{
+		display: flex;
 	}
 }
