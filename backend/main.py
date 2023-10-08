@@ -64,14 +64,14 @@ def getAllPoems():
 		data = db.query(f"SELECT * FROM poems WHERE title LIKE '%{q}%' OR content LIKE '%{q}%' ORDER BY ID DESC LIMIT {params}, {limit}")
 	result = []
 	for i in data.fetchall():
-		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchone()
+		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchall()[0]
 		result.append({
 			"ID": i[0],
 			"title": i[1],
 			"content": i[2],
 			"author": user[1]
 		})
-	total = db.query("SELECT COUNT(*) FROM poems").fetchone()[0]
+	total = db.query("SELECT COUNT(*) FROM poems").fetchall()[0][0]
 	return jsonify({
 		"status": 200,
 		"total": total,
@@ -82,8 +82,8 @@ def getAllPoems():
 def getPoem():
 	req = json.loads(request.data)['poemID']
 	db = database()
-	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchone()
-	user = db.query(f"SELECT * FROM users").fetchone()[1]
+	data = db.query(f"SELECT * FROM poems WHERE ID = {req}").fetchall()[0]
+	user = db.query(f"SELECT * FROM users").fetchall()[0][1]
 	return jsonify({
 		"ID": data[0],
 		"title": data[1],
@@ -118,7 +118,7 @@ def credentials():
 	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "- - ")
 	password = encrypt(data['password'])
 	if data['password1'] == "":
-		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE NOCASE").fetchone()
+		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE NOCASE").fetchall()[0]
 		if x:
 			return jsonify({
 				"status": 200,
