@@ -325,6 +325,7 @@ body {
 	.head > .nav > .ham{
 		display: flex;
 		margin-right: .5em;
+		font-size: large;
 	}
 	.main > .lists{
 		display: none;
