@@ -287,7 +287,7 @@ body {
 @media only screen and (max-width: 760px) {
 	.head > .nav > ul{
 		background-color: #dedede10;
-		display: flex;
+		display: none;
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
@@ -306,5 +306,11 @@ body {
 	.head > .nav > .ham{
 		display: flex;
 		margin-right: .5em;
+	}
+	.main > .lists{
+		display: none;
+	}
+	.main > .list {
+		
 	}
 }
