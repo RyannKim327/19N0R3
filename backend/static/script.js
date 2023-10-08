@@ -75,7 +75,16 @@ window.onload = () => {
 			poem_list.style.display = "none"
 		}
 	}
-	
+	if(window.innerWidth <= 760){
+		let poem_list = document.getElementById("poem-list")
+		document.getElementById("content").onclick = (event) => {
+			if(poem_list.style.display == "none"){
+				poem_list.style.display = "none"
+			}else{
+				poem_list.style.display = "none"
+			}	
+		}
+	}
 }
 let page = 1
 let total = 0
@@ -113,13 +122,6 @@ async function fetching(){
 							poem_list.style.display = "none"
 						}else{
 							poem_list.style.display = "none"
-						}
-						document.getElementById("content").onclick = (event) => {
-							if(poem_list.style.display == "none"){
-								poem_list.style.display = "none"
-							}else{
-								poem_list.style.display = "none"
-							}	
 						}
 					}
 				}
