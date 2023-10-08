@@ -87,6 +87,10 @@ body {
 	flex-direction: column;
 }
 
+.head > .nav > .ham{
+	display: none;
+}
+
 .root > .header > h5{
 	font-family: 'Courier New', Courier, monospace;
 	margin-left: .75em;
@@ -282,12 +286,16 @@ body {
 
 @media only screen and (max-width: 760px) {
 	.head > .nav > ul{
-		background-color: var(--main-background);
+		background-color: ;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
 		right: .5em;
+		padding: .5em;
+		border-radius: .25em;
+		backdrop-filter: blur(40px);
+		box-shadow: 3px 3px 5px #000000aa, 3px 3px 5px inset #000000aa;
 	}
 	.head > .nav > ul > li{
 		margin: 0 !important;
@@ -296,6 +304,7 @@ body {
 		text-align: right;
 	}
 	.head > .nav > .ham{
+		display: flex;
 		margin-right: .5em;
 	}
 }
