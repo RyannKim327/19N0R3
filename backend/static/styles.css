@@ -286,15 +286,15 @@ body {
 
 @media only screen and (max-width: 760px) {
 	.head > .nav > ul{
-		background-color: ;
+		background-color: #dedede10;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
 		right: .5em;
 		padding: .5em;
-		border-radius: .25em;
-		backdrop-filter: blur(40px);
+		border-radius: .5em;
+		backdrop-filter: blur(2px);
 		box-shadow: 3px 3px 5px #000000aa, 3px 3px 5px inset #000000aa;
 	}
 	.head > .nav > ul > li{
