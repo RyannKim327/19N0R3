@@ -343,6 +343,7 @@ body {
 	.main > .content {
 		margin: .5em 0;
 	}
+	
 	.main > .content > .poem-header > #toggle-list{
 		display: flex;
 	}

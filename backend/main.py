@@ -157,4 +157,8 @@ def sendToAdmin():
 	message = data['msg']
 	time = data['time']
 	zone = data['timezone']
+	return jsonify({
+		"status": 200,
+		"msg": "We sent a feedback to the developer"
+	})
 
