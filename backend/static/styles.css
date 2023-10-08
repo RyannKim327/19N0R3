@@ -316,25 +316,30 @@ body {
 		backdrop-filter: blur(2px);
 		box-shadow: 3px 3px 5px #000000aa, 3px 3px 5px inset #000000aa;
 	}
+	
 	.head > .nav > ul > li{
 		margin: 0 !important;
 		padding: 0 !important;
 		width: 100%;
 		text-align: right;
 	}
+	
 	.head > .nav > .ham{
 		display: flex;
 		margin-right: .5em;
 		font-size: large;
 	}
+	
 	.main > .lists{
 		background-color: var(--main-background);
 		position: absolute;
+		width: 40%;
 	}
+
 	.main > .lists > .page > #pager{
-		font-size: small;
+		font-size: smaller;
 	}
-	
+
 	.main > .content {
 		margin: .5em 0;
 	}
