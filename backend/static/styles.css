@@ -182,13 +182,18 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
+}
+
+.main > .content > .poem-header > #toggle-list{
+	align-self: center;
+	justify-self: center;
+	left: 0;
 }
 
 .main > .content > .poem-header > .title{
 	display: flex;
 	flex-direction: column;
-	justify-self: center;
-	jus
 }
 
 .main > .content > .poem-header > .title > #title{
