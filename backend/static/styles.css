@@ -310,7 +310,7 @@ body {
 	.main > .lists{
 		display: none;
 	}
-	.main > .list {
-		
+	.main > .content {
+		margin: .5em 0;
 	}
 }
