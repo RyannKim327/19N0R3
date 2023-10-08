@@ -68,7 +68,12 @@ window.onload = () => {
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
 	document.getElementById("toggle-list").onclick = (event) => {
-		
+		let poem_list = document.getElementById("poem-list")
+		if(poem_list.style.display == "none"){
+			poem_list.style.display = "flex"
+		}else{
+			poem_list.style.display = "none"
+		}
 	}
 }
 let page = 1
