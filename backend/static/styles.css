@@ -178,12 +178,17 @@ body {
 	overflow-y: hidden;
 }
 
-.main > .content > .poem-header > #title{
+.main > .content > .poem-header{
+	display: flex;
+	flex-direction: row;
+}
+
+.main > .content > .poem-header > .title > #title{
 	font-family: "IBM Plex Serif";
 	font-style: italic;
 }
 
-.main > .content > #author{
+.main > .content > .poem-header > .titles #author{
 	font-family: "Gideon Roman";
 }
 
