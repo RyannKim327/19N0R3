@@ -113,6 +113,14 @@ async function fetching(){
 						}else{
 							poem_list.style.display = "none"
 						}
+						document.getElementById("content").onclick = (event) => {
+							if(poem_list.style.display == "none"){
+								poem_list.style.display = "none"
+							}else{
+								poem_list.style.display = "none"
+							}
+							
+						}
 					}
 				}
 
