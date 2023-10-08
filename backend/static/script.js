@@ -84,6 +84,9 @@ window.onload = () => {
 				poem_list.style.display = "none"
 			}	
 		}
+		document.getElementById("ham-nav").onclick = (event) => {
+			
+		}
 	}
 }
 let page = 1
