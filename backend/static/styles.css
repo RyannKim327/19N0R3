@@ -328,9 +328,13 @@ body {
 		font-size: large;
 	}
 	.main > .lists{
-		background-color: ;
+		background-color: var(--main-background);
 		position: absolute;
 	}
+	.main > .lists > .page > #pager{
+		font-size: small;
+	}
+	
 	.main > .content {
 		margin: .5em 0;
 	}
