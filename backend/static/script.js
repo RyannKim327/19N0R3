@@ -67,6 +67,9 @@ window.onload = () => {
 	document.getElementById("loading").style.display = "none"
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
+	document.getElementById("toggle-list").onclick = (event) => {
+		
+	}
 }
 let page = 1
 let total = 0
