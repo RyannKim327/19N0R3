@@ -282,14 +282,18 @@ body {
 
 @media only screen and (max-width: 760px) {
 	.head > .nav > ul{
+		background-color: var(--main-background);
 		display: flex;
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
-		right: 0;
+		right: .5em;
 	}
 	.head > .nav > ul > li{
-		margin: 0;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100%;
+		text-align: right;
 	}
 	.head > .nav > .ham{
 		margin-right: .5em;
