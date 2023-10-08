@@ -181,10 +181,13 @@ body {
 .main > .content > .poem-header{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 .main > .content > .poem-header > #toggle-list{
 	display: none;
+	font-size: larger;
+	margin: .5em;
 }
 
 .main > .content > .poem-header > .title{
