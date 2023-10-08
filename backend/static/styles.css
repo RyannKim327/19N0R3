@@ -181,6 +181,14 @@ body {
 .main > .content > .poem-header{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+}
+
+.main > .content > .poem-header > .title{
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	jus
 }
 
 .main > .content > .poem-header > .title > #title{
