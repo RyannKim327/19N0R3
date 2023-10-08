@@ -186,9 +186,9 @@ body {
 }
 
 .main > .content > .poem-header > #toggle-list{
-	align-self: center;
-	justify-self: center;
-	left: 0;
+	border: 1px black solid;
+	justify-self: flex-start;
+	align-self: flex-start;
 }
 
 .main > .content > .poem-header > .title{
