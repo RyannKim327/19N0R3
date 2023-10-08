@@ -75,6 +75,7 @@ window.onload = () => {
 			poem_list.style.display = "none"
 		}
 	}
+	
 }
 let page = 1
 let total = 0
@@ -118,8 +119,7 @@ async function fetching(){
 								poem_list.style.display = "none"
 							}else{
 								poem_list.style.display = "none"
-							}
-							
+							}	
 						}
 					}
 				}
