@@ -134,6 +134,7 @@ body {
 	overflow-y: scroll;
 	list-style: none;
 	margin: .5em 0;
+	max-height: 75%;
 }
 
 .main > .lists > #lists > li{
@@ -177,6 +178,7 @@ body {
 	margin: var(--margin);
 	margin-right: 0;
 	text-align: center;
+	max-height: 75vh;
 	overflow-y: hidden;
 }
 
