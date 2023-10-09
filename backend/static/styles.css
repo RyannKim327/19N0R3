@@ -132,9 +132,9 @@ body {
 
 .main > .lists > #lists{
 	overflow-y: scroll;
-	max-height: 80vh;
 	list-style: none;
 	margin: .5em 0;
+	max-height: 75%;
 }
 
 .main > .lists > #lists > li{
@@ -178,8 +178,8 @@ body {
 	margin: var(--margin);
 	margin-right: 0;
 	text-align: center;
-	height: 90vh;
 	overflow-y: hidden;
+	max-height: ;
 }
 
 .main > .content > .poem-header{
@@ -213,13 +213,13 @@ body {
 .main > .content > #content{
 	margin: .5em;
 	overflow-y: scroll;
-	height: 90%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: "Rochester";
 	font-style: italic;
 	font-weight: bold;
+	max-height: 80vh;
 }
 
 .main > .content > #content::-webkit-scrollbar{
