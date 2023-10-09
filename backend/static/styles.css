@@ -178,7 +178,7 @@ body {
 	margin: var(--margin);
 	margin-right: 0;
 	text-align: center;
-	max-height: 75vh;
+	height: 80vh;
 	overflow-y: hidden;
 }
 
@@ -219,6 +219,7 @@ body {
 	font-family: "Rochester";
 	font-style: italic;
 	font-weight: bold;
+	height: 100%;
 }
 
 .main > .content > #content::-webkit-scrollbar{
