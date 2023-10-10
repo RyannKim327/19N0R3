@@ -2,7 +2,7 @@ from db import database
 
 db = database()
 
-q = "19N0R3"
+q = "sana"
 
-a = db.query(f"SELECT * FROM poems RIGHT JOIN users ON poems.ID = users.ID WHERE title LIKE '%{q}%' or content LIKE '%{q}%' ")
+a = db.query(f"SELECT * FROM poems RIGHT JOIN users ON poems.ID = users.ID WHERE poems.title LIKE '%{q}%' OR poems.content LIKE '%{q}%' OR users.penname LIKE '%{q}%'")
 print(a.fetchall())
