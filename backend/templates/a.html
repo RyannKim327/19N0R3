@@ -90,6 +90,8 @@
 			alert("The content is already in your clipboard.")
 		}
 		function about(){
+			document.getElementById("poem-contents").style.display = "block"
+			document.getElementById("formlogin").style.display = "none"
 			document.getElementById("title").textContent = "About"
 			document.getElementById("author").textContent = ""
 			document.getElementById("content").innerHTML = "&emsp;The Pen and Love is a web platform where we share and express our feelings though the help of poetry. It is also open for all, readers or writers, who wanted to."
