@@ -43,7 +43,7 @@
 					<li onclick="about()">About</li>
 					<li onclick="download()">Download</li>
 					<li onclick="location.href = '/register'">Register</li>
-					<li onclick="location.href = '/login'">Login</li>
+					<li onclick="changeui('')">Login</li>
 					<li onclick="sharelink()">Share</li>
 				</ul>
 			</div>
@@ -57,8 +57,8 @@
 				</div>
 				<p id="content">Makikihintay lamang po</p>
 			</div>
-			<div class="root container content" style="display: none;">
-				<div class="form" id="form">
+			<div class="root container content" style="display: none;" id="formlogin">
+				<div class="form">
 					<h3>Users form</h3>
 					<label class="input">
 						<label for="username"><i class="fa-solid fa-user fa-2xs"></i></label>
