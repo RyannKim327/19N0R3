@@ -39,7 +39,7 @@
 			</div>
 			<div class="nav" id="mobile-nav">
 				<ul>
-					<li onclick="changeui('formlogin')">Home</li>
+					<li onclick="home()">Home</li>
 					<li onclick="about()">About</li>
 					<li onclick="download()">Download</li>
 					<li onclick="changeui('formlogin')">Login</li>
@@ -96,6 +96,8 @@
 			document.getElementById("content").innerHTML = "&emsp;The Pen and Love is a web platform where we share and express our feelings though the help of poetry. It is also open for all, readers or writers, who wanted to."
 		}
 		function home(){
+			document.getElementById("poem-contents").style.display = "flex"
+			document.getElementById("poem-contents").style.display = "flex"
 			let cookie_data = getCookie("poemID").replace(/=/gi, "")
 			poem(cookie_data)
 		}
