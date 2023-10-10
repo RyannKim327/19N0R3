@@ -4,5 +4,5 @@ db = database()
 
 q = "19N0R3"
 
-a = db.query(f"SELECT * FROM poems WHERE title LIKE '%{q}%' or content LIKE '%{1}%' RIGHT JOIN ON poems.ID = users.ID")
+a = db.query(f"SELECT * FROM poems RIGHT JOIN users ON poems.ID = users.ID WHERE title LIKE '%{q}%' or content LIKE '%{q}%' ")
 print(a.fetchall())
