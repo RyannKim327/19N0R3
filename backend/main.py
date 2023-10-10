@@ -61,7 +61,7 @@ def getAllPoems():
 		data = db.query(f"SELECT * FROM poems ORDER BY ID DESC LIMIT {params}, {limit}")
 	else:
 		q = request.args.get("q").replace("-", "").replace("'", "").replace('"', '')
-		data = db.query(f"SELECT * FROM poems WHERE title LIKE '%{q}%' OR content LIKE '%{q}%' UNION SELECT * FROM users WHERE penname LIKE  ORDER BY ID DESC LIMIT {params}, {limit}")
+		data = db.query(f"SELECT * FROM poems WHERE title LIKE '%{q}%' OR content LIKE '%{q}%' ORDER BY ID DESC LIMIT {params}, {limit}")
 	result = []
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchall()[0]
