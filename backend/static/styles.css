@@ -141,7 +141,18 @@ body {
 	-moz-box-sizing: border-box;
 }
 
-.main > .lists > #lists > li:hover{+
+.main > .lists > #lists > li:hover{
+	animation: bounce ;
+}
+
+@keyframes bounce {
+	from{
+		margin-top: 0;
+	}to{
+		margin-top: -1em;
+	}
+}
+
 .main > .lists > #lists > li{
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
