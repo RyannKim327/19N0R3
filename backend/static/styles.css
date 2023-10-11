@@ -141,6 +141,7 @@ body {
 	-moz-box-sizing: border-box;
 }
 
+.main > .lists > #lists > li:hover{+
 .main > .lists > #lists > li{
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
