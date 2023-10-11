@@ -58,10 +58,10 @@ def getAllPoems():
 	params = limit * params
 	db = database()
 	if request.args.get("q") == "":
-		data = db.query(f"SELECT * FROM poems ORDER BY ID DESC LIMIT {params}, {limit}")
+		data = db.query(f"SELECT * FROM poems RIGHT JOIN users ON poems.author = users.ID ORDER BY ID DESC LIMIT {params}, {limit}")
 	else:
 		q = request.args.get("q").replace("-", "").replace("'", "").replace('"', '')
-		data = db.query(f"SELECT * FROM poems WHERE title LIKE '%{q}%' OR content LIKE '%{q}%' ORDER BY ID DESC LIMIT {params}, {limit}")
+		data = db.query(f"SELECT * FROM poems RIGHT JOIN users ON poems.author = users.ID WHERE poems.title LIKE '%{q}%' OR poems.content LIKE '%{q}%' ORDER BY ID DESC LIMIT {params}, {limit}")
 	result = []
 	for i in data.fetchall():
 		user = db.query(f"SELECT * FROM users WHERE ID = {i[3]}").fetchall()[0]
