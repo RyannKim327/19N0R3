@@ -3,7 +3,7 @@
 
 :root{
 	--main-background: #dedede;
-	--main-text-color: #131313;
+	--main-text-color: #ffffff;
 
 	--border-color: #131313;
 
@@ -31,6 +31,9 @@
 
 body {
 	background-color: var(--main-background);
+	background-image: url("https://i.pinimg.com/564x/12/0e/50/120e50a226a8feee6f57620b411c9e6a.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: var(--main-text-color);
 	padding: var(--margin);
 	overflow: hidden;
