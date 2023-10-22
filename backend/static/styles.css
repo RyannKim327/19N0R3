@@ -372,7 +372,7 @@ body {
 
 	.main > .content {
 		margin: .5em 0;
-		height: calc();
+		height: calc(100vh - 3em) !important;
 	}
 
 	.main > .content > .poem-header > #toggle-list{
