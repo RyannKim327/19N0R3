@@ -379,4 +379,7 @@ body {
 		border: 1px #ffffff solid;
 		color: #ffffff;
 	}
+	.main > .lists > #lists > li{
+		padding: 0 .5em
+	}
 }
