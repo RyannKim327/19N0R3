@@ -374,6 +374,10 @@ body {
 		margin: .5em 0;
 	}
 
+	.main > .content  > #content{
+		padding-bottom: 3em;
+	} 
+
 	.main > .content > .poem-header > #toggle-list{
 		display: flex;
 		color: #ffffff;
