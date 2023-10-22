@@ -228,6 +228,7 @@ body {
 	font-style: italic;
 	font-weight: bold;
 	max-height: 80vh;
+	color: #000000;
 }
 
 .main > .content > #content::-webkit-scrollbar{
