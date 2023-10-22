@@ -325,6 +325,7 @@ body {
 		background-position: center;
 		background-size: cover;
 		color: #ffffff;
+		height: 90vh;
 	}
 	.content{
 		color: #000000;
