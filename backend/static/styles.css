@@ -391,6 +391,9 @@ body {
 		backdrop-filter: blur(40px);
 		width: 50%;
 	}
+	.main > .lists > #lists{
+		max-height: 75vh;
+	}
 	.main > .lists > input, .main > .lists > #lists > li{
 		border: 1px #ffffff solid;
 		color: #ffffff;
