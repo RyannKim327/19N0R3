@@ -302,7 +302,7 @@ body {
 	animation: loading 1s 0.001s infinite;
 }
 
-.mobile{
+.mobile_gaps{
 	display: none;
 }
 
@@ -396,5 +396,8 @@ body {
 	}
 	.main > .lists > #lists > li{
 		padding: 0 .5em
+	}
+	.mobile_gaps{
+		display: block;
 	}
 }
