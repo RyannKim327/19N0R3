@@ -342,7 +342,6 @@ body {
 		margin: .5em 0;
 		list-style: none;
 		border: 1px var(--border-color) solid;
-		height: 90vh;
 	}
 	
 	.main > .nav > ul > li{
@@ -364,6 +363,7 @@ body {
 		position: absolute;
 		width: 40%;
 		transition: ease-in 1s;
+		height: auto;
 	}
 
 	.main > .lists > .page > #pager{
