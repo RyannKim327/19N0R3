@@ -389,7 +389,7 @@ body {
 	.main > .lists{
 		background-color: #dedede50;
 		backdrop-filter: blur(40px);
-		width: 50%;
+		width: 75%;
 	}
 	.main > .lists > #lists{
 		max-height: 70vh;
