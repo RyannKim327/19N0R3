@@ -318,7 +318,10 @@ body {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		text
+		color: #ffffff;
+	}
+	.content{
+		color: #000000;
 	}
 	.head > .nav > ul{
 		display: none;
