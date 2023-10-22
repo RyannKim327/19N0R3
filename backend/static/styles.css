@@ -372,6 +372,11 @@ body {
 		color: #ffffff;
 	}
 	.main > .lists{
-		background-color: #dededeaa;
+		background-color: #dedede50;
+		backdrop-filter: blur(40px);
+	}
+	.main > .lists > input, .main > .lists > li{
+		border: 1px #ffffff solid;
+		color: #ffffff;
 	}
 }
