@@ -325,7 +325,6 @@ body {
 		background-position: center;
 		background-size: cover;
 		color: #ffffff;
-		height: 97vh;
 	}
 	.content{
 		color: #000000;
@@ -343,7 +342,7 @@ body {
 		margin: .5em 0;
 		list-style: none;
 		border: 1px var(--border-color) solid;
-		height: 95vh;
+		height: 90vh;
 	}
 	
 	.main > .nav > ul > li{
