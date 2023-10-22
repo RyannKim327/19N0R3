@@ -369,5 +369,9 @@ body {
 
 	.main > .content > .poem-header > #toggle-list{
 		display: flex;
+		color: #ffffff;
+	}
+	.main > .lists{
+		background-color: #dededeaa;
 	}
 }
