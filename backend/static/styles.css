@@ -313,6 +313,13 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
+	body{
+		background-image: url("https://i.pinimg.com/564x/c7/78/d9/c778d97ae2fd37b67f1464389c22e9ef.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text
+	}
 	.head > .nav > ul{
 		display: none;
 	}
