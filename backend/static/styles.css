@@ -227,9 +227,10 @@ body {
 	-moz-box-sizing: border-box;
 	font-family: "Rochester";
 	font-style: italic;
-	font-weight: bold;
+	font-weight: 100;
 	max-height: 80vh;
-	color: #000000;
+	color: #ffffff;
+	text-shadow: 3px 3px 5px #000000;
 }
 
 .main > .content > #content::-webkit-scrollbar{
