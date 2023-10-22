@@ -302,6 +302,10 @@ body {
 	animation: loading 1s 0.001s infinite;
 }
 
+.mobile{
+	display: none;
+}
+
 @keyframes loading{
 	from{
 		transform: rotate(0deg);
