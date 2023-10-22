@@ -389,6 +389,7 @@ body {
 	.main > .lists{
 		background-color: #dedede50;
 		backdrop-filter: blur(40px);
+		width: 50%;
 	}
 	.main > .lists > input, .main > .lists > #lists > li{
 		border: 1px #ffffff solid;
