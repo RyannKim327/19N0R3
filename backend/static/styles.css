@@ -327,7 +327,7 @@ body {
 		display: none;
 	}
 	.main > .nav > ul{
-		background-color: var(--main-background);	
+		background-color: "dedede10";	
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
