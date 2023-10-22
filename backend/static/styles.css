@@ -5,7 +5,7 @@
 	--main-background: #dedede;
 	--main-text-color: #ffffff;
 
-	--border-color: #131313;
+	--border-color: #ffffff;
 
 	--loading-bg: #131320aa;
 
@@ -148,6 +148,7 @@ body {
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
 	margin: .5em .25em;
+	padding: 0 .5em;
 }
 
 .main > .lists > #lists::-webkit-scrollbar{
