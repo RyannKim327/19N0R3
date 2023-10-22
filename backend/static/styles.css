@@ -392,7 +392,7 @@ body {
 		width: 50%;
 	}
 	.main > .lists > #lists{
-		max-height: 75vh;
+		max-height: 70vh;
 	}
 	.main > .lists > input, .main > .lists > #lists > li{
 		border: 1px #ffffff solid;
