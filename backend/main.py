@@ -44,6 +44,9 @@ def test():
 def download():
 	return send_from_directory(directory=os.path.join(current_app.root_path, "static"), path="app.apk")
 
+@app.route("/api/add-poem")
+def addPoem():
+
 @app.route("/api/get-all-poems")
 def getAllPoems():
 	if request.args.get("p"):
