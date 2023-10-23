@@ -1,4 +1,5 @@
-text = "19N0R3"
+class SolarSystem:
+	
 alpha = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
 keyword = "MPOP Reverse II"
 key = []
@@ -27,8 +28,3 @@ def decrypt(key, text):
 		if x >= len(key):
 			x = 0
 	return _
-
-a = encrypt(key, text)
-print(a)
-a = decrypt(key, a)
-print(a)
