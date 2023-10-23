@@ -2,7 +2,8 @@ text = "19N0R3"
 alpha = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
 keyword = "MPOP Reverse II"
 key = []
-for i in range()
+for i in range(len(keyword)):
+	
 _ = ""
 x = 0
 for i in text:
