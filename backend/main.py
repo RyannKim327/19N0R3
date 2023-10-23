@@ -47,8 +47,11 @@ def download():
 
 @app.route("/api/add-poem")
 def addPoem():
+	solar = SolarSystem()
+	title = solar.encrypt("Sample")
+	content = solar.encrypt("Sample content")
 	db = database()
-	db.query(f"INSERT INTO poems (title, author, content) VALUES ('{title}', '', '')")
+	db.query(f"INSERT INTO poems (title, author, content) VALUES ('{title}', 1, '{content}')")
 	pass
 
 @app.route("/api/get-all-poems")
