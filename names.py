@@ -1,6 +1,8 @@
 text = "19N0R3"
-alpha = "AaBbCcdefghijklmnopqrstuvwxyz"
-key = [13, 16, 15, 16]
+alpha = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
+keyword = "MPOP Reverse II"
+key = []
+for i in range()
 _ = ""
 x = 0
 for i in text:
