@@ -52,7 +52,7 @@ def addPoem():
 	content = solar.encrypt("Sample content")
 	db = database()
 	db.query(f"INSERT INTO poems (title, author, content) VALUES ('{title}', 1, '{content}')")
-	pass
+	return "Done"
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
