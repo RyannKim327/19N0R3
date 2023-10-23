@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request, send_from_directory, current_app
 from database.db import database
+from hash import SolarSystem
 import json, hashlib, os
 
 def encrypt(text):
@@ -47,7 +48,7 @@ def download():
 @app.route("/api/add-poem")
 def addPoem():
 	db = database()
-	db.query(F"INSERT INTO")
+	db.query(f"INSERT INTO poems (title, author, content) VALUES ('{title}', '', '')")
 	pass
 
 @app.route("/api/get-all-poems")
