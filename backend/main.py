@@ -115,7 +115,7 @@ def confirmUser():
 def credentials():
 	data = json.loads(request.data)
 	db = database()
-	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "- - ")
+	username = data['username'].replace("'", "\'").replace('"', '\"').replace("--", "-")
 	password = encrypt(data['password'])
 	if data['password1'] == "":
 		x = db.query(f"SELECT * FROM users WHERE password = '{password}' AND penname = '{username}' COLLATE NOCASE").fetchall()[0]
