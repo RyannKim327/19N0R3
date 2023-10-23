@@ -46,6 +46,9 @@ def download():
 
 @app.route("/api/add-poem")
 def addPoem():
+	db = database()
+	db.query(F"INSERT INTO")
+	pass
 
 @app.route("/api/get-all-poems")
 def getAllPoems():
