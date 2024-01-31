@@ -1,6 +1,6 @@
 async function get_request(url, _then){
-	fetch(url).then(r => {
-		return r.json()
+	fetch(url).then(response => {
+		return response.json()
 	}).then(_then).catch(e => {
 		console.log(e)
 	})

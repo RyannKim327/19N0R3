@@ -103,7 +103,7 @@ let page = 1
 let total = 0
 
 async function fetching(){
-	let search = document.getElementById("search").value
+	let search = document.getElementById("search").value ?? ""
 	await get_request(`/api/get-all-poems?p=${page}&q=${search}`, (r) => {
 		let new_data = JSON.stringify(r)
 		if(stored_data != new_data){
