@@ -54,7 +54,7 @@ def addPoem():
 	db.query(f"INSERT INTO poems (title, author, content) VALUES ('{title}', 1, '{content}')")
 	return "Done"
 
-@app.route("/api/get-all-poems")
+@app.route("/api/all-poems")
 def getAllPoems():
 	if request.args.get("p"):
 		if request.args.get("p").isdigit():
@@ -88,7 +88,7 @@ def getAllPoems():
 		"data": result
 	})
 
-@app.route("/api/get-poem", methods=["POST"])
+@app.route("/api/poem", methods=["POST"])
 def getPoem():
 	req = json.loads(request.data)['poemID']
 	db = database()

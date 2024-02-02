@@ -45,7 +45,7 @@ let intervals = 0
 let share = {}
 
 async function poem(poemID) {
-	post_request("/api/get-poem", {
+	post("/api/poem", {
 		"method": "POST",
 		"body": JSON.stringify({
 			"poemID": poemID
@@ -104,7 +104,7 @@ let total = 0
 
 async function fetching(){
 	let search = document.getElementById("search").value ?? ""
-	await get_request(`/api/get-all-poems?p=${page}&q=${search}`, (r) => {
+	await get(`/api/all-poems?p=${page}&q=${search}`, (r) => {
 		let new_data = JSON.stringify(r)
 		if(stored_data != new_data){
 			document.getElementById("lists").innerHTML = ""

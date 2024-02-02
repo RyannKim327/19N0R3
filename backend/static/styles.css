@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Gideon+Roman&family=Yesteryear&family=IBM+Plex+Serif&display=swap');
 
 :root{
-	--main-background: #dedede;
+	--main-background: #000000;
 	--main-text-color: #ffffff;
 
 	--border-color: #ffffff;
@@ -31,7 +31,7 @@
 
 body {
 	background-color: var(--main-background);
-	background-image: url("https://i.pinimg.com/564x/bf/92/a6/bf92a6825a1b8381e13dcca7e188a3d2.jpg");
+	/* background-image: url("https://i.pinimg.com/564x/bf/92/a6/bf92a6825a1b8381e13dcca7e188a3d2.jpg"); */
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: var(--main-text-color);
@@ -324,7 +324,7 @@ body {
 
 @media only screen and (max-width: 760px) {
 	body{
-		background-image: url("https://i.pinimg.com/564x/c7/78/d9/c778d97ae2fd37b67f1464389c22e9ef.jpg");
+		/* background-image: url("https://i.pinimg.com/564x/c7/78/d9/c778d97ae2fd37b67f1464389c22e9ef.jpg"); */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
