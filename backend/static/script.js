@@ -31,7 +31,7 @@ async function poem(poemID) {
 		document.title = data['title']
 		document.getElementById("title").innerHTML = read(data['title'])
 		document.getElementById("author").innerHTML = read(data['author'])
-		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>") + "<br><br><br><br><br>"
+		document.getElementById("content").innerHTML = read(data['content']).replace(/\n/gi, "<br>")
 		share['title'] = data['title']
 		share['author'] = data['author']
 		share['ID'] = poemID
@@ -95,10 +95,8 @@ async function fetching(){
 
 				_list.onclick = (event) => {
 					document.title = list['title']
-					document.getElementById("title").innerHTML = read(list['title'])
-					document.getElementById("content").innerHTML = read(list['content']).replace(/\n/gi, "<br>")
-					poem(list['ID'])
 					setCookie("poemID", list['ID'])
+					poem(list['ID'])
 					if(window.innerWidth <= 761){
 						let poem_list = document.getElementById("poem-list")
 						if(poem_list.style.display == "none"){

@@ -207,7 +207,7 @@ body {
 	align-items: center;
 }
 
-.main > .content > .poem-header > #toggle-list{
+.main > .content > .poem-header > .title > #toggle-list{
 	display: none;
 	font-size: larger;
 	margin: .5em;
@@ -215,18 +215,20 @@ body {
 
 .main > .content > .poem-header > .title{
 	display: flex;
-	flex-direction: column;
-	justify-items: center;
+	flex-direction: row;
+	justify-content: center;
 	width: 100%;
 }
 
-.main > .content > .poem-header > .title > #title{
+.main > .content > .poem-header > .title > div > #title{
 	font-family: "IBM Plex Serif";
 	font-style: italic;
+	color: var(--main-text-color);
 }
 
-.main > .content > .poem-header > .titles #author{
+.main > .content > .poem-header > .title > div > #author{
 	font-family: "Gideon Roman";
+	color: var(--main-text-color);
 }
 
 .main > .content > #content{
@@ -238,7 +240,7 @@ body {
 	font-family: "Rochester";
 	font-style: italic;
 	font-weight: 100;
-	max-height: 80vh;
+	max-height: 75vh;
 	color: #ffffff;
 	text-shadow: 3px 3px 5px #000000;
 }
@@ -313,10 +315,6 @@ body {
 	animation: loading 1s 0.001s infinite;
 }
 
-.mobile_gaps{
-	display: none;
-}
-
 @keyframes loading{
 	from{
 		transform: rotate(0deg);
@@ -340,15 +338,27 @@ body {
 		background-position: center;
 		background-size: cover;
 		color: #ffffff;
+		height: 80vh;
 	}
+
 	.content{
 		color: #000000;
 	}
+
+	.main > .content > .poem-header > .title > div{
+		width: 100%;
+		text-align: center;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+
 	.head > .nav > ul{
 		display: none;
 	}
+	
 	.main > .nav > ul{
-		background-color: "dedede10";	
+		background-color: var(--main-background);	
 		flex-direction: column;
 		position: absolute;
 		z-index: 1;
@@ -357,6 +367,7 @@ body {
 		margin: .5em 0;
 		list-style: none;
 		border: 1px var(--border-color) solid;
+		border-radius: .25em;
 	}
 	
 	.main > .nav > ul > li{
@@ -370,6 +381,7 @@ body {
 		display: flex;
 		margin-right: .5em;
 		font-size: large;
+		cursor: pointer;
 	}
 	
 	.main > .lists{
@@ -390,20 +402,30 @@ body {
 	}
 
 	.main > .content  > #content{
-		padding-bottom: 3em;
+		max-height: 50vh;
 	} 
 
-	.main > .content > .poem-header > #toggle-list{
+	.main > .content > .poem-header > .title > #toggle-list{
 		display: flex;
 		color: #ffffff;
+		cursor: pointer;
 	}
+
 	.main > .lists{
 		background-color: #dedede50;
 		backdrop-filter: blur(40px);
 		width: 75%;
+		height: 60vh;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
-	.main > .lists > #lists{
-		max-height: 70vh;
+	.main > .lists > .poem-list-content > #lists{
+		max-height: 18rem;
+		overflow-y: scroll;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
 	.main > .lists > input, .main > .lists > #lists > li{
 		border: 1px #ffffff solid;
@@ -411,8 +433,5 @@ body {
 	}
 	.main > .lists > #lists > li{
 		padding: 0 .5em
-	}
-	.mobile_gaps{
-		display: block;
 	}
 }

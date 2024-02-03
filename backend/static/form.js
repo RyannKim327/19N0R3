@@ -15,33 +15,35 @@ function about(){
 	document.getElementById("content").innerHTML = "<blockquote>The \"Pen and Love\" is a platform where we share the thoughts and ideas, as well as the emotions and love to one another.</blockquote>"
 }
 
-`<div class="poem-header">
-<span id="toggle-list"><i class="fa-solid fa-list"></i></span>
-<div class="title">
-	<h3 id="title">Pamagat</h3>
-	<h5 id="author">Manununla</h5>
-</div>
-</div>
-<p id="content">Makikihintay lamang po</p>
-<div class="mobile_gaps">
-<br><br><br><br><br>
-</div>`
-
 function home(){
 	const base = document.createElement("div")
 	const toggle = document.createElement("span")
 	const tLogo = document.createElement("i")
 	const header = document.createElement("div")
+	const titleContainer = document.createElement("div")
 	const title = document.createElement("h3")
 	const author = document.createElement("h5")
 	const content = document.createElement("p")
 
 	base.classList.add("poem-header")
+	titleContainer.style.display = "flex"
+	titleContainer.style.flexDirection = "column"
+	titleContainer.style.justifyContent = "center"
 
 	tLogo.classList.add("fa-solid")
 	tLogo.classList.add("fa-list")
 
 	toggle.id = "toggle-list"
+	alert(document.getElementById("poem-list").style.display)
+	toggle.onclick = (event) => {
+		const lists_ = document.getElementById("poem-list")
+		if(lists_.style.display == "none"){
+			lists_.style.display = "flex"
+		}else{
+			lists_.style.display = "none"
+		}
+	}
+
 	toggle.appendChild(tLogo)
 
 	header.classList.add("title")
@@ -51,15 +53,21 @@ function home(){
 	content.id = "content"
 
 	header.appendChild(toggle)
-	header.appendChild(title)
-	header.appendChild(author)
+	titleContainer.appendChild(title)
+	titleContainer.appendChild(author)
+	header.appendChild(titleContainer)
 	base.appendChild(header)
 	
 	document.getElementById("poem-contents").innerHTML = ""
 	document.getElementById("poem-contents").appendChild(base)
 	document.getElementById("poem-contents").appendChild(content)
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
-	poem(cookie_data)
+	
+	if(cookie_data){
+		poem(cookie_data)
+	}else{
+		poem(1)
+	}
 }
 
 function checkCredentials() {
