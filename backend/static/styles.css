@@ -108,6 +108,7 @@ body {
 	flex-direction: row;
 	align-content: space-between;
 	width: 100%;
+	max-height: 90vh;
 }
 
 .main > .lists{
@@ -119,7 +120,6 @@ body {
 	-moz-box-sizing: border-box;
 	margin: var(--margin);
 	margin-left: 0;
-	max-height: 90vh;
 }
 
 .main > .lists > input{
@@ -134,34 +134,44 @@ body {
 	color: var(--main-text-color);
 }
 
-.main > .lists > #lists{
-	overflow-y: scroll;
-	list-style: none;
-	margin: .5em 0;
-	max-height: 85%;
+.main > .lists > .poem-list-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 80vh;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
 
-.main > .lists > #lists > li{
+.main > .lists > .poem-list-content > #lists{
+	overflow-y: scroll;
+	list-style: none;
+	margin: .5em 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+.main > .lists > .poem-list-content > #lists > li{
 	border-radius: .25em;
 	border: 1px var(--border-color) solid;
 	margin: .5em .25em;
 	padding: 0 .5em;
 }
 
-.main > .lists > #lists::-webkit-scrollbar{
+.main > .lists > .poem-list-content > #lists::-webkit-scrollbar{
 	width: 0;
 }
 
-.main > .lists > .page{
+.main > .lists > .poem-list-content > .page{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
 
-.main > .lists > .page > button, .main > .lists > .page > span{
+.main > .lists > .poem-list-content > .page > button, .main > .lists > .poem-list-content > .page > span{
 	background-color: transparent;
 	padding: .25em 0;
 	width: 45%;
@@ -175,7 +185,7 @@ body {
 	text-align: center;
 }
 
-.main > .lists > .page > span{
+.main > .lists > .poem-list-content > .page > span{
 	cursor: default;
 }
 
@@ -371,7 +381,7 @@ body {
 		height: auto;
 	}
 
-	.main > .lists > .page > #pager{
+	.main > .lists > .poem-list-content > .page > #pager{
 		font-size: smaller;
 	}
 

@@ -1,3 +1,4 @@
+home()
 function download(){
 	location.href = "/download"
 }
@@ -9,17 +10,89 @@ function sharelink(){
 
 function about(){
 	document.getElementById("poem-contents").style.display = "block"
-	document.getElementById("formlogin").style.display = "none"
 	document.getElementById("title").textContent = "About"
 	document.getElementById("author").textContent = ""
 	document.getElementById("content").innerHTML = "<blockquote>The \"Pen and Love\" is a platform where we share the thoughts and ideas, as well as the emotions and love to one another.</blockquote>"
 }
 
+`<div class="poem-header">
+<span id="toggle-list"><i class="fa-solid fa-list"></i></span>
+<div class="title">
+	<h3 id="title">Pamagat</h3>
+	<h5 id="author">Manununla</h5>
+</div>
+</div>
+<p id="content">Makikihintay lamang po</p>
+<div class="mobile_gaps">
+<br><br><br><br><br>
+</div>`
+
 function home(){
-	document.getElementById("poem-contents").style.display = "block"
-	document.getElementById("formlogin").style.display = "none"
+	const base = document.createElement("div")
+	const toggle = document.createElement("span")
+	const tLogo = document.createElement("i")
+	const header = document.createElement("div")
+	const title = document.createElement("h3")
+	const author = document.createElement("h5")
+	const content = document.createElement("p")
+
+	base.classList.add("poem-header")
+
+	tLogo.classList.add("fa-solid")
+	tLogo.classList.add("fa-list")
+
+	toggle.id = "toggle-list"
+	toggle.appendChild(tLogo)
+
+	header.classList.add("title")
+
+	title.id = "title"
+	author.id = "author"
+	content.id = "content"
+
+	header.appendChild(toggle)
+	header.appendChild(title)
+	header.appendChild(author)
+	base.appendChild(header)
+	
+	document.getElementById("poem-contents").innerHTML = ""
+	document.getElementById("poem-contents").appendChild(base)
+	document.getElementById("poem-contents").appendChild(content)
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
+}
+
+function checkCredentials() {
+	if(getCookie("credentials") == ""){
+		credentials()
+	}else{
+		publish()
+		alert("test")
+	}
+}
+
+function publish(){
+	const base = document.createElement("div")
+	const form = document.createElement("div")
+	const title = document.createElement("input")
+	const content = document.createElement("textarea")
+	const button = document.createElement("button")
+
+	base.classList.add("container")
+	base.classList.add("content")
+	form.classList.add("form")
+
+	title.placeholder = "Enter your title"
+	content.placeholder = "Enter the content"
+
+
+	form.appendChild(title)
+	form.appendChild(content)
+	form.appendChild(button)
+	base.appendChild(form)
+
+	document.getElementById("poem-contents").innerHTML = ""
+	document.getElementById("poem-contents").appendChild(base)
 }
 
 function credentials(){

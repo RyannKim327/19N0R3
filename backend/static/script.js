@@ -1,27 +1,3 @@
-function setCookie(key, value){
-	const date = new Date()
-	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000))
-	let xp = `expires=${date.toUTCString()}`
-	document.cookie = `${key}=${value};${xp};path=/`
-}
-
-function getCookie(key){
-	const cookie = document.cookie
-	const name = `${key}=`
-	const decode = decodeURIComponent(cookie)
-	const data = decode.split(";")
-	for(let d in data){
-		let new_data = data[d]
-		while(new_data[0] == " "){
-			new_data = new_data.substring(1)
-		}
-		if(new_data.indexOf(key) == 0){
-			return new_data.substring(key.length, new_data.length)
-		}
-	}
-	return ""
-}
-
 function read(text){
 	let x = ""
 	for(let _ = 0; _ <  text.length; _++){
@@ -66,14 +42,7 @@ window.onload = () => {
 	document.getElementById("loading").style.display = "none"
 	let cookie_data = getCookie("poemID").replace(/=/gi, "")
 	poem(cookie_data)
-	document.getElementById("toggle-list").onclick = (event) => {
-		let poem_list = document.getElementById("poem-list")
-		if(poem_list.style.display == "none"){
-			poem_list.style.display = "flex"
-		}else{
-			poem_list.style.display = "none"
-		}
-	}
+	
 	if(window.innerWidth <= 761){
 		let poem_list = document.getElementById("poem-list")
 		document.getElementById("content").onclick = (event) => {
@@ -99,6 +68,7 @@ window.onload = () => {
 		}
 	}
 }
+
 let page = 1
 let total = 0
 
