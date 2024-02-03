@@ -61,24 +61,6 @@
 					<br><br><br><br><br>
 				</div>
 			</div>
-			<div class="root container content" style="display: none;" id="formlogin">
-				<div class="form">
-					<h3>Users form</h3>
-					<label class="input">
-						<label for="username"><i class="fa-solid fa-user fa-2xs"></i></label>
-						<input type="text" id="username">
-					</label>
-					<label class="input">
-						<label for="password"><i class="fa-solid fa-lock fa-2xs"></i></label>
-						<input type="password" id="password">
-					</label>
-					<label class="input" id="confirmPassword">
-						<label for="password1"><i class="fa-solid fa-check fa-2xs"></i></label>
-						<input type="password" id="password1">
-					</label>
-					<button id="proceed">Register</button>
-				</div>
-			</div>
 		</div>
 		<div id="loading">
 			<div class="circle"></div>
@@ -87,72 +69,8 @@
 	</body>
 	<script src="/static/ryses.js"></script>
 	<script src="/static/script.js"></script>
+	<script src="/static/form.js"></script>
 	<script>
-		function download(){
-			location.href = "/download"
-		}
-		function sharelink(){
-			navigator.clipboard.writeText(`Here's a like of a poem written by ${share['author']} entitled ${share['title']}\n\nYou may read it at https://pen-and-love.writers.repl.co/read/${share['ID']}`)
-			alert("The content is already in your clipboard.")
-		}
-		function about(){
-			document.getElementById("poem-contents").style.display = "block"
-			document.getElementById("formlogin").style.display = "none"
-			document.getElementById("title").textContent = "About"
-			document.getElementById("author").textContent = ""
-			document.getElementById("content").innerHTML = "<blockquote>The \"Pen and Love\" is a platform where we share the thoughts and ideas, as well as the emotions and love to one another.</blockquote>"
-		}
-		function home(){
-			document.getElementById("poem-contents").style.display = "block"
-			document.getElementById("formlogin").style.display = "none"
-			let cookie_data = getCookie("poemID").replace(/=/gi, "")
-			poem(cookie_data)
-		}
-		function credentials(){
-			document.getElementById("poem-contents").style.display = "none"
-			document.getElementById("formlogin").style.display = "flex"
-		}
-		if(getCookie("credentials") != ""){
-			document.getElementById("login").remove()
-			document.getElementById("loginNav").remove()
-		}
-		let username = document.getElementById("username")
-		let button = document.getElementById("proceed")
-		username.onchange = (event) => {
-			post("/api/confirm-user", {
-					"method": "POST",
-					"body": JSON.stringify({
-						"username": username.value
-					})
-				}, (r) =>  {
-					if(r.total > 0){
-						document.getElementById("confirmPassword").style.display = "none"
-						button.textContent = "Login"
-					}else{
-						document.getElementById("confirmPassword").style.display = "flex"
-						button.textContent = "Register"
-					}
-				}
-			)
-		}
-		button.onclick = () => {
-			post("/api/credentials", {
-				"method": "POST",
-				"body": JSON.stringify({
-					"username": username.value,
-					"password": document.getElementById("password").value,	
-					"password1": document.getElementById("password1").value
-				})
-			}, (response) => {
-				setCookie("userID", response.ID)
-				setCookie("username", response.username)
-				setCookie("credentials", JSON.stringify({
-					"username": response.username,
-					"userID": response.ID
-				}))
-				document.getElementById("login").remove()
-				document.getElementById("loginNav").remove()
-			})
-		}
+		
 	</script>
 </html>

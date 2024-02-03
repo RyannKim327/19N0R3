@@ -260,6 +260,7 @@ body {
 	margin: .25em;
 	border: 1px var(--border-color) solid;
 	border-radius: .5em;
+	color:var(--main-text-color);
 }
 
 .container > .form > button{
@@ -270,7 +271,7 @@ body {
 .container > .form > label > input{
 	background-color:  transparent;
 	color: var(--main-text-color);
-	margin-left: .15em;
+	margin-left: .25em;
 }
 
 .container > .form > label > label{
